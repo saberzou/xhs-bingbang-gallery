@@ -113,6 +113,44 @@
             white-space: pre-wrap;
             color: var(--text-main);
         }
+        .feedback-bar {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .btn-feedback {
+            background: #F4F4F4;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #888;
+            flex: none;
+            padding: 0;
+        }
+        .btn-feedback:hover {
+            background: #EBEBEB;
+            transform: scale(1.05);
+        }
+        .btn-feedback.active-up {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        .btn-feedback.active-down {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+        .btn-feedback.active-heart {
+            background: #FCE4EC;
+            color: #E91E63;
+        }
         .actions {
             display: flex;
             gap: 12px;
@@ -238,13 +276,57 @@
     <div id="toast" class="toast">Copied to clipboard! ✨</div>
 
     <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
         function copyText(button, text) {
             navigator.clipboard.writeText(text).then(() => {
-                const toast = document.getElementById('toast');
-                toast.classList.add('show');
-                setTimeout(() => toast.classList.remove('show'), 2500);
+                showToast('Copied! ✨');
             });
         }
+
+        function toggleFeedback(btn, id, type) {
+            const storageKey = 'xhs_feedback_' + id;
+            let state = JSON.parse(localStorage.getItem(storageKey) || '{"thumb": null, "heart": false}');
+            const container = btn.closest('.feedback-bar');
+            const btnUp = container.querySelector('.btn-up');
+            const btnDown = container.querySelector('.btn-down');
+            const btnHeart = container.querySelector('.btn-heart');
+            if (type === 'up') { state.thumb = state.thumb === 'up' ? null : 'up'; }
+            else if (type === 'down') { state.thumb = state.thumb === 'down' ? null : 'down'; }
+            else if (type === 'heart') { state.heart = !state.heart; }
+            localStorage.setItem(storageKey, JSON.stringify(state));
+            if (btnUp) btnUp.classList.toggle('active-up', state.thumb === 'up');
+            if (btnDown) btnDown.classList.toggle('active-down', state.thumb === 'down');
+            if (btnHeart) btnHeart.classList.toggle('active-heart', state.heart);
+            const emojis = [];
+            if (state.thumb === 'up') emojis.push('👍');
+            if (state.thumb === 'down') emojis.push('👎');
+            if (state.heart) emojis.push('❤️');
+            if (emojis.length > 0) {
+                const msg = '/feedback ' + id + ' ' + emojis.join(' ');
+                navigator.clipboard.writeText(msg).then(() => {
+                    showToast('Copied! Paste into chat to sync.');
+                });
+            } else {
+                showToast('Feedback cleared.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.card').forEach(card => {
+                const id = card.dataset.id;
+                if (!id) return;
+                const state = JSON.parse(localStorage.getItem('xhs_feedback_' + id) || '{"thumb": null, "heart": false}');
+                if (state.thumb === 'up') { let b = card.querySelector('.btn-up'); if (b) b.classList.add('active-up'); }
+                if (state.thumb === 'down') { let b = card.querySelector('.btn-down'); if (b) b.classList.add('active-down'); }
+                if (state.heart) { let b = card.querySelector('.btn-heart'); if (b) b.classList.add('active-heart'); }
+            });
+        });
     </script>
 </body>
 </html>
