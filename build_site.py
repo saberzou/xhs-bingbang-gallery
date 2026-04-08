@@ -88,7 +88,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .card-image-wrapper {{
             position: relative;
             width: 100%;
-            padding-top: 100%;
+            padding-top: 133.33%;
             background: #F4F4F4;
         }}
         .card img {{
@@ -227,7 +227,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 """
 
 CARD_TEMPLATE = """
-        <div class="card">
+        <div class="card" data-id="{date}">
             <div class="card-image-wrapper">
                 <img src="images/{image_filename}" alt="Doodle">
             </div>
@@ -237,6 +237,19 @@ CARD_TEMPLATE = """
                     <span class="pillar-badge">{pillar}</span>
                 </div>
                 <div class="caption">{caption}</div>
+                
+                <div class="feedback-bar">
+                    <button class="btn-feedback btn-up" onclick="toggleFeedback(this, '{date}', 'up')" title="Good Quality">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                    </button>
+                    <button class="btn-feedback btn-down" onclick="toggleFeedback(this, '{date}', 'down')" title="Needs Work">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg>
+                    </button>
+                    <button class="btn-feedback btn-heart" onclick="toggleFeedback(this, '{date}', 'heart')" title="Adopted / Posted">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </button>
+                </div>
+
                 <div class="actions">
                     <button class="btn-copy" onclick="copyText(this, `{escaped_caption}`)">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
