@@ -109,7 +109,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .carousel-slide img {{
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            background: #F4F4F4;
         }}
         .carousel-controls {{
             position: absolute;
@@ -153,6 +154,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }}
         .carousel-container:hover .btn-nav {{
             opacity: 1;
+        }}
+        @media (pointer: coarse) {{
+            .btn-nav {{ display: none; }}
         }}
         .btn-prev {{ left: 12px; }}
         .btn-next {{ right: 12px; }}
@@ -323,6 +327,32 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 }});
             }});
             
+            // Touch/swipe support
+            let startX = 0;
+            let startY = 0;
+            let isDragging = false;
+
+            container.addEventListener('touchstart', (e) => {{
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                isDragging = true;
+            }}, {{ passive: true }});
+
+            container.addEventListener('touchend', (e) => {{
+                if (!isDragging) return;
+                isDragging = false;
+                const dx = e.changedTouches[0].clientX - startX;
+                const dy = e.changedTouches[0].clientY - startY;
+                if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {{
+                    if (dx < 0) {{
+                        currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
+                    }} else {{
+                        currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex;
+                    }}
+                    updateCarousel();
+                }}
+            }}, {{ passive: true }});
+
             // Initial setup
             updateCarousel();
         }});
