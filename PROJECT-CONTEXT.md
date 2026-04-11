@@ -11,16 +11,19 @@ A daily content generation pipeline for Saber's 小红书 account **@BingBang** 
 
 Profile: https://www.xiaohongshu.com/user/profile/63cdd10e00000000260059b0
 
-## Current Status: TESTING
+## Current Status: PRODUCTION (Season 2)
 
-Output quality is being evaluated before adopting as daily workflow. Not yet in production/cron.
+Fully automated daily pipeline running at 8:00 AM CST.
+Output is published to a private GitHub Pages gallery: https://saberzou.github.io/xhs-bingbang-gallery/
+Saber manually saves the image and copies the text from the gallery to post on XHS.
 
 ## What's Built
 
-- `generate.py` — main script, picks pillar by day of week, random theme, generates image via Gemini Imagen (nano-banana), writes caption + metadata
-- `style-guide.md` — visual identity, caption voice, hashtag strategy
-- `themes/theme-bank.md` — 50 themes across 5 pillars
-- `drafts/samples/` — 5 test outputs (one per pillar)
+- `generate.py` — main script, generates 3:4 kawaii-style wallpaper via Gemini Imagen, writes caption + metadata.
+- `build_site.py` — generates a masonry-layout HTML gallery with 1-click Copy/Save buttons.
+- `publish.sh` — cron script (runs daily) that wraps generation, site building, and GitHub pushing.
+- `style-guide.md` — visual identity (thick lines, solid fills, dot faces, ✦ stars) and caption voice (Silent Diary).
+- `themes/theme-bank.md` — Season 2 themes (Anti-anxiety, rest validation, anti-hustle).
 
 ## File Layout
 

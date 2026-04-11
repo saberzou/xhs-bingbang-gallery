@@ -104,7 +104,7 @@ def generate_image(theme: dict, objects_key: str, output_path: Path) -> bool:
             [
                 "python3", str(NANO_BANANA),
                 prompt,
-                "--aspect-ratio", "1:1",
+                "--aspect-ratio", "3:4",
                 "-o", str(output_path),
                 "--json",
             ],

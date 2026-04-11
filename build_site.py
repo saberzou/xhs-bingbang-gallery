@@ -90,7 +90,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .carousel-container {{
             position: relative;
             width: 100%;
-            padding-top: 100%; /* 1:1 Aspect Ratio */
+            padding-top: 133.33%; /* 3:4 Aspect Ratio */
             background: #F4F4F4;
             overflow: hidden;
         }}
@@ -356,7 +356,7 @@ CARD_TEMPLATE = """
                     </button>
                     <a href="images/{first_image_filename}" download="{first_image_filename}" class="btn-download">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save Current
+                        Save
                     </a>
                 </div>
             </div>
@@ -394,6 +394,13 @@ def build():
                 images_to_show = [Path(p) for p in meta["images"].values()]
             elif "image" in meta:
                 images_to_show = [Path(meta["image"])]
+            
+            # Also pick up image_a.png / image_b.png even if metadata is v1
+            if len(images_to_show) <= 1:
+                img_a = folder / "image_a.png"
+                img_b = folder / "image_b.png"
+                if img_a.exists() and img_b.exists():
+                    images_to_show = [img_a, img_b]
         else:
             # Fallback
             caption = caption_file.read_text(encoding='utf-8').strip() if caption_file.exists() else "Test generation."

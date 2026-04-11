@@ -1,0 +1,177 @@
+======================================
+Starting Daily XHS Job: Thu Apr  9 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-09
+🎯 Pillar: 文字涂鸦
+💡 Text: Unsubscribe from the hustle.
+🎨 Objects: "a cute envelope stamping itself with a 'no thanks' seal"
+
+🎨 Generating image in new 3:4 wallpaper style...
+   ❌ Image generation failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-09/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-09/metadata.json
+
+========================================
+📄 Caption:
+"退出盲目的内卷游戏。人生是旷野，不是轨道。"
+
+#极简 #插画 #黑白 #手写 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Thu Apr  9 09:21:59 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-09
+🎯 Pillar: 文字涂鸦
+💡 Text: You are not your productivity.
+🎨 Objects: "a cute sleeping laptop with a cozy blanket over the screen"
+
+🎨 Generating image in new 3:4 wallpaper style...
+   ✅ Saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-09/image.png
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-09/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-09/metadata.json
+
+========================================
+📄 Caption:
+"你的价值，不由今天的产出决定。好好休息也是一种重要任务。"
+
+#极简 #黑白 #插画 #手写 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 79c356d] Auto-generate content for 2026-04-09
+ 5 files changed, 55 insertions(+)
+ create mode 100644 docs/images/2026-04-09_image.png
+ create mode 100644 drafts/2026-04-09/caption.md
+ create mode 100644 drafts/2026-04-09/image.png
+ create mode 100644 drafts/2026-04-09/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   aff3ff0..79c356d  main -> main
+Done: Thu Apr  9 09:22:09 CST 2026
+======================================
+Starting Daily XHS Job: Fri Apr 10 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-10
+🎯 Pillar: 情绪速写
+💡 Text: Be gentle with yourself.
+🎨 Objects: "two cute hands carefully holding a fragile, bandaged heart"
+
+🎨 Generating image in new 3:4 wallpaper style...
+   ❌ Image generation failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-10/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-10/metadata.json
+
+========================================
+📄 Caption:
+"世界给的子弹够多了，不要再做自己的狙击手了。"
+
+#涂鸦 #插画 #黑白 #情绪 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Fri Apr 10 08:00:31 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-10
+🎯 Pillar: 情绪速写
+💡 Text: You survived today. That's a win.
+🎨 Objects: "a tired but smiling battery icon with one bar left"
+
+🎨 Generating image in new 3:4 wallpaper style...
+   ✅ Saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-10/image.png
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-10/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-10/metadata.json
+
+========================================
+📄 Caption:
+"能平安度过今天，本身就是一种胜利。辛苦了，好好睡一觉吧。"
+
+#涂鸦 #极简 #黑白 #日常心情 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main edc96a6] Auto-generate content for 2026-04-10
+ 5 files changed, 55 insertions(+)
+ create mode 100644 docs/images/2026-04-10_image.png
+ create mode 100644 drafts/2026-04-10/caption.md
+ create mode 100644 drafts/2026-04-10/image.png
+ create mode 100644 drafts/2026-04-10/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   79c356d..edc96a6  main -> main
+Done: Fri Apr 10 08:00:42 CST 2026
+======================================
+Starting Daily XHS Job: Sat Apr 11 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-11
+🎯 Pillar: 设计感悟
+💡 Text: Keep going.
+🎨 Objects: a cute little coffee cup with a happy face
+
+🎨 Generating image in new 3:4 wallpaper style...
+   ❌ Image generation failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-11/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-11/metadata.json
+
+========================================
+📄 Caption:
+继续前进吧。
+
+#手绘 #涂鸦 #黑白 #设计师日常 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Sat Apr 11 08:01:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-11
+🎯 Pillar: 设计感悟
+💡 Text: Keep going.
+🎨 Objects: a cute little coffee cup with a happy face
+
+🎨 Generating image in new 3:4 wallpaper style...
+   ✅ Saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-11/image.png
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-11/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-11/metadata.json
+
+========================================
+📄 Caption:
+继续前进吧。
+
+#黑白 #手绘 #涂鸦 #设计师日常 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main ebd03ea] Auto-generate content for 2026-04-11
+ 5 files changed, 55 insertions(+)
+ create mode 100644 docs/images/2026-04-11_image.png
+ create mode 100644 drafts/2026-04-11/caption.md
+ create mode 100644 drafts/2026-04-11/image.png
+ create mode 100644 drafts/2026-04-11/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   edc96a6..ebd03ea  main -> main
+Done: Sat Apr 11 08:01:14 CST 2026
+======================================
+Starting Daily XHS Job: Sat Apr 11 08:01:39 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-11
+🎯 Pillar: 设计感悟
+💡 Text: Keep going.
+🎨 Objects: a cute little coffee cup with a happy face
+
+🎨 Generating image in new 3:4 wallpaper style...
+   ✅ Saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-11/image.png
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-11/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-11/metadata.json
+
+========================================
+📄 Caption:
+继续前进吧。
+
+#插画 #黑白 #手绘 #设计师日常 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 8008d09] Auto-generate content for 2026-04-11
+ 5 files changed, 4 insertions(+), 4 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   ebd03ea..8008d09  main -> main
+Done: Sat Apr 11 08:01:51 CST 2026

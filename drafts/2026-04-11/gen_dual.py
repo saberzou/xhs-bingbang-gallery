@@ -44,7 +44,7 @@ for opt in options:
     prompt = STYLE_BASE.format(subject=opt["subject"])
     print(f"\n🎨 Generating Option {opt['label']}...")
     result = subprocess.run(
-        ["python3", NANO, prompt, "--aspect-ratio", "1:1", "-o", opt["output"], "--json"],
+        ["python3", NANO, prompt, "--aspect-ratio", "3:4", "-o", opt["output"], "--json"],
         capture_output=True, text=True, timeout=120,
     )
     try:
