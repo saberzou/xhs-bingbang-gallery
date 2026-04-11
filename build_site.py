@@ -98,12 +98,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
             height: 100%;
             display: flex;
             transition: transform 0.3s ease-in-out;
         }}
         .carousel-slide {{
-            min-width: 100%;
+            flex: 0 0 100%;
+            width: 100%;
             height: 100%;
         }}
         .carousel-slide img {{
@@ -364,7 +366,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 CARD_TEMPLATE = """
         <div class="card" data-id="{date}">
             <div class="carousel-container">
-                <div class="carousel-track" style="width: {track_width}%;">
+                <div class="carousel-track">
                     {slides}
                 </div>
                 {nav_buttons}
