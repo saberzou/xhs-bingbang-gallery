@@ -6,11 +6,11 @@
     <title>@BingBang Gallery</title>
     <style>
         :root {
-            --bg-color: #F9F8F6; /* Warm paper off-white */
+            --bg-color: #F9F8F6;
             --card-bg: #FFFFFF;
-            --text-main: #2C2C2C; /* Soft black */
+            --text-main: #2C2C2C;
             --text-sub: #8E8E8E;
-            --accent: #E85D45; /* Warm Coral/Orange */
+            --accent: #E85D45;
             --accent-hover: #D14D36;
             --radius: 24px;
             --btn-radius: 100px;
@@ -69,20 +69,78 @@
             transform: translateY(-8px);
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
         }
-        .card-image-wrapper {
+        
+        /* Carousel Styles */
+        .carousel-container {
             position: relative;
             width: 100%;
-            padding-top: 133.33%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
             background: #F4F4F4;
+            overflow: hidden;
         }
-        .card img {
+        .carousel-track {
             position: absolute;
             top: 0;
             left: 0;
+            height: 100%;
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+        }
+        .carousel-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+        .carousel-controls {
+            position: absolute;
+            bottom: 12px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            z-index: 10;
+        }
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .dot.active {
+            background: var(--accent);
+            transform: scale(1.2);
+        }
+        .btn-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .carousel-container:hover .btn-nav {
+            opacity: 1;
+        }
+        .btn-prev { left: 12px; }
+        .btn-next { right: 12px; }
+
         .card-content {
             padding: 28px;
         }
@@ -112,44 +170,6 @@
             margin-bottom: 28px;
             white-space: pre-wrap;
             color: var(--text-main);
-        }
-        .feedback-bar {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-        .btn-feedback {
-            background: #F4F4F4;
-            border: none;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            min-width: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            color: #888;
-            flex: none;
-            padding: 0;
-        }
-        .btn-feedback:hover {
-            background: #EBEBEB;
-            transform: scale(1.05);
-        }
-        .btn-feedback.active-up {
-            background: #E8F5E9;
-            color: #2E7D32;
-        }
-        .btn-feedback.active-down {
-            background: #FFEBEE;
-            color: #C62828;
-        }
-        .btn-feedback.active-heart {
-            background: #FCE4EC;
-            color: #E91E63;
         }
         .actions {
             display: flex;
@@ -214,12 +234,6 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Staggered load */
-        .masonry .card:nth-child(1) { animation-delay: 0.1s; }
-        .masonry .card:nth-child(2) { animation-delay: 0.2s; }
-        .masonry .card:nth-child(3) { animation-delay: 0.3s; }
-        .masonry .card:nth-child(4) { animation-delay: 0.4s; }
-        .masonry .card:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
@@ -232,8 +246,17 @@
     <div class="masonry">
         
         <div class="card" data-id="2026-04-11">
-            <div class="card-image-wrapper">
-                <img src="images/2026-04-11_image.png" alt="Doodle">
+            <div class="carousel-container">
+                <div class="carousel-track" style="width: 100%;">
+                    
+                    <div class="carousel-slide">
+                        <img src="images/2026-04-11_image.png" alt="Doodle">
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    
+                </div>
             </div>
             <div class="card-content">
                 <div class="card-header">
@@ -243,18 +266,6 @@
                 <div class="caption">继续前进吧。
 
 #插画 #黑白 #手绘 #设计师日常 #BingBang</div>
-                
-                <div class="feedback-bar">
-                    <button class="btn-feedback btn-up" onclick="toggleFeedback(this, '2026-04-11', 'up')" title="Good Quality">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-down" onclick="toggleFeedback(this, '2026-04-11', 'down')" title="Needs Work">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-heart" onclick="toggleFeedback(this, '2026-04-11', 'heart')" title="Adopted / Posted">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    </button>
-                </div>
 
                 <div class="actions">
                     <button class="btn-copy" onclick="copyText(this, `继续前进吧。
@@ -265,7 +276,7 @@
                     </button>
                     <a href="images/2026-04-11_image.png" download="2026-04-11_image.png" class="btn-download">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
+                        Save Current
                     </a>
                 </div>
             </div>
@@ -273,8 +284,17 @@
 
 
         <div class="card" data-id="2026-04-10">
-            <div class="card-image-wrapper">
-                <img src="images/2026-04-10_image.png" alt="Doodle">
+            <div class="carousel-container">
+                <div class="carousel-track" style="width: 100%;">
+                    
+                    <div class="carousel-slide">
+                        <img src="images/2026-04-10_image.png" alt="Doodle">
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    
+                </div>
             </div>
             <div class="card-content">
                 <div class="card-header">
@@ -284,18 +304,6 @@
                 <div class="caption">"能平安度过今天，本身就是一种胜利。辛苦了，好好睡一觉吧。"
 
 #涂鸦 #极简 #黑白 #日常心情 #BingBang</div>
-                
-                <div class="feedback-bar">
-                    <button class="btn-feedback btn-up" onclick="toggleFeedback(this, '2026-04-10', 'up')" title="Good Quality">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-down" onclick="toggleFeedback(this, '2026-04-10', 'down')" title="Needs Work">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-heart" onclick="toggleFeedback(this, '2026-04-10', 'heart')" title="Adopted / Posted">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    </button>
-                </div>
 
                 <div class="actions">
                     <button class="btn-copy" onclick="copyText(this, `"能平安度过今天，本身就是一种胜利。辛苦了，好好睡一觉吧。"
@@ -306,7 +314,7 @@
                     </button>
                     <a href="images/2026-04-10_image.png" download="2026-04-10_image.png" class="btn-download">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
+                        Save Current
                     </a>
                 </div>
             </div>
@@ -314,8 +322,17 @@
 
 
         <div class="card" data-id="2026-04-09">
-            <div class="card-image-wrapper">
-                <img src="images/2026-04-09_image.png" alt="Doodle">
+            <div class="carousel-container">
+                <div class="carousel-track" style="width: 100%;">
+                    
+                    <div class="carousel-slide">
+                        <img src="images/2026-04-09_image.png" alt="Doodle">
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    
+                </div>
             </div>
             <div class="card-content">
                 <div class="card-header">
@@ -325,18 +342,6 @@
                 <div class="caption">"你的价值，不由今天的产出决定。好好休息也是一种重要任务。"
 
 #极简 #黑白 #插画 #手写 #BingBang</div>
-                
-                <div class="feedback-bar">
-                    <button class="btn-feedback btn-up" onclick="toggleFeedback(this, '2026-04-09', 'up')" title="Good Quality">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-down" onclick="toggleFeedback(this, '2026-04-09', 'down')" title="Needs Work">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-heart" onclick="toggleFeedback(this, '2026-04-09', 'heart')" title="Adopted / Posted">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    </button>
-                </div>
 
                 <div class="actions">
                     <button class="btn-copy" onclick="copyText(this, `"你的价值，不由今天的产出决定。好好休息也是一种重要任务。"
@@ -347,7 +352,7 @@
                     </button>
                     <a href="images/2026-04-09_image.png" download="2026-04-09_image.png" class="btn-download">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
+                        Save Current
                     </a>
                 </div>
             </div>
@@ -355,8 +360,17 @@
 
 
         <div class="card" data-id="2026-04-08">
-            <div class="card-image-wrapper">
-                <img src="images/2026-04-08_image.png" alt="Doodle">
+            <div class="carousel-container">
+                <div class="carousel-track" style="width: 100%;">
+                    
+                    <div class="carousel-slide">
+                        <img src="images/2026-04-08_image.png" alt="Doodle">
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    
+                </div>
             </div>
             <div class="card-content">
                 <div class="card-header">
@@ -366,18 +380,6 @@
                 <div class="caption">"计划被打乱也没关系，有时候弯路里的风景更美。"
 
 #手绘 #插画 #涂鸦 #创意 #BingBang</div>
-                
-                <div class="feedback-bar">
-                    <button class="btn-feedback btn-up" onclick="toggleFeedback(this, '2026-04-08', 'up')" title="Good Quality">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-down" onclick="toggleFeedback(this, '2026-04-08', 'down')" title="Needs Work">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-heart" onclick="toggleFeedback(this, '2026-04-08', 'heart')" title="Adopted / Posted">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    </button>
-                </div>
 
                 <div class="actions">
                     <button class="btn-copy" onclick="copyText(this, `"计划被打乱也没关系，有时候弯路里的风景更美。"
@@ -388,7 +390,7 @@
                     </button>
                     <a href="images/2026-04-08_image.png" download="2026-04-08_image.png" class="btn-download">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
+                        Save Current
                     </a>
                 </div>
             </div>
@@ -412,43 +414,52 @@
             });
         }
 
-        function toggleFeedback(btn, id, type) {
-            const storageKey = 'xhs_feedback_' + id;
-            let state = JSON.parse(localStorage.getItem(storageKey) || '{"thumb": null, "heart": false}');
-            const container = btn.closest('.feedback-bar');
-            const btnUp = container.querySelector('.btn-up');
-            const btnDown = container.querySelector('.btn-down');
-            const btnHeart = container.querySelector('.btn-heart');
-            if (type === 'up') { state.thumb = state.thumb === 'up' ? null : 'up'; }
-            else if (type === 'down') { state.thumb = state.thumb === 'down' ? null : 'down'; }
-            else if (type === 'heart') { state.heart = !state.heart; }
-            localStorage.setItem(storageKey, JSON.stringify(state));
-            if (btnUp) btnUp.classList.toggle('active-up', state.thumb === 'up');
-            if (btnDown) btnDown.classList.toggle('active-down', state.thumb === 'down');
-            if (btnHeart) btnHeart.classList.toggle('active-heart', state.heart);
-            const emojis = [];
-            if (state.thumb === 'up') emojis.push('👍');
-            if (state.thumb === 'down') emojis.push('👎');
-            if (state.heart) emojis.push('❤️');
-            if (emojis.length > 0) {
-                const msg = '/feedback ' + id + ' ' + emojis.join(' ');
-                navigator.clipboard.writeText(msg).then(() => {
-                    showToast('Copied! Paste into chat to sync.');
-                });
-            } else {
-                showToast('Feedback cleared.');
-            }
-        }
+        // Carousel Logic
+        document.querySelectorAll('.carousel-container').forEach(container => {
+            const track = container.querySelector('.carousel-track');
+            const slides = container.querySelectorAll('.carousel-slide');
+            const dots = container.querySelectorAll('.dot');
+            const btnPrev = container.querySelector('.btn-prev');
+            const btnNext = container.querySelector('.btn-next');
+            const downloadBtn = container.closest('.card').querySelector('.btn-download');
+            
+            if (slides.length <= 1) return;
+            
+            let currentIndex = 0;
+            const maxIndex = slides.length - 1;
 
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.card').forEach(card => {
-                const id = card.dataset.id;
-                if (!id) return;
-                const state = JSON.parse(localStorage.getItem('xhs_feedback_' + id) || '{"thumb": null, "heart": false}');
-                if (state.thumb === 'up') { let b = card.querySelector('.btn-up'); if (b) b.classList.add('active-up'); }
-                if (state.thumb === 'down') { let b = card.querySelector('.btn-down'); if (b) b.classList.add('active-down'); }
-                if (state.heart) { let b = card.querySelector('.btn-heart'); if (b) b.classList.add('active-heart'); }
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === currentIndex);
+                });
+                
+                // Update download link
+                const currentImg = slides[currentIndex].querySelector('img').src;
+                const fileName = currentImg.split('/').pop();
+                downloadBtn.href = currentImg;
+                downloadBtn.download = fileName;
+            }
+
+            if (btnPrev) btnPrev.addEventListener('click', () => {
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex;
+                updateCarousel();
             });
+
+            if (btnNext) btnNext.addEventListener('click', () => {
+                currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = idx;
+                    updateCarousel();
+                });
+            });
+            
+            // Initial setup
+            updateCarousel();
         });
     </script>
 </body>

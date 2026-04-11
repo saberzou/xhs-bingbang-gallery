@@ -22,11 +22,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <title>@BingBang Gallery</title>
     <style>
         :root {{
-            --bg-color: #F9F8F6; /* Warm paper off-white */
+            --bg-color: #F9F8F6;
             --card-bg: #FFFFFF;
-            --text-main: #2C2C2C; /* Soft black */
+            --text-main: #2C2C2C;
             --text-sub: #8E8E8E;
-            --accent: #E85D45; /* Warm Coral/Orange */
+            --accent: #E85D45;
             --accent-hover: #D14D36;
             --radius: 24px;
             --btn-radius: 100px;
@@ -85,20 +85,78 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             transform: translateY(-8px);
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
         }}
-        .card-image-wrapper {{
+        
+        /* Carousel Styles */
+        .carousel-container {{
             position: relative;
             width: 100%;
-            padding-top: 133.33%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
             background: #F4F4F4;
+            overflow: hidden;
         }}
-        .card img {{
+        .carousel-track {{
             position: absolute;
             top: 0;
             left: 0;
+            height: 100%;
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }}
+        .carousel-slide {{
+            min-width: 100%;
+            height: 100%;
+        }}
+        .carousel-slide img {{
             width: 100%;
             height: 100%;
             object-fit: cover;
         }}
+        .carousel-controls {{
+            position: absolute;
+            bottom: 12px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            z-index: 10;
+        }}
+        .dot {{
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.2s;
+        }}
+        .dot.active {{
+            background: var(--accent);
+            transform: scale(1.2);
+        }}
+        .btn-nav {{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }}
+        .carousel-container:hover .btn-nav {{
+            opacity: 1;
+        }}
+        .btn-prev {{ left: 12px; }}
+        .btn-next {{ right: 12px; }}
+
         .card-content {{
             padding: 28px;
         }}
@@ -128,44 +186,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             margin-bottom: 28px;
             white-space: pre-wrap;
             color: var(--text-main);
-        }}
-        .feedback-bar {{
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            margin-bottom: 16px;
-        }}
-        .btn-feedback {{
-            background: #F4F4F4;
-            border: none;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            min-width: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            color: #888;
-            flex: none;
-            padding: 0;
-        }}
-        .btn-feedback:hover {{
-            background: #EBEBEB;
-            transform: scale(1.05);
-        }}
-        .btn-feedback.active-up {{
-            background: #E8F5E9;
-            color: #2E7D32;
-        }}
-        .btn-feedback.active-down {{
-            background: #FFEBEE;
-            color: #C62828;
-        }}
-        .btn-feedback.active-heart {{
-            background: #FCE4EC;
-            color: #E91E63;
         }}
         .actions {{
             display: flex;
@@ -230,12 +250,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             from {{ opacity: 0; transform: translateY(-20px); }}
             to {{ opacity: 1; transform: translateY(0); }}
         }}
-        /* Staggered load */
-        .masonry .card:nth-child(1) {{ animation-delay: 0.1s; }}
-        .masonry .card:nth-child(2) {{ animation-delay: 0.2s; }}
-        .masonry .card:nth-child(3) {{ animation-delay: 0.3s; }}
-        .masonry .card:nth-child(4) {{ animation-delay: 0.4s; }}
-        .masonry .card:nth-child(5) {{ animation-delay: 0.5s; }}
     </style>
 </head>
 <body>
@@ -265,43 +279,52 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             }});
         }}
 
-        function toggleFeedback(btn, id, type) {{
-            const storageKey = 'xhs_feedback_' + id;
-            let state = JSON.parse(localStorage.getItem(storageKey) || '{{"thumb": null, "heart": false}}');
-            const container = btn.closest('.feedback-bar');
-            const btnUp = container.querySelector('.btn-up');
-            const btnDown = container.querySelector('.btn-down');
-            const btnHeart = container.querySelector('.btn-heart');
-            if (type === 'up') {{ state.thumb = state.thumb === 'up' ? null : 'up'; }}
-            else if (type === 'down') {{ state.thumb = state.thumb === 'down' ? null : 'down'; }}
-            else if (type === 'heart') {{ state.heart = !state.heart; }}
-            localStorage.setItem(storageKey, JSON.stringify(state));
-            if (btnUp) btnUp.classList.toggle('active-up', state.thumb === 'up');
-            if (btnDown) btnDown.classList.toggle('active-down', state.thumb === 'down');
-            if (btnHeart) btnHeart.classList.toggle('active-heart', state.heart);
-            const emojis = [];
-            if (state.thumb === 'up') emojis.push('👍');
-            if (state.thumb === 'down') emojis.push('👎');
-            if (state.heart) emojis.push('❤️');
-            if (emojis.length > 0) {{
-                const msg = '/feedback ' + id + ' ' + emojis.join(' ');
-                navigator.clipboard.writeText(msg).then(() => {{
-                    showToast('Copied! Paste into chat to sync.');
-                }});
-            }} else {{
-                showToast('Feedback cleared.');
-            }}
-        }}
+        // Carousel Logic
+        document.querySelectorAll('.carousel-container').forEach(container => {{
+            const track = container.querySelector('.carousel-track');
+            const slides = container.querySelectorAll('.carousel-slide');
+            const dots = container.querySelectorAll('.dot');
+            const btnPrev = container.querySelector('.btn-prev');
+            const btnNext = container.querySelector('.btn-next');
+            const downloadBtn = container.closest('.card').querySelector('.btn-download');
+            
+            if (slides.length <= 1) return;
+            
+            let currentIndex = 0;
+            const maxIndex = slides.length - 1;
 
-        document.addEventListener('DOMContentLoaded', () => {{
-            document.querySelectorAll('.card').forEach(card => {{
-                const id = card.dataset.id;
-                if (!id) return;
-                const state = JSON.parse(localStorage.getItem('xhs_feedback_' + id) || '{{"thumb": null, "heart": false}}');
-                if (state.thumb === 'up') {{ let b = card.querySelector('.btn-up'); if (b) b.classList.add('active-up'); }}
-                if (state.thumb === 'down') {{ let b = card.querySelector('.btn-down'); if (b) b.classList.add('active-down'); }}
-                if (state.heart) {{ let b = card.querySelector('.btn-heart'); if (b) b.classList.add('active-heart'); }}
+            function updateCarousel() {{
+                track.style.transform = `translateX(-${{currentIndex * 100}}%)`;
+                dots.forEach((dot, idx) => {{
+                    dot.classList.toggle('active', idx === currentIndex);
+                }});
+                
+                // Update download link
+                const currentImg = slides[currentIndex].querySelector('img').src;
+                const fileName = currentImg.split('/').pop();
+                downloadBtn.href = currentImg;
+                downloadBtn.download = fileName;
+            }}
+
+            if (btnPrev) btnPrev.addEventListener('click', () => {{
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex;
+                updateCarousel();
             }});
+
+            if (btnNext) btnNext.addEventListener('click', () => {{
+                currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
+                updateCarousel();
+            }});
+
+            dots.forEach((dot, idx) => {{
+                dot.addEventListener('click', () => {{
+                    currentIndex = idx;
+                    updateCarousel();
+                }});
+            }});
+            
+            // Initial setup
+            updateCarousel();
         }});
     </script>
 </body>
@@ -310,8 +333,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 CARD_TEMPLATE = """
         <div class="card" data-id="{date}">
-            <div class="card-image-wrapper">
-                <img src="images/{image_filename}" alt="Doodle">
+            <div class="carousel-container">
+                <div class="carousel-track" style="width: {track_width}%;">
+                    {slides}
+                </div>
+                {nav_buttons}
+                <div class="carousel-controls">
+                    {dots}
+                </div>
             </div>
             <div class="card-content">
                 <div class="card-header">
@@ -319,32 +348,25 @@ CARD_TEMPLATE = """
                     <span class="pillar-badge">{pillar}</span>
                 </div>
                 <div class="caption">{caption}</div>
-                
-                <div class="feedback-bar">
-                    <button class="btn-feedback btn-up" onclick="toggleFeedback(this, '{date}', 'up')" title="Good Quality">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-down" onclick="toggleFeedback(this, '{date}', 'down')" title="Needs Work">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg>
-                    </button>
-                    <button class="btn-feedback btn-heart" onclick="toggleFeedback(this, '{date}', 'heart')" title="Adopted / Posted">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    </button>
-                </div>
 
                 <div class="actions">
                     <button class="btn-copy" onclick="copyText(this, `{escaped_caption}`)">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                         Copy
                     </button>
-                    <a href="images/{image_filename}" download="{image_filename}" class="btn-download">
+                    <a href="images/{first_image_filename}" download="{first_image_filename}" class="btn-download">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
+                        Save Current
                     </a>
                 </div>
             </div>
         </div>
 """
+
+SLIDE_TEMPLATE = """
+                    <div class="carousel-slide">
+                        <img src="images/{image_filename}" alt="Doodle">
+                    </div>"""
 
 def build():
     cards_html = []
@@ -359,33 +381,66 @@ def build():
         meta_file = folder / "metadata.json"
         caption_file = folder / "caption.md"
         
+        images_to_show = []
+        
         if meta_file.exists() and caption_file.exists():
             with open(meta_file, 'r', encoding='utf-8') as f:
                 meta = json.load(f)
             with open(caption_file, 'r', encoding='utf-8') as f:
                 caption = f.read().strip()
-            img_path = Path(meta['image'])
+                
+            # Check for multiple images in metadata (v2 format)
+            if "images" in meta:
+                images_to_show = [Path(p) for p in meta["images"].values()]
+            elif "image" in meta:
+                images_to_show = [Path(meta["image"])]
         else:
-            img_path = None
-            for p in folder.glob("*.png"):
-                img_path = p
-                break
-            if not img_path:
-                continue
+            # Fallback
             caption = caption_file.read_text(encoding='utf-8').strip() if caption_file.exists() else "Test generation."
             meta = {"date": folder.name, "pillar": "测试"}
+            images_to_show = list(folder.glob("*.png"))
 
-        if not img_path or not img_path.exists():
+        # Filter to only existing images
+        images_to_show = [img for img in images_to_show if img.exists()]
+        
+        if not images_to_show:
             continue
 
-        img_filename = f"{folder.name}_{img_path.name}"
-        target_img = IMG_OUTPUT_DIR / img_filename
-        shutil.copy2(img_path, target_img)
+        slides_html = ""
+        dots_html = ""
+        first_img_filename = ""
+        
+        for idx, img_path in enumerate(images_to_show):
+            img_filename = f"{folder.name}_{img_path.name}"
+            if idx == 0:
+                first_img_filename = img_filename
+                
+            target_img = IMG_OUTPUT_DIR / img_filename
+            shutil.copy2(img_path, target_img)
+            
+            slides_html += SLIDE_TEMPLATE.format(image_filename=img_filename)
+            active_class = 'active' if idx == 0 else ''
+            dots_html += f'<div class="dot {active_class}"></div>'
+            
+        track_width = len(images_to_show) * 100
+        
+        nav_buttons = ""
+        if len(images_to_show) > 1:
+            nav_buttons = """
+                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            """
+        else:
+            dots_html = "" # Hide dots if only 1 image
         
         escaped_caption = caption.replace('`', '\\`').replace('$', '\\$')
         
         card = CARD_TEMPLATE.format(
-            image_filename=img_filename,
+            track_width=track_width,
+            slides=slides_html,
+            nav_buttons=nav_buttons,
+            dots=dots_html,
+            first_image_filename=first_img_filename,
             date=meta['date'],
             pillar=meta.get('pillar', 'Generated'),
             caption=caption,

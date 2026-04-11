@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-XHS Daily Content Generator for @BingBang
-Generates a cute B&W doodle with English text + Chinese caption.
-Output: drafts/YYYY-MM-DD/ with image.png, caption.md, metadata.json
+XHS Daily Content Generator for @BingBang (v2 — Dual Metaphor)
+Generates TWO contrasting doodles per quote + Chinese caption.
+Output: drafts/YYYY-MM-DD/ with image_a.png, image_b.png, caption.md, metadata.json
 """
 
 import json
@@ -23,52 +23,50 @@ NANO_BANANA = Path.home() / ".openclaw/workspace-axel/skills/nano-banana/generat
 # Content pillars — rotate by day of week
 PILLARS = ["设计感悟", "生活碎片", "创意灵感", "文字涂鸦", "情绪速写", "设计感悟", "生活碎片"]
 
-# Base prompt template for the new style
-STYLE_PROMPT = """A cute, imperfect hand-drawn black and white marker sketch on a pure white background. 
-Style: Looks like it was genuinely doodled in a sketchbook with a thick black Sharpie pen. Organic, slightly wobbly lines, charming imperfections, not perfectly straight or vector-like. Bold outlines and solid ink scribbled fills.
-Must include exactly 4 floating 4-pointed diamond sparkle stars (✦) with hand-drawn, slightly uneven edges.
-The objects should be clustered in the center, floating, not grounded. No background elements. No gray tones, strictly black and white ink.
-Draw these specific objects: {objects}.
-At the very bottom, centered in an imperfect, organic hand-lettered italic font, write exactly this text: "{text}"
+# Base prompt template
+STYLE_PROMPT = """A minimalist hand-drawn doodle illustration in black ink on a pure white background. The style is indie-comic/bullet-journal kawaii-inspired with thick, uniform, slightly wobbly outlines (mimicking a felt-tip fineliner or marker). 
+The subject is {objects}, anthropomorphized with a simple face consisting of two tiny dot eyes and a small curved smile (or closed downward 'v' eyes).
+Use high-contrast solid black for small accents (like leaves, UI icons, or tiny pin-prick eyes) and hollow outlines for the rest.
+Must include exactly 4 or 5 floating 4-pointed hollow diamond sparkles (✦) and tiny floating bubbles to fill negative space.
+Centralized floating composition with heavy use of negative space. No background grounding lines.
+At the very bottom, separated by a clear margin of white space, hand-lettered bold all-caps sans-serif typography with rounded terminals that reads exactly: "{text}"
 """
 
 def parse_theme_bank():
-    """Parse the new theme-bank.md format."""
+    """Parse theme-bank.md format. Supports objects + objects_alt fields."""
     themes = {}
     current_pillar = None
-    
+
     content = THEMES_FILE.read_text(encoding="utf-8")
     lines = content.split('\n')
-    
+
     current_theme = {}
-    
+
     for line in lines:
         if line.startswith('## '):
-            # Extract pillar name before any parentheses
             pillar_match = re.match(r'## ([^\(]+)', line)
             if pillar_match:
                 current_pillar = pillar_match.group(1).strip()
                 themes[current_pillar] = []
         elif line.strip() and current_pillar:
-            # Parse theme blocks
-            if re.match(r'^\d+\.', line) or line.startswith('   '):
-                line = line.strip()
-                if line.startswith(str(len(themes[current_pillar])+1) + '.') or ('text:' in line and not current_theme):
-                    if current_theme:
-                        themes[current_pillar].append(current_theme)
-                        current_theme = {}
-                
-                if 'text:' in line:
-                    current_theme['text'] = line.split('text:')[1].strip().strip('"')
-                elif 'objects:' in line:
-                    current_theme['objects'] = line.split('objects:')[1].strip()
-                elif 'caption:' in line:
-                    current_theme['caption'] = line.split('caption:')[1].strip()
-    
-    # Don't forget the last theme
+            line = line.strip()
+            if re.match(r'^\d+\.', line):
+                if current_theme:
+                    themes[current_pillar].append(current_theme)
+                    current_theme = {}
+
+            if 'text:' in line and 'objects' not in line:
+                current_theme['text'] = line.split('text:')[1].strip().strip('"')
+            elif 'objects_alt:' in line:
+                current_theme['objects_alt'] = line.split('objects_alt:')[1].strip().strip('"')
+            elif 'objects:' in line:
+                current_theme['objects'] = line.split('objects:')[1].strip().strip('"')
+            elif 'caption:' in line:
+                current_theme['caption'] = line.split('caption:')[1].strip().strip('"')
+
     if current_theme and current_pillar:
         themes[current_pillar].append(current_theme)
-        
+
     return themes
 
 # Core hashtags
@@ -85,18 +83,19 @@ def pick_theme(themes_data, pillar: str) -> dict:
     """Pick a random theme from the given pillar."""
     themes = themes_data.get(pillar, themes_data.get("生活碎片", []))
     if not themes:
-        # Fallback if parsing fails
         return {
             "text": "Keep going.",
             "objects": "a cute little coffee cup with a happy face",
+            "objects_alt": "a tiny wind-up toy robot marching forward with determination",
             "caption": "继续前进吧。"
         }
     return random.choice(themes)
 
-def generate_image(theme: dict, output_path: Path) -> bool:
-    """Generate image using nano-banana."""
+def generate_image(theme: dict, objects_key: str, output_path: Path) -> bool:
+    """Generate image using nano-banana for a specific objects variant."""
+    objects = theme.get(objects_key, theme.get("objects", "cute shapes"))
     prompt = STYLE_PROMPT.format(
-        objects=theme.get("objects", "cute shapes"),
+        objects=objects,
         text=theme.get("text", "")
     )
 
@@ -120,49 +119,47 @@ def generate_image(theme: dict, output_path: Path) -> bool:
 def generate_caption(theme: dict, pillar: str) -> str:
     """Generate XHS caption from theme."""
     base_caption = theme.get("caption", "")
-
-    # Pick hashtags
     tags = random.sample(CORE_TAGS, 3) + random.sample(PILLAR_TAGS.get(pillar, ["#涂鸦"]), 1)
     tags.append("#BingBang")
     tag_line = " ".join(tags)
-
-    caption = f"{base_caption}\n\n{tag_line}"
-    return caption
+    return f"{base_caption}\n\n{tag_line}"
 
 def main():
     today = datetime.now().strftime("%Y-%m-%d")
-    day_of_week = datetime.now().weekday()  # 0=Monday
+    day_of_week = datetime.now().weekday()
 
     themes_data = parse_theme_bank()
-    
-    # Pick pillar based on day
     pillar = PILLARS[day_of_week]
-
-    # Pick theme
     theme = pick_theme(themes_data, pillar)
 
-    # Create output directory
     output_dir = DRAFTS_DIR / today
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"📅 Date: {today}")
     print(f"🎯 Pillar: {pillar}")
     print(f"💡 Text: {theme.get('text')}")
-    print(f"🎨 Objects: {theme.get('objects')}")
+    print(f"🎨 Option A: {theme.get('objects')}")
+    print(f"🎨 Option B: {theme.get('objects_alt', '(no alt — using same)')}")
     print()
 
-    # Generate image
-    image_path = output_dir / "image.png"
-    print("🎨 Generating image in new 1:1 cute sticker style...")
-    success = generate_image(theme, image_path)
-    if success:
-        print(f"   ✅ Saved to {image_path}")
+    # Generate Option A
+    image_a = output_dir / "image_a.png"
+    print("🎨 Generating Option A...")
+    success_a = generate_image(theme, "objects", image_a)
+    print(f"   {'✅' if success_a else '❌'} Option A {'saved' if success_a else 'failed'}")
+
+    # Generate Option B
+    image_b = output_dir / "image_b.png"
+    print("🎨 Generating Option B...")
+    if theme.get("objects_alt"):
+        success_b = generate_image(theme, "objects_alt", image_b)
     else:
-        print("   ❌ Image generation failed")
+        # Fallback: use same objects (shouldn't happen once theme bank is updated)
+        success_b = generate_image(theme, "objects", image_b)
+    print(f"   {'✅' if success_b else '❌'} Option B {'saved' if success_b else 'failed'}")
 
     # Generate caption
     caption = generate_caption(theme, pillar)
-
     caption_path = output_dir / "caption.md"
     caption_path.write_text(f"{caption}\n", encoding="utf-8")
     print(f"📝 Caption saved to {caption_path}")
@@ -172,7 +169,12 @@ def main():
         "date": today,
         "pillar": pillar,
         "theme": theme,
-        "image": str(image_path),
+        "images": {
+            "a": str(image_a),
+            "b": str(image_b),
+        },
+        # Keep backward compat
+        "image": str(image_a),
         "generated_at": datetime.now().isoformat(),
     }
     meta_path = output_dir / "metadata.json"
@@ -184,7 +186,7 @@ def main():
     print(f"📄 Caption:\n{caption}")
     print("=" * 40)
 
-    return 0 if success else 1
+    return 0 if (success_a and success_b) else 1
 
 if __name__ == "__main__":
     sys.exit(main())
