@@ -1,0 +1,16 @@
+{
+  "date": "2026-04-15",
+  "pillar": "创意灵感",
+  "theme": {
+    "text": "Small is still something.",
+    "objects": "a tiny cute pebble casting a surprisingly nice shadow",
+    "objects_alt": "a tiny match that just lit a candle, looking proudly at the flame it started",
+    "caption": "微小的进步也是进步。今天只要没倒退，就已经很棒了。"
+  },
+  "images": {
+    "a": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-15/image_a.png",
+    "b": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-15/image_b.png"
+  },
+  "image": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-15/image_a.png",
+  "generated_at": "2026-04-15T08:01:00.901098"
+}
