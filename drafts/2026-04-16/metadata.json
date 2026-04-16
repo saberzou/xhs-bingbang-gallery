@@ -1,0 +1,16 @@
+{
+  "date": "2026-04-16",
+  "pillar": "文字涂鸦",
+  "theme": {
+    "text": "You are not your productivity.",
+    "objects": "a cute sleeping laptop with a cozy blanket over the screen",
+    "objects_alt": "a tiny robot taking off its work helmet and sighing with relief",
+    "caption": "你的价值，不由今天的产出决定。好好休息也是一种重要任务。"
+  },
+  "images": {
+    "a": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-16/image_a.png",
+    "b": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-16/image_b.png"
+  },
+  "image": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-16/image_a.png",
+  "generated_at": "2026-04-16T08:00:59.280632"
+}
