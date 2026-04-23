@@ -1,0 +1,16 @@
+{
+  "date": "2026-04-23",
+  "pillar": "文字涂鸦",
+  "theme": {
+    "text": "It's okay to log off.",
+    "objects": "a cute disconnected plug and socket sleeping next to each other",
+    "objects_alt": "a tiny Wi-Fi icon with its bars turned off, looking peacefully asleep",
+    "caption": "世界不会因为你休息一天就崩塌。今天先放过自己吧。"
+  },
+  "images": {
+    "a": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-23/image_a.png",
+    "b": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-23/image_b.png"
+  },
+  "image": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-23/image_a.png",
+  "generated_at": "2026-04-23T08:00:56.977320"
+}
