@@ -1,0 +1,16 @@
+{
+  "date": "2026-04-24",
+  "pillar": "情绪速写",
+  "theme": {
+    "text": "Let them misunderstand you.",
+    "objects": "a cute cactus wearing sunglasses, unbothered",
+    "objects_alt": "a tiny character with noise-cancelling headphones on, reading a book, totally unbothered by chaos around them",
+    "caption": "解释太累了。懂你的人自然懂，不懂的人随他去吧。"
+  },
+  "images": {
+    "a": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-24/image_a.png",
+    "b": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-24/image_b.png"
+  },
+  "image": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-24/image_a.png",
+  "generated_at": "2026-04-24T08:00:58.535896"
+}
