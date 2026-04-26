@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-XHS Daily Content Generator for @BingBang (v2 — Dual Metaphor)
-Generates TWO contrasting doodles per quote + Chinese caption.
-Output: drafts/YYYY-MM-DD/ with image_a.png, image_b.png, caption.md, metadata.json
+XHS Daily Content Generator for @BingBang — Sage & Andy Edition
+Generates one doodle per day featuring Sage (bear) and/or Andy (cat).
+Output: drafts/YYYY-MM-DD/ with image.png, caption.md, metadata.json
 """
 
 import json
@@ -10,101 +10,91 @@ import os
 import random
 import subprocess
 import sys
-import re
 from datetime import datetime
 from pathlib import Path
 
-# Paths
 SCRIPT_DIR = Path(__file__).parent
 DRAFTS_DIR = SCRIPT_DIR / "drafts"
-THEMES_FILE = SCRIPT_DIR / "themes" / "theme-bank.md"
 NANO_BANANA = Path.home() / ".openclaw/workspace-axel/skills/nano-banana/generate_image.py"
 
-# Content pillars — rotate by day of week
-PILLARS = ["设计感悟", "生活碎片", "创意灵感", "文字涂鸦", "情绪速写", "设计感悟", "生活碎片"]
+# --- Character Definitions ---
 
-# Base prompt template
-STYLE_PROMPT = """A minimalist hand-drawn doodle illustration in black ink on a pure white background. The style is indie-comic/bullet-journal kawaii-inspired with thick, uniform, slightly wobbly outlines (mimicking a felt-tip fineliner or marker). 
-The subject is {objects}, anthropomorphized with a simple face consisting of two tiny dot eyes and a small curved smile (or closed downward 'v' eyes).
-Use high-contrast solid black for small accents (like leaves, UI icons, or tiny pin-prick eyes) and hollow outlines for the rest.
-Must include exactly 4 or 5 floating 4-pointed hollow diamond sparkles (✦) and tiny floating bubbles to fill negative space.
-Centralized floating composition with heavy use of negative space. No background grounding lines.
-At the very bottom, separated by a clear margin of white space, hand-lettered bold all-caps sans-serif typography with rounded terminals that reads exactly: "{text}"
-"""
+SAGE_DESC = """a bear character called Sage with a large rounded-rectangle head (wider than tall, flat top/bottom with soft radiused corners), two small semi-circular ear nubs on the outer top corners, two tiny solid black dot eyes set far apart near the outer edges, a minimalist nose-mouth shaped like a tiny "I" (horizontal dash nose, short vertical line, horizontal dash mouth) centered between eyes. Squat chibi body roughly same height as head, short tubular limbs with rounded nub hands, wearing a plain white t-shirt with a small solid black heart on chest and loose trousers bunching at ankles over simple rounded shoes"""
 
-def parse_theme_bank():
-    """Parse theme-bank.md format. Supports objects + objects_alt fields."""
-    themes = {}
-    current_pillar = None
+ANDY_DESC = """a cat character called Andy with an identical rounded-rectangle head to Sage, three thick vertical parallel black stripes centered on the forehead, small slightly pointed triangular ears on top corners, identical tiny black dot eyes set wide apart, identical minimalist "I" shaped nose-mouth. Same squat chibi proportions as Sage, wearing a black t-shirt with a small solid black diamond icon and simple pants with rounded shoes"""
 
-    content = THEMES_FILE.read_text(encoding="utf-8")
-    lines = content.split('\n')
+STYLE_BASE = """Clean digital monolinear ink illustration on pure white background. Constant line thickness throughout (no tapering or pressure sensitivity). Flat 2D perspective, no shading. Extremely high use of negative space. A single simple horizontal line represents the ground. Characters centered in frame. Simplified props (maximum 1-2 objects). Optional: a few four-pointed diamond sparkles (✦) or short parallel motion lines. Hand-drawn minimalist sans-serif text at the very bottom in all-caps with rounded terminals reading exactly: "{text}" """
 
-    current_theme = {}
+# --- Content Scenes ---
+# Each scene has: cast (both/sage/andy), text, caption, scene description
+SCENES = [
+    # Everyday Life
+    {"cast": "both", "text": "COFFEE FIRST", "caption": "先来杯咖啡。", "scene": "standing side by side each holding a tiny coffee cup, steam rising"},
+    {"cast": "both", "text": "CLEANING LIFTS THE SPIRIT", "caption": "打扫完心情也亮了。", "scene": "Sage sweeping with a tiny broom while Andy wipes a window, sparkles around them"},
+    {"cast": "sage", "text": "SLOW MORNING", "caption": "慢慢来的早晨。", "scene": "sitting on the ground holding a warm mug with both hands, eyes peacefully closed (curved lines), tiny steam swirls"},
+    {"cast": "andy", "text": "JUST LOOKING", "caption": "就看看而已。", "scene": "standing on tiptoes peering into a tiny fishbowl with a small fish inside"},
+    {"cast": "both", "text": "GROCERIES", "caption": "买菜也是一种仪式感。", "scene": "walking together carrying a paper grocery bag between them, a carrot and baguette sticking out"},
+    {"cast": "both", "text": "LAUNDRY DAY", "caption": "晾衣服的下午。", "scene": "hanging tiny shirts on a clothesline, a small basket on the ground"},
+    {"cast": "sage", "text": "NAPPING", "caption": "午睡是正经事。", "scene": "curled up sleeping on a tiny cushion, three Z letters floating above"},
+    {"cast": "andy", "text": "WINDOW SEAT", "caption": "窗边发呆时间。", "scene": "sitting on a windowsill looking outside, chin resting on one hand"},
 
-    for line in lines:
-        if line.startswith('## '):
-            pillar_match = re.match(r'## ([^\(]+)', line)
-            if pillar_match:
-                current_pillar = pillar_match.group(1).strip()
-                themes[current_pillar] = []
-        elif line.strip() and current_pillar:
-            line = line.strip()
-            if re.match(r'^\d+\.', line):
-                if current_theme:
-                    themes[current_pillar].append(current_theme)
-                    current_theme = {}
+    # Growth & Emotion
+    {"cast": "andy", "text": "IT'S OKAY", "caption": "没关系的。", "scene": "sitting alone hugging knees with a small rain cloud above, but a tiny smile"},
+    {"cast": "both", "text": "ONE STEP AT A TIME", "caption": "一步一步来。", "scene": "climbing a simple staircase together, Sage one step ahead reaching back toward Andy"},
+    {"cast": "sage", "text": "TRUST YOUR GUT", "caption": "相信直觉。", "scene": "standing confidently with arms crossed, eyes as small determined dots"},
+    {"cast": "andy", "text": "STILL LEARNING", "caption": "还在学。", "scene": "sitting at a tiny desk with an open book, a small question mark floating above"},
+    {"cast": "both", "text": "YOUR PACE IS THE RIGHT PACE", "caption": "你的节奏就是对的。", "scene": "walking together but at slightly different strides, both looking content"},
+    {"cast": "andy", "text": "BRAVE TODAY", "caption": "今天也要勇敢。", "scene": "standing in front of a closed door, one hand reaching for the doorknob, taking a breath"},
+    {"cast": "sage", "text": "BREATHE", "caption": "深呼吸。", "scene": "standing with eyes closed and arms slightly out, tiny lines radiating outward like calm energy"},
 
-            if 'text:' in line and 'objects' not in line:
-                current_theme['text'] = line.split('text:')[1].strip().strip('"')
-            elif 'objects_alt:' in line:
-                current_theme['objects_alt'] = line.split('objects_alt:')[1].strip().strip('"')
-            elif 'objects:' in line:
-                current_theme['objects'] = line.split('objects:')[1].strip().strip('"')
-            elif 'caption:' in line:
-                current_theme['caption'] = line.split('caption:')[1].strip().strip('"')
+    # Relationship Moments
+    {"cast": "both", "text": "STILL HERE", "caption": "我还在。", "scene": "sitting back to back on the ground, leaning on each other, eyes peaceful"},
+    {"cast": "both", "text": "NO WORDS NEEDED", "caption": "不用说话也可以。", "scene": "sitting side by side on a bench looking at nothing in particular, comfortable silence"},
+    {"cast": "both", "text": "SHARE", "caption": "分你一半。", "scene": "Sage breaking a cookie in half and handing one piece to Andy"},
+    {"cast": "both", "text": "UMBRELLA", "caption": "有伞一起撑。", "scene": "standing close under one small umbrella, tiny rain lines falling around them"},
+    {"cast": "both", "text": "GOOD NIGHT", "caption": "晚安。", "scene": "lying in two tiny beds side by side, a crescent moon and star above"},
+    {"cast": "both", "text": "HIGH FIVE", "caption": "击个掌！", "scene": "jumping up to high-five each other, motion lines and sparkles at the point of contact"},
 
-    if current_theme and current_pillar:
-        themes[current_pillar].append(current_theme)
+    # Metaphorical Scenes
+    {"cast": "both", "text": "GROW TOGETHER", "caption": "一起成长。", "scene": "each watering a small plant in a pot, the plants leaning toward each other"},
+    {"cast": "sage", "text": "CARRY ON", "caption": "继续走。", "scene": "walking forward carrying a small bindle stick over shoulder, looking ahead"},
+    {"cast": "andy", "text": "BLOOM", "caption": "会开花的。", "scene": "holding a tiny pot with a single flower just beginning to bloom, looking at it with wonder"},
+    {"cast": "both", "text": "PAPER BOATS", "caption": "放一只纸船。", "scene": "crouching by a simple wavy line (water), placing paper boats on the surface"},
+    {"cast": "both", "text": "STARGAZING", "caption": "看星星的夜晚。", "scene": "lying on the ground looking up, a few simple stars and one shooting star above"},
+    {"cast": "sage", "text": "LIGHTHOUSE", "caption": "做自己的灯塔。", "scene": "standing on a tiny hill next to a simple lighthouse, looking out calmly"},
+    {"cast": "andy", "text": "BUTTERFLY", "caption": "蝴蝶停了一下。", "scene": "standing still with a tiny butterfly landed on one outstretched hand, looking at it gently"},
+    {"cast": "both", "text": "KITE", "caption": "放风筝的日子。", "scene": "one holding a kite string while the other watches, a simple diamond kite in the sky with a curvy tail"},
+]
 
-    return themes
-
-# Core hashtags
 CORE_TAGS = ["#手绘", "#涂鸦", "#黑白", "#极简", "#插画"]
-PILLAR_TAGS = {
-    "设计感悟": ["#设计师日常", "#设计灵感", "#设计思考"],
-    "生活碎片": ["#生活感悟", "#日常", "#生活碎片"],
-    "创意灵感": ["#创意", "#灵感", "#脑洞"],
-    "文字涂鸦": ["#文字控", "#手写", "#英文字体"],
-    "情绪速写": ["#情绪", "#打工人", "#日常心情"],
-}
+EXTRA_TAGS = ["#BingBang", "#Sage和Andy", "#日常", "#治愈", "#生活感悟"]
 
-def pick_theme(themes_data, pillar: str) -> dict:
-    """Pick a random theme from the given pillar."""
-    themes = themes_data.get(pillar, themes_data.get("生活碎片", []))
-    if not themes:
-        return {
-            "text": "Keep going.",
-            "objects": "a cute little coffee cup with a happy face",
-            "objects_alt": "a tiny wind-up toy robot marching forward with determination",
-            "caption": "继续前进吧。"
-        }
-    return random.choice(themes)
 
-def generate_image(theme: dict, objects_key: str, output_path: Path) -> bool:
-    """Generate image using nano-banana for a specific objects variant."""
-    objects = theme.get(objects_key, theme.get("objects", "cute shapes"))
-    prompt = STYLE_PROMPT.format(
-        objects=objects,
-        text=theme.get("text", "")
-    )
+def build_prompt(scene: dict) -> str:
+    """Build the full image generation prompt."""
+    cast = scene["cast"]
+    if cast == "both":
+        char_desc = f"{SAGE_DESC}; and {ANDY_DESC}"
+    elif cast == "sage":
+        char_desc = SAGE_DESC
+    else:
+        char_desc = ANDY_DESC
 
+    scene_desc = scene["scene"]
+    text = scene["text"]
+
+    prompt = f"{STYLE_BASE.format(text=text)}\n\nCharacter(s): {char_desc}\n\nScene: {scene_desc}"
+    return prompt
+
+
+def generate_image(prompt: str, output_path: Path) -> bool:
+    """Generate image using nano-banana."""
     try:
         result = subprocess.run(
             [
                 "python3", str(NANO_BANANA),
                 prompt,
-                "--aspect-ratio", "3:4",
+                "--aspect-ratio", "1:1",
                 "-o", str(output_path),
                 "--json",
             ],
@@ -116,77 +106,53 @@ def generate_image(theme: dict, objects_key: str, output_path: Path) -> bool:
         print(f"Image generation failed: {e}", file=sys.stderr)
         return False
 
-def generate_caption(theme: dict, pillar: str) -> str:
-    """Generate XHS caption from theme."""
-    base_caption = theme.get("caption", "")
-    tags = random.sample(CORE_TAGS, 3) + random.sample(PILLAR_TAGS.get(pillar, ["#涂鸦"]), 1)
-    tags.append("#BingBang")
-    tag_line = " ".join(tags)
-    return f"{base_caption}\n\n{tag_line}"
 
 def main():
     today = datetime.now().strftime("%Y-%m-%d")
-    day_of_week = datetime.now().weekday()
 
-    themes_data = parse_theme_bank()
-    pillar = PILLARS[day_of_week]
-    theme = pick_theme(themes_data, pillar)
+    # Pick a random scene
+    scene = random.choice(SCENES)
 
     output_dir = DRAFTS_DIR / today
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"📅 Date: {today}")
-    print(f"🎯 Pillar: {pillar}")
-    print(f"💡 Text: {theme.get('text')}")
-    print(f"🎨 Option A: {theme.get('objects')}")
-    print(f"🎨 Option B: {theme.get('objects_alt', '(no alt — using same)')}")
+    print(f"🎭 Cast: {scene['cast']}")
+    print(f"💬 Text: {scene['text']}")
+    print(f"🎨 Scene: {scene['scene']}")
     print()
 
-    # Generate Option A
-    image_a = output_dir / "image_a.png"
-    print("🎨 Generating Option A...")
-    success_a = generate_image(theme, "objects", image_a)
-    print(f"   {'✅' if success_a else '❌'} Option A {'saved' if success_a else 'failed'}")
+    # Generate image
+    image_path = output_dir / "image.png"
+    print("🎨 Generating doodle...")
+    success = generate_image(build_prompt(scene), image_path)
+    print(f"   {'✅' if success else '❌'} {'Saved' if success else 'Failed'}")
 
-    # Generate Option B
-    image_b = output_dir / "image_b.png"
-    print("🎨 Generating Option B...")
-    if theme.get("objects_alt"):
-        success_b = generate_image(theme, "objects_alt", image_b)
-    else:
-        # Fallback: use same objects (shouldn't happen once theme bank is updated)
-        success_b = generate_image(theme, "objects", image_b)
-    print(f"   {'✅' if success_b else '❌'} Option B {'saved' if success_b else 'failed'}")
-
-    # Generate caption
-    caption = generate_caption(theme, pillar)
+    # Caption
+    tags = random.sample(CORE_TAGS, 3) + random.sample(EXTRA_TAGS, 2)
+    caption = f"{scene['caption']}\n\n{' '.join(tags)}"
     caption_path = output_dir / "caption.md"
     caption_path.write_text(f"{caption}\n", encoding="utf-8")
-    print(f"📝 Caption saved to {caption_path}")
+    print(f"📝 Caption saved")
 
-    # Save metadata
+    # Metadata
     metadata = {
         "date": today,
-        "pillar": pillar,
-        "theme": theme,
-        "images": {
-            "a": str(image_a),
-            "b": str(image_b),
-        },
-        # Keep backward compat
-        "image": str(image_a),
+        "cast": scene["cast"],
+        "text": scene["text"],
+        "scene": scene["scene"],
+        "image": str(image_path),
         "generated_at": datetime.now().isoformat(),
     }
     meta_path = output_dir / "metadata.json"
     meta_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"📋 Metadata saved to {meta_path}")
+    print(f"📋 Metadata saved")
 
     print()
-    print("=" * 40)
     print(f"📄 Caption:\n{caption}")
-    print("=" * 40)
 
-    return 0 if (success_a and success_b) else 1
+    return 0 if success else 1
+
 
 if __name__ == "__main__":
     sys.exit(main())
