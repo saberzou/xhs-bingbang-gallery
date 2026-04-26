@@ -26,7 +26,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             --text: #333;
             --text-sub: #999;
             --accent: #FF2442;
-            --gap: 16px;
+            --gap: 24px;
             --radius: 6px;
         }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -55,7 +55,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             grid-template-columns: repeat(2, 1fr);
             gap: var(--gap);
             padding: 0 var(--gap) var(--gap);
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }}
         @media (min-width: 640px) {{ .grid {{ grid-template-columns: repeat(3, 1fr); }} }}
