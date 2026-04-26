@@ -70,6 +70,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border-radius: var(--radius);
             overflow: hidden;
             background: #f5f5f5;
+            border: 1px solid rgba(0,0,0,0.06);
         }}
         .item-img img {{
             display: block;
