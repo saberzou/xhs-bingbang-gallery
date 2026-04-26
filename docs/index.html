@@ -6,1156 +6,593 @@
     <title>@BingBang Gallery</title>
     <style>
         :root {
-            --bg-color: #F9F8F6;
-            --card-bg: #FFFFFF;
-            --text-main: #2C2C2C;
-            --text-sub: #8E8E8E;
-            --accent: #E85D45;
-            --accent-hover: #D14D36;
-            --radius: 24px;
-            --btn-radius: 100px;
+            --bg: #FFFFFF;
+            --text: #333;
+            --text-sub: #999;
+            --accent: #FF2442;
+            --gap: 6px;
+            --radius: 6px;
         }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 60px 24px;
-            color: var(--text-main);
+            background: var(--bg);
+            color: var(--text);
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
         header {
+            padding: 28px 16px 20px;
             text-align: center;
-            margin-bottom: 80px;
-            animation: fadeInDown 0.8s ease-out;
         }
         header h1 {
-            margin: 0;
-            font-size: 36px;
+            font-size: 20px;
             font-weight: 700;
-            letter-spacing: -0.8px;
-            color: var(--text-main);
+            letter-spacing: -0.5px;
         }
         header p {
             color: var(--text-sub);
-            font-size: 16px;
-            margin-top: 16px;
-            font-weight: 400;
+            font-size: 12px;
+            margin-top: 4px;
         }
-        .masonry {
-            columns: 1;
-            column-gap: 24px;
-            max-width: 1400px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--gap);
+            padding: 0 var(--gap) var(--gap);
+            max-width: 1200px;
             margin: 0 auto;
         }
-        @media (min-width: 640px) { .masonry { columns: 2; } }
-        @media (min-width: 960px) { .masonry { columns: 3; } }
-        @media (min-width: 1280px) { .masonry { columns: 4; } }
-        
-        .card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            margin-bottom: 24px;
-            break-inside: avoid;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-            overflow: hidden;
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            display: flex;
-            flex-direction: column;
-            animation: fadeInUp 0.8s ease-out backwards;
-            border: 1px solid rgba(0,0,0,0.02);
+        @media (min-width: 640px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 960px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+        @media (min-width: 1280px) { .grid { grid-template-columns: repeat(5, 1fr); } }
+        .item {
+            cursor: pointer;
         }
-        .card:hover {
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-        }
-        
-        /* Carousel Styles */
-        .carousel-container {
+        .item-img {
             position: relative;
             width: 100%;
-            padding-top: 100%; /* 1:1 Aspect Ratio */
-            background: #F4F4F4;
+            border-radius: var(--radius);
             overflow: hidden;
+            background: #f5f5f5;
         }
-        .carousel-track {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .item-img img {
+            display: block;
             width: 100%;
-            height: 100%;
-            display: flex;
-            transition: transform 0.3s ease-in-out;
-        }
-        .carousel-slide {
-            flex: 0 0 100%;
-            width: 100%;
-            height: 100%;
-        }
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
+            aspect-ratio: 1;
             object-fit: cover;
         }
-        .carousel-controls {
+        .item-img .multi-badge {
             position: absolute;
-            bottom: 12px;
-            left: 0;
-            width: 100%;
+            top: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .item-info {
+            padding: 6px 2px 14px;
+        }
+        .item-title {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .item-meta {
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 4px;
+            font-size: 10px;
+            color: var(--text-sub);
+        }
+        .item-author {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(0,0,0,0.92);
+            align-items: center;
             justify-content: center;
-            gap: 6px;
-            z-index: 10;
+            flex-direction: column;
         }
-        .dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: rgba(0,0,0,0.2);
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 70vh;
+            border-radius: 8px;
+        }
+        .lightbox-caption {
+            color: #fff;
+            font-size: 14px;
+            margin-top: 16px;
+            max-width: 480px;
+            text-align: center;
+            line-height: 1.6;
+            padding: 0 20px;
+            white-space: pre-wrap;
+        }
+        .lightbox-actions {
+            margin-top: 16px;
+            display: flex;
+            gap: 12px;
+        }
+        .lightbox-actions button, .lightbox-actions a {
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 13px;
             cursor: pointer;
-            transition: all 0.2s;
+            text-decoration: none;
         }
-        .dot.active {
-            background: var(--accent);
-            transform: scale(1.2);
+        .lightbox-actions button:hover, .lightbox-actions a:hover { background: rgba(255,255,255,0.25); }
+        .lightbox-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
         }
-        .btn-nav {
+        .lightbox-nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.8);
+            background: rgba(255,255,255,0.15);
             border: none;
+            color: #fff;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 18px;
             cursor: pointer;
-            z-index: 10;
-            opacity: 0;
-            transition: opacity 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .carousel-container:hover .btn-nav {
-            opacity: 1;
-        }
-        @media (pointer: coarse) {
-            .btn-nav { display: none; }
-        }
-        .btn-prev { left: 12px; }
-        .btn-next { right: 12px; }
-
-        .card-content {
-            padding: 28px;
-        }
-        .card-header {
+        .lightbox-nav:hover { background: rgba(255,255,255,0.25); }
+        .lightbox-nav.prev { left: 16px; }
+        .lightbox-nav.next { right: 16px; }
+        .lightbox-dots {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
+            gap: 6px;
+            margin-top: 12px;
         }
-        .date {
-            font-size: 13px;
-            color: var(--text-sub);
-            font-weight: 500;
-        }
-        .pillar-badge {
-            color: var(--accent);
-            background: rgba(232, 93, 69, 0.1);
-            padding: 4px 10px;
-            border-radius: 100px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        .caption {
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 28px;
-            white-space: pre-wrap;
-            color: var(--text-main);
-        }
-        .actions {
-            display: flex;
-            gap: 12px;
-            margin-top: auto;
-        }
-        button, .btn-download {
-            flex: 1;
-            padding: 14px 16px;
-            border: none;
-            border-radius: var(--btn-radius);
-            font-size: 14px;
-            font-weight: 600;
+        .lightbox-dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
             cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
         }
-        .btn-copy {
-            background-color: #F4F4F4;
-            color: var(--text-main);
-        }
-        .btn-copy:hover {
-            background-color: #EBEBEB;
-        }
-        .btn-download {
-            background-color: var(--accent);
-            color: #FFFFFF;
-        }
-        .btn-download:hover {
-            background-color: var(--accent-hover);
-        }
-        .toast {
-            position: fixed;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%) translateY(20px);
-            background: #2C2C2C;
-            color: white;
-            padding: 14px 28px;
-            border-radius: var(--btn-radius);
-            font-size: 14px;
-            font-weight: 500;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            z-index: 1000;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-        }
-        .toast.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .lightbox-dots span.active { background: #fff; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>@BingBang Gallery</h1>
-        <p>Warm & imperfect daily doodles.</p>
+        <h1>@BingBang</h1>
+        <p>Sage & Andy's daily adventures</p>
     </header>
 
-    <div class="masonry">
+    <div class="grid">
         
-        <div class="card" data-id="2026-04-26">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-26_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-26_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-26_image_a.png", "images/2026-04-26_image_b.png"], `每一天都是新的冒险。带上你最好的朋友，出发吧。
+
+#BingBang #Sage #Andy #插画 #黑白 #手绘 #涂鸦 #好朋友`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-26_image_a.png" alt="每一天都是新的冒险。带上你最好的朋友，出发吧。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-26</span>
-                    <span class="pillar-badge">Sage & Andy</span>
-                </div>
-                <div class="caption">每一天都是新的冒险。带上你最好的朋友，出发吧。
-
-#BingBang #Sage #Andy #插画 #黑白 #手绘 #涂鸦 #好朋友</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `每一天都是新的冒险。带上你最好的朋友，出发吧。
-
-#BingBang #Sage #Andy #插画 #黑白 #手绘 #涂鸦 #好朋友`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-26_image_a.png" download="2026-04-26_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">每一天都是新的冒险。带上你最好的朋友，出发吧。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-26</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-25">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-25_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-25_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-25_image_a.png", "images/2026-04-25_image_b.png"], `把浇灌别人的水，用来滋养自己。悄悄扎根就好了。
+
+#手绘 #黑白 #涂鸦 #设计师日常 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-25_image_a.png" alt="把浇灌别人的水，用来滋养自己。悄悄扎根就好了。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-25</span>
-                    <span class="pillar-badge">设计感悟</span>
-                </div>
-                <div class="caption">把浇灌别人的水，用来滋养自己。悄悄扎根就好了。
-
-#手绘 #黑白 #涂鸦 #设计师日常 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `把浇灌别人的水，用来滋养自己。悄悄扎根就好了。
-
-#手绘 #黑白 #涂鸦 #设计师日常 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-25_image_a.png" download="2026-04-25_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">把浇灌别人的水，用来滋养自己。悄悄扎根就好了。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-25</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-24">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-24_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-24_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-24_image_a.png", "images/2026-04-24_image_b.png"], `解释太累了。懂你的人自然懂，不懂的人随他去吧。
+
+#手绘 #黑白 #插画 #情绪 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-24_image_a.png" alt="解释太累了。懂你的人自然懂，不懂的人随他去吧。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-24</span>
-                    <span class="pillar-badge">情绪速写</span>
-                </div>
-                <div class="caption">解释太累了。懂你的人自然懂，不懂的人随他去吧。
-
-#手绘 #黑白 #插画 #情绪 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `解释太累了。懂你的人自然懂，不懂的人随他去吧。
-
-#手绘 #黑白 #插画 #情绪 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-24_image_a.png" download="2026-04-24_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">解释太累了。懂你的人自然懂，不懂的人随他去吧。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-24</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-23">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-23_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-23_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-23_image_a.png", "images/2026-04-23_image_b.png"], `世界不会因为你休息一天就崩塌。今天先放过自己吧。
+
+#插画 #黑白 #极简 #手写 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-23_image_a.png" alt="世界不会因为你休息一天就崩塌。今天先放过自己吧。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-23</span>
-                    <span class="pillar-badge">文字涂鸦</span>
-                </div>
-                <div class="caption">世界不会因为你休息一天就崩塌。今天先放过自己吧。
-
-#插画 #黑白 #极简 #手写 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `世界不会因为你休息一天就崩塌。今天先放过自己吧。
-
-#插画 #黑白 #极简 #手写 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-23_image_a.png" download="2026-04-23_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">世界不会因为你休息一天就崩塌。今天先放过自己吧。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-23</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-22">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-22_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-22_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-22_image_a.png", "images/2026-04-22_image_b.png"], `允许自己有不知道答案的时刻。迷茫本身也是一种经历。
+
+#涂鸦 #黑白 #手绘 #脑洞 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-22_image_a.png" alt="允许自己有不知道答案的时刻。迷茫本身也是一种经历。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-22</span>
-                    <span class="pillar-badge">创意灵感</span>
-                </div>
-                <div class="caption">允许自己有不知道答案的时刻。迷茫本身也是一种经历。
-
-#涂鸦 #黑白 #手绘 #脑洞 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `允许自己有不知道答案的时刻。迷茫本身也是一种经历。
-
-#涂鸦 #黑白 #手绘 #脑洞 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-22_image_a.png" download="2026-04-22_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">允许自己有不知道答案的时刻。迷茫本身也是一种经历。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-22</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-21">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-21_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-21_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-21_image_a.png", "images/2026-04-21_image_b.png"], `允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
+
+#涂鸦 #手绘 #黑白 #生活感悟 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-21_image_a.png" alt="允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-21</span>
-                    <span class="pillar-badge">生活碎片</span>
-                </div>
-                <div class="caption">允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
-
-#涂鸦 #手绘 #黑白 #生活感悟 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
-
-#涂鸦 #手绘 #黑白 #生活感悟 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-21_image_a.png" download="2026-04-21_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-21</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-20">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-20_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-20_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-20_image_a.png", "images/2026-04-20_image_b.png"], `你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
+
+#手绘 #涂鸦 #黑白 #设计灵感 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-20_image_a.png" alt="你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-20</span>
-                    <span class="pillar-badge">设计感悟</span>
-                </div>
-                <div class="caption">你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
-
-#手绘 #涂鸦 #黑白 #设计灵感 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
-
-#手绘 #涂鸦 #黑白 #设计灵感 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-20_image_a.png" download="2026-04-20_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-20</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-19">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-19_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-19_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-19_image_a.png", "images/2026-04-19_image_b.png"], `允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
+
+#插画 #黑白 #极简 #生活碎片 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-19_image_a.png" alt="允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-19</span>
-                    <span class="pillar-badge">生活碎片</span>
-                </div>
-                <div class="caption">允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
-
-#插画 #黑白 #极简 #生活碎片 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
-
-#插画 #黑白 #极简 #生活碎片 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-19_image_a.png" download="2026-04-19_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-19</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-18">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-18_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-18_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-18_image_a.png", "images/2026-04-18_image_b.png"], `弯路也是路，偶尔停下来看看风景也不错。
+
+#插画 #极简 #黑白 #设计师日常 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-18_image_a.png" alt="弯路也是路，偶尔停下来看看风景也不错。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-18</span>
-                    <span class="pillar-badge">设计感悟</span>
-                </div>
-                <div class="caption">弯路也是路，偶尔停下来看看风景也不错。
-
-#插画 #极简 #黑白 #设计师日常 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `弯路也是路，偶尔停下来看看风景也不错。
-
-#插画 #极简 #黑白 #设计师日常 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-18_image_a.png" download="2026-04-18_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">弯路也是路，偶尔停下来看看风景也不错。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-18</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-17">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-17_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-17_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-17_image_a.png", "images/2026-04-17_image_b.png"], `世界给的子弹够多了，不要再做自己的狙击手了。
+
+#极简 #插画 #涂鸦 #情绪 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-17_image_a.png" alt="世界给的子弹够多了，不要再做自己的狙击手了。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-17</span>
-                    <span class="pillar-badge">情绪速写</span>
-                </div>
-                <div class="caption">世界给的子弹够多了，不要再做自己的狙击手了。
-
-#极简 #插画 #涂鸦 #情绪 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `世界给的子弹够多了，不要再做自己的狙击手了。
-
-#极简 #插画 #涂鸦 #情绪 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-17_image_a.png" download="2026-04-17_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">世界给的子弹够多了，不要再做自己的狙击手了。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-17</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-16">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-16_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-16_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-16_image_a.png", "images/2026-04-16_image_b.png"], `你的价值，不由今天的产出决定。好好休息也是一种重要任务。
+
+#插画 #黑白 #手绘 #文字控 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-16_image_a.png" alt="你的价值，不由今天的产出决定。好好休息也是一种重要任务。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-16</span>
-                    <span class="pillar-badge">文字涂鸦</span>
-                </div>
-                <div class="caption">你的价值，不由今天的产出决定。好好休息也是一种重要任务。
-
-#插画 #黑白 #手绘 #文字控 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `你的价值，不由今天的产出决定。好好休息也是一种重要任务。
-
-#插画 #黑白 #手绘 #文字控 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-16_image_a.png" download="2026-04-16_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">你的价值，不由今天的产出决定。好好休息也是一种重要任务。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-16</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-15">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-15_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-15_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-15_image_a.png", "images/2026-04-15_image_b.png"], `微小的进步也是进步。今天只要没倒退，就已经很棒了。
+
+#黑白 #插画 #涂鸦 #灵感 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-15_image_a.png" alt="微小的进步也是进步。今天只要没倒退，就已经很棒了。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-15</span>
-                    <span class="pillar-badge">创意灵感</span>
-                </div>
-                <div class="caption">微小的进步也是进步。今天只要没倒退，就已经很棒了。
-
-#黑白 #插画 #涂鸦 #灵感 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `微小的进步也是进步。今天只要没倒退，就已经很棒了。
-
-#黑白 #插画 #涂鸦 #灵感 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-15_image_a.png" download="2026-04-15_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">微小的进步也是进步。今天只要没倒退，就已经很棒了。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-15</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-14">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-14_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-14_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-14_image_a.png", "images/2026-04-14_image_b.png"], `不是每时每刻都要冲刺，有些阶段就是用来积蓄力量的。
+
+#黑白 #手绘 #插画 #生活碎片 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-14_image_a.png" alt="不是每时每刻都要冲刺，有些阶段就是用来积蓄力量的。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-14</span>
-                    <span class="pillar-badge">生活碎片</span>
-                </div>
-                <div class="caption">不是每时每刻都要冲刺，有些阶段就是用来积蓄力量的。
-
-#黑白 #手绘 #插画 #生活碎片 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `不是每时每刻都要冲刺，有些阶段就是用来积蓄力量的。
-
-#黑白 #手绘 #插画 #生活碎片 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-14_image_a.png" download="2026-04-14_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">不是每时每刻都要冲刺，有些阶段就是用来积蓄力量的。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-14</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-13">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-13_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-13_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-13_image_a.png", "images/2026-04-13_image_b.png"], `你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
+
+#手绘 #黑白 #涂鸦 #设计师日常 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-13_image_a.png" alt="你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-13</span>
-                    <span class="pillar-badge">设计感悟</span>
-                </div>
-                <div class="caption">你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
-
-#手绘 #黑白 #涂鸦 #设计师日常 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
-
-#手绘 #黑白 #涂鸦 #设计师日常 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-13_image_a.png" download="2026-04-13_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-13</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-12">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-12_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-12_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-12_image_a.png", "images/2026-04-12_image_b.png"], `不用追赶别人的进度条，你的时间线由你自己决定。
+
+#极简 #黑白 #涂鸦 #生活感悟 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-12_image_a.png" alt="不用追赶别人的进度条，你的时间线由你自己决定。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-12</span>
-                    <span class="pillar-badge">生活碎片</span>
-                </div>
-                <div class="caption">不用追赶别人的进度条，你的时间线由你自己决定。
-
-#极简 #黑白 #涂鸦 #生活感悟 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `不用追赶别人的进度条，你的时间线由你自己决定。
-
-#极简 #黑白 #涂鸦 #生活感悟 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-12_image_a.png" download="2026-04-12_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">不用追赶别人的进度条，你的时间线由你自己决定。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-12</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-11">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-11_image_a.png" alt="Doodle">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-11_image_b.png" alt="Doodle">
-                    </div>
-                </div>
-                
-                <button class="btn-nav btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
-                <button class="btn-nav btn-next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
-            
-                <div class="carousel-controls">
-                    <div class="dot active"></div><div class="dot "></div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-11_image_a.png", "images/2026-04-11_image_b.png"], `继续前进吧。
+
+#插画 #黑白 #手绘 #设计师日常 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-11_image_a.png" alt="继续前进吧。" loading="lazy">
+                <span class="multi-badge">2 pics</span>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-11</span>
-                    <span class="pillar-badge">设计感悟</span>
-                </div>
-                <div class="caption">继续前进吧。
-
-#插画 #黑白 #手绘 #设计师日常 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `继续前进吧。
-
-#插画 #黑白 #手绘 #设计师日常 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-11_image_a.png" download="2026-04-11_image_a.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">继续前进吧。</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-11</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-10">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-10_image.png" alt="Doodle">
-                    </div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-10_image.png"], `"能平安度过今天，本身就是一种胜利。辛苦了，好好睡一觉吧。"
+
+#涂鸦 #极简 #黑白 #日常心情 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-10_image.png" alt=""能平安度过今天，本身就是一种胜利。辛苦了，好好睡一觉吧。"" loading="lazy">
                 
-                <div class="carousel-controls">
-                    
-                </div>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-10</span>
-                    <span class="pillar-badge">情绪速写</span>
-                </div>
-                <div class="caption">"能平安度过今天，本身就是一种胜利。辛苦了，好好睡一觉吧。"
-
-#涂鸦 #极简 #黑白 #日常心情 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `"能平安度过今天，本身就是一种胜利。辛苦了，好好睡一觉吧。"
-
-#涂鸦 #极简 #黑白 #日常心情 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-10_image.png" download="2026-04-10_image.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">"能平安度过今天，本身就是一种胜利。辛苦了，好好睡一觉吧。"</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-10</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-09">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-09_image.png" alt="Doodle">
-                    </div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-09_image.png"], `"你的价值，不由今天的产出决定。好好休息也是一种重要任务。"
+
+#极简 #黑白 #插画 #手写 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-09_image.png" alt=""你的价值，不由今天的产出决定。好好休息也是一种重要任务。"" loading="lazy">
                 
-                <div class="carousel-controls">
-                    
-                </div>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-09</span>
-                    <span class="pillar-badge">文字涂鸦</span>
-                </div>
-                <div class="caption">"你的价值，不由今天的产出决定。好好休息也是一种重要任务。"
-
-#极简 #黑白 #插画 #手写 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `"你的价值，不由今天的产出决定。好好休息也是一种重要任务。"
-
-#极简 #黑白 #插画 #手写 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-09_image.png" download="2026-04-09_image.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">"你的价值，不由今天的产出决定。好好休息也是一种重要任务。"</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-09</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" data-id="2026-04-08">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    
-                    <div class="carousel-slide">
-                        <img src="images/2026-04-08_image.png" alt="Doodle">
-                    </div>
-                </div>
+        <div class="item" onclick="openLightbox(["images/2026-04-08_image.png"], `"计划被打乱也没关系，有时候弯路里的风景更美。"
+
+#手绘 #插画 #涂鸦 #创意 #BingBang`, 0)">
+            <div class="item-img">
+                <img src="images/2026-04-08_image.png" alt=""计划被打乱也没关系，有时候弯路里的风景更美。"" loading="lazy">
                 
-                <div class="carousel-controls">
-                    
-                </div>
             </div>
-            <div class="card-content">
-                <div class="card-header">
-                    <span class="date">2026-04-08</span>
-                    <span class="pillar-badge">创意灵感</span>
-                </div>
-                <div class="caption">"计划被打乱也没关系，有时候弯路里的风景更美。"
-
-#手绘 #插画 #涂鸦 #创意 #BingBang</div>
-
-                <div class="actions">
-                    <button class="btn-copy" onclick="copyText(this, `"计划被打乱也没关系，有时候弯路里的风景更美。"
-
-#手绘 #插画 #涂鸦 #创意 #BingBang`)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy
-                    </button>
-                    <a href="images/2026-04-08_image.png" download="2026-04-08_image.png" class="btn-download">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        Save
-                    </a>
+            <div class="item-info">
+                <div class="item-title">"计划被打乱也没关系，有时候弯路里的风景更美。"</div>
+                <div class="item-meta">
+                    <span class="item-author">🐯 BingBang</span>
+                    <span>2026-04-08</span>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <div id="toast" class="toast">Copied to clipboard! ✨</div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav prev" id="lb-prev" onclick="lbNav(-1)">&#8249;</button>
+        <button class="lightbox-nav next" id="lb-next" onclick="lbNav(1)">&#8250;</button>
+        <img id="lb-img" src="" alt="">
+        <div class="lightbox-dots" id="lb-dots"></div>
+        <div class="lightbox-caption" id="lb-caption"></div>
+        <div class="lightbox-actions">
+            <button onclick="lbCopy()">Copy Caption</button>
+            <a id="lb-download" href="" download="">Save Image</a>
+        </div>
+    </div>
 
     <script>
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.innerText = message;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 2500);
+        let lbImages = [];
+        let lbIndex = 0;
+        let lbCaption = '';
+
+        function openLightbox(images, caption, startIdx) {
+            lbImages = images;
+            lbIndex = startIdx || 0;
+            lbCaption = caption;
+            updateLb();
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
         }
 
-        function copyText(button, text) {
-            navigator.clipboard.writeText(text).then(() => {
-                showToast('Copied! ✨');
-            });
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
         }
 
-        // Carousel Logic
-        document.querySelectorAll('.carousel-container').forEach(container => {
-            const track = container.querySelector('.carousel-track');
-            const slides = container.querySelectorAll('.carousel-slide');
-            const dots = container.querySelectorAll('.dot');
-            const btnPrev = container.querySelector('.btn-prev');
-            const btnNext = container.querySelector('.btn-next');
-            const downloadBtn = container.closest('.card').querySelector('.btn-download');
-            
-            if (slides.length <= 1) return;
-            
-            let currentIndex = 0;
-            const maxIndex = slides.length - 1;
+        function lbNav(dir) {
+            lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+            updateLb();
+        }
 
-            function updateCarousel() {
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-                dots.forEach((dot, idx) => {
-                    dot.classList.toggle('active', idx === currentIndex);
-                });
-                
-                // Update download link
-                const currentImg = slides[currentIndex].querySelector('img').src;
-                const fileName = currentImg.split('/').pop();
-                downloadBtn.href = currentImg;
-                downloadBtn.download = fileName;
+        function updateLb() {
+            const img = document.getElementById('lb-img');
+            img.src = lbImages[lbIndex];
+            document.getElementById('lb-caption').textContent = lbCaption;
+            const dl = document.getElementById('lb-download');
+            dl.href = lbImages[lbIndex];
+            dl.download = lbImages[lbIndex].split('/').pop();
+
+            // Nav buttons
+            document.getElementById('lb-prev').style.display = lbImages.length > 1 ? 'block' : 'none';
+            document.getElementById('lb-next').style.display = lbImages.length > 1 ? 'block' : 'none';
+
+            // Dots
+            const dots = document.getElementById('lb-dots');
+            if (lbImages.length > 1) {
+                dots.innerHTML = lbImages.map((_, i) =>
+                    `<span class="${i === lbIndex ? 'active' : ''}" onclick="lbIndex=${i};updateLb()"></span>`
+                ).join('');
+                dots.style.display = 'flex';
+            } else {
+                dots.style.display = 'none';
             }
+        }
 
-            if (btnPrev) btnPrev.addEventListener('click', () => {
-                currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex;
-                updateCarousel();
+        function lbCopy() {
+            navigator.clipboard.writeText(lbCaption).then(() => {
+                const btn = event.target;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy Caption', 1500);
             });
+        }
 
-            if (btnNext) btnNext.addEventListener('click', () => {
-                currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
-                updateCarousel();
-            });
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeLightbox();
+        });
 
-            dots.forEach((dot, idx) => {
-                dot.addEventListener('click', () => {
-                    currentIndex = idx;
-                    updateCarousel();
-                });
-            });
-            
-            // Touch/swipe support
-            let startX = 0;
-            let startY = 0;
-            let isDragging = false;
-
-            container.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                isDragging = true;
-            }, { passive: true });
-
-            container.addEventListener('touchend', (e) => {
-                if (!isDragging) return;
-                isDragging = false;
-                const dx = e.changedTouches[0].clientX - startX;
-                const dy = e.changedTouches[0].clientY - startY;
-                if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-                    if (dx < 0) {
-                        currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
-                    } else {
-                        currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex;
-                    }
-                    updateCarousel();
-                }
-            }, { passive: true });
-
-            // Initial setup
-            updateCarousel();
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('lightbox').classList.contains('open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') lbNav(-1);
+            if (e.key === 'ArrowRight') lbNav(1);
         });
     </script>
 </body>
