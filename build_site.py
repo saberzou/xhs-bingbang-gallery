@@ -55,7 +55,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             grid-template-columns: repeat(2, 1fr);
             gap: var(--gap);
             padding: 0 var(--gap) var(--gap);
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }}
         @media (min-width: 640px) {{ .grid {{ grid-template-columns: repeat(3, 1fr); }} }}
