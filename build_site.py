@@ -82,7 +82,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border: 1px solid rgba(0,0,0,0.02);
         }}
         .card:hover {{
-            transform: translateY(-8px);
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
         }}
         
@@ -90,7 +89,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .carousel-container {{
             position: relative;
             width: 100%;
-            padding-top: 133.33%; /* 3:4 Aspect Ratio */
+            padding-top: 100%; /* 1:1 Aspect Ratio */
             background: #F4F4F4;
             overflow: hidden;
         }}
@@ -111,8 +110,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .carousel-slide img {{
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            background: #F4F4F4;
+            object-fit: cover;
         }}
         .carousel-controls {{
             position: absolute;

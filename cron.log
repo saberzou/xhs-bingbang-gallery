@@ -175,3 +175,873 @@ Starting Daily XHS Job: Sat Apr 11 08:01:39 CST 2026
 To https://github.com/saberzou/xhs-bingbang-gallery.git
    ebd03ea..8008d09  main -> main
 Done: Sat Apr 11 08:01:51 CST 2026
+======================================
+Starting Daily XHS Job: Sun Apr 12 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-12
+🎯 Pillar: 生活碎片
+💡 Text: Protect your peace.
+🎨 Option A: a cute little house holding an umbrella over itself
+🎨 Option B: a tiny cactus with a 'do not disturb' sign, sitting in its own bubble
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-12/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-12/metadata.json
+
+========================================
+📄 Caption:
+允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
+
+#插画 #手绘 #极简 #生活碎片 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Sun Apr 12 08:00:36 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-12
+🎯 Pillar: 生活碎片
+💡 Text: Trust your own timeline.
+🎨 Option A: a cute hourglass taking a nap on its side
+🎨 Option B: a cute little seed underground, sleeping peacefully while a fully grown flower blooms above
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-12/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-12/metadata.json
+
+========================================
+📄 Caption:
+不用追赶别人的进度条，你的时间线由你自己决定。
+
+#极简 #黑白 #涂鸦 #生活感悟 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main f82c004] Auto-generate content for 2026-04-12
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-12_image_a.png
+ create mode 100644 docs/images/2026-04-12_image_b.png
+ create mode 100644 drafts/2026-04-12/caption.md
+ create mode 100644 drafts/2026-04-12/image_a.png
+ create mode 100644 drafts/2026-04-12/image_b.png
+ create mode 100644 drafts/2026-04-12/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   a10c0e0..f82c004  main -> main
+Done: Sun Apr 12 08:00:54 CST 2026
+======================================
+Starting Daily XHS Job: Mon Apr 13 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-13
+🎯 Pillar: 设计感悟
+💡 Text: You are not behind.
+🎨 Option A: a cute calendar page looking relaxed with its eyes closed
+🎨 Option B: a tiny snail overtaking a broken, exhausted alarm clock on a track
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-13/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-13/metadata.json
+
+========================================
+📄 Caption:
+你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
+
+#插画 #涂鸦 #极简 #设计思考 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Mon Apr 13 08:00:37 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-13
+🎯 Pillar: 设计感悟
+💡 Text: You are not behind.
+🎨 Option A: a cute calendar page looking relaxed with its eyes closed
+🎨 Option B: a tiny snail overtaking a broken, exhausted alarm clock on a track
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-13/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-13/metadata.json
+
+========================================
+📄 Caption:
+你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
+
+#手绘 #黑白 #涂鸦 #设计师日常 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main b2eef8d] Auto-generate content for 2026-04-13
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-13_image_a.png
+ create mode 100644 docs/images/2026-04-13_image_b.png
+ create mode 100644 drafts/2026-04-13/caption.md
+ create mode 100644 drafts/2026-04-13/image_a.png
+ create mode 100644 drafts/2026-04-13/image_b.png
+ create mode 100644 drafts/2026-04-13/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   f82c004..b2eef8d  main -> main
+Done: Mon Apr 13 08:00:57 CST 2026
+======================================
+Starting Daily XHS Job: Tue Apr 14 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-14
+🎯 Pillar: 生活碎片
+💡 Text: You are enough right now.
+🎨 Option A: a partially filled cute coffee mug looking perfectly content
+🎨 Option B: a cute battery icon at 47% with arms crossed, looking satisfied and unbothered
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-14/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-14/metadata.json
+
+========================================
+📄 Caption:
+现在的你，就已经足够好了。不需要为了迎合谁而去改变。
+
+#涂鸦 #黑白 #插画 #生活感悟 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Tue Apr 14 08:00:39 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-14
+🎯 Pillar: 生活碎片
+💡 Text: Some chapters are just for resting.
+🎨 Option A: a cute closed book with a bookmark acting as a blanket
+🎨 Option B: a tiny bear in full hibernation mode inside a cozy den, with a 'see you in spring' sign
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-14/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-14/metadata.json
+
+========================================
+📄 Caption:
+不是每时每刻都要冲刺，有些阶段就是用来积蓄力量的。
+
+#黑白 #手绘 #插画 #生活碎片 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main e580e47] Auto-generate content for 2026-04-14
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-14_image_a.png
+ create mode 100644 docs/images/2026-04-14_image_b.png
+ create mode 100644 drafts/2026-04-14/caption.md
+ create mode 100644 drafts/2026-04-14/image_a.png
+ create mode 100644 drafts/2026-04-14/image_b.png
+ create mode 100644 drafts/2026-04-14/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   b2eef8d..e580e47  main -> main
+Done: Tue Apr 14 08:01:00 CST 2026
+======================================
+Starting Daily XHS Job: Wed Apr 15 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-15
+🎯 Pillar: 创意灵感
+💡 Text: You don't have to have it all figured out.
+🎨 Option A: a cute confused puzzle piece shrugging with a tiny smile
+🎨 Option B: a tiny GPS device with a spinning loading icon, but the character holding it looks calm
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-15/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-15/metadata.json
+
+========================================
+📄 Caption:
+允许自己有不知道答案的时刻。迷茫本身也是一种经历。
+
+#涂鸦 #手绘 #极简 #脑洞 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Wed Apr 15 08:00:44 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-15
+🎯 Pillar: 创意灵感
+💡 Text: Small is still something.
+🎨 Option A: a tiny cute pebble casting a surprisingly nice shadow
+🎨 Option B: a tiny match that just lit a candle, looking proudly at the flame it started
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-15/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-15/metadata.json
+
+========================================
+📄 Caption:
+微小的进步也是进步。今天只要没倒退，就已经很棒了。
+
+#黑白 #插画 #涂鸦 #灵感 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 50ccde3] Auto-generate content for 2026-04-15
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-15_image_a.png
+ create mode 100644 docs/images/2026-04-15_image_b.png
+ create mode 100644 drafts/2026-04-15/caption.md
+ create mode 100644 drafts/2026-04-15/image_a.png
+ create mode 100644 drafts/2026-04-15/image_b.png
+ create mode 100644 drafts/2026-04-15/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   e580e47..50ccde3  main -> main
+Done: Wed Apr 15 08:01:03 CST 2026
+======================================
+Starting Daily XHS Job: Thu Apr 16 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-16
+🎯 Pillar: 文字涂鸦
+💡 Text: Let go of what you can't control.
+🎨 Option A: a cute hand gently releasing a balloon
+🎨 Option B: a tiny character opening their fists and watching little worries float away as bubbles
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-16/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-16/metadata.json
+
+========================================
+📄 Caption:
+把能掌控的做好，剩下的交给时间。不内耗是最高级的自律。
+
+#手绘 #极简 #涂鸦 #英文字体 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Thu Apr 16 08:00:40 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-16
+🎯 Pillar: 文字涂鸦
+💡 Text: You are not your productivity.
+🎨 Option A: a cute sleeping laptop with a cozy blanket over the screen
+🎨 Option B: a tiny robot taking off its work helmet and sighing with relief
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-16/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-16/metadata.json
+
+========================================
+📄 Caption:
+你的价值，不由今天的产出决定。好好休息也是一种重要任务。
+
+#插画 #黑白 #手绘 #文字控 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main b592e81] Auto-generate content for 2026-04-16
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-16_image_a.png
+ create mode 100644 docs/images/2026-04-16_image_b.png
+ create mode 100644 drafts/2026-04-16/caption.md
+ create mode 100644 drafts/2026-04-16/image_a.png
+ create mode 100644 drafts/2026-04-16/image_b.png
+ create mode 100644 drafts/2026-04-16/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   50ccde3..b592e81  main -> main
+Done: Thu Apr 16 08:01:01 CST 2026
+======================================
+Starting Daily XHS Job: Fri Apr 17 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-17
+🎯 Pillar: 情绪速写
+💡 Text: It's okay to just exist today.
+🎨 Option A: a cute little cloud resting comfortably on the ground
+🎨 Option B: a tiny character lying flat like a starfish, arms and legs out, eyes closed, completely at peace
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-17/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-17/metadata.json
+
+========================================
+📄 Caption:
+今天什么都不做也没关系。能平静地度过一天，就很好了。
+
+#涂鸦 #极简 #手绘 #日常心情 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Fri Apr 17 08:00:34 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-17
+🎯 Pillar: 情绪速写
+💡 Text: Be gentle with yourself.
+🎨 Option A: two cute hands carefully holding a fragile, bandaged heart
+🎨 Option B: a tiny character wrapping themselves in a big warm scarf like a cocoon
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-17/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-17/metadata.json
+
+========================================
+📄 Caption:
+世界给的子弹够多了，不要再做自己的狙击手了。
+
+#极简 #插画 #涂鸦 #情绪 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 2cb38bc] Auto-generate content for 2026-04-17
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-17_image_a.png
+ create mode 100644 docs/images/2026-04-17_image_b.png
+ create mode 100644 drafts/2026-04-17/caption.md
+ create mode 100644 drafts/2026-04-17/image_a.png
+ create mode 100644 drafts/2026-04-17/image_b.png
+ create mode 100644 drafts/2026-04-17/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   b592e81..2cb38bc  main -> main
+Done: Fri Apr 17 08:01:05 CST 2026
+======================================
+Starting Daily XHS Job: Sat Apr 18 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-18
+🎯 Pillar: 设计感悟
+💡 Text: Run your own race.
+🎨 Option A: a cute little turtle wearing sneakers and a sweatband
+🎨 Option B: a tiny analog clock melting like Dalí's watches, but with a relaxed smile
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-18/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-18/metadata.json
+
+========================================
+📄 Caption:
+不要拿别人的地图，找自己的路。按照自己的节奏走，就很稳妥。
+
+#黑白 #插画 #极简 #设计师日常 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Sat Apr 18 08:00:25 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-18
+🎯 Pillar: 设计感悟
+💡 Text: Progress isn't a straight line.
+🎨 Option A: a squiggly, tangled arrow pointing upward with a tiny smiling star at the end
+🎨 Option B: a cute roller coaster car with a happy face, going up and down wildly but arriving at the top
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-18/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-18/metadata.json
+
+========================================
+📄 Caption:
+弯路也是路，偶尔停下来看看风景也不错。
+
+#插画 #极简 #黑白 #设计师日常 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main da11ff4] Auto-generate content for 2026-04-18
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-18_image_a.png
+ create mode 100644 docs/images/2026-04-18_image_b.png
+ create mode 100644 drafts/2026-04-18/caption.md
+ create mode 100644 drafts/2026-04-18/image_a.png
+ create mode 100644 drafts/2026-04-18/image_b.png
+ create mode 100644 drafts/2026-04-18/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   2cb38bc..da11ff4  main -> main
+Done: Sat Apr 18 08:00:46 CST 2026
+======================================
+Starting Daily XHS Job: Sun Apr 19 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-19
+🎯 Pillar: 生活碎片
+💡 Text: Some chapters are just for resting.
+🎨 Option A: a cute closed book with a bookmark acting as a blanket
+🎨 Option B: a tiny bear in full hibernation mode inside a cozy den, with a 'see you in spring' sign
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-19/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-19/metadata.json
+
+========================================
+📄 Caption:
+不是每时每刻都要冲刺，有些阶段就是用来积蓄力量的。
+
+#插画 #极简 #手绘 #生活碎片 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Sun Apr 19 08:00:39 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-19
+🎯 Pillar: 生活碎片
+💡 Text: Protect your peace.
+🎨 Option A: a cute little house holding an umbrella over itself
+🎨 Option B: a tiny cactus with a 'do not disturb' sign, sitting in its own bubble
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-19/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-19/metadata.json
+
+========================================
+📄 Caption:
+允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
+
+#插画 #黑白 #极简 #生活碎片 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 939c070] Auto-generate content for 2026-04-19
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-19_image_a.png
+ create mode 100644 docs/images/2026-04-19_image_b.png
+ create mode 100644 drafts/2026-04-19/caption.md
+ create mode 100644 drafts/2026-04-19/image_a.png
+ create mode 100644 drafts/2026-04-19/image_b.png
+ create mode 100644 drafts/2026-04-19/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   da11ff4..939c070  main -> main
+Done: Sun Apr 19 08:00:55 CST 2026
+======================================
+Starting Daily XHS Job: Mon Apr 20 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-20
+🎯 Pillar: 设计感悟
+💡 Text: You are not behind.
+🎨 Option A: a cute calendar page looking relaxed with its eyes closed
+🎨 Option B: a tiny snail overtaking a broken, exhausted alarm clock on a track
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-20/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-20/metadata.json
+
+========================================
+📄 Caption:
+你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
+
+#插画 #黑白 #手绘 #设计思考 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Mon Apr 20 08:00:43 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-20
+🎯 Pillar: 设计感悟
+💡 Text: You are not behind.
+🎨 Option A: a cute calendar page looking relaxed with its eyes closed
+🎨 Option B: a tiny snail overtaking a broken, exhausted alarm clock on a track
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-20/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-20/metadata.json
+
+========================================
+📄 Caption:
+你没有落后，也没有领先。在命运为你安排的时区里，一切都准时。
+
+#手绘 #涂鸦 #黑白 #设计灵感 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 651d893] Auto-generate content for 2026-04-20
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-20_image_a.png
+ create mode 100644 docs/images/2026-04-20_image_b.png
+ create mode 100644 drafts/2026-04-20/caption.md
+ create mode 100644 drafts/2026-04-20/image_a.png
+ create mode 100644 drafts/2026-04-20/image_b.png
+ create mode 100644 drafts/2026-04-20/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   939c070..651d893  main -> main
+Done: Mon Apr 20 08:01:00 CST 2026
+======================================
+Starting Daily XHS Job: Tue Apr 21 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-21
+🎯 Pillar: 生活碎片
+💡 Text: Don't compare your behind-the-scenes.
+🎨 Option A: a cute half-eaten apple looking content next to a perfect shiny fake apple
+🎨 Option B: a tiny character watching a highlight reel on a phone while their cozy messy room is behind them
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-21/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-21/metadata.json
+
+========================================
+📄 Caption:
+每个人都有自己的节奏，没必要去羡慕别人展露在外的光鲜。
+
+#涂鸦 #插画 #极简 #生活感悟 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Tue Apr 21 08:00:24 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-21
+🎯 Pillar: 生活碎片
+💡 Text: Protect your peace.
+🎨 Option A: a cute little house holding an umbrella over itself
+🎨 Option B: a tiny cactus with a 'do not disturb' sign, sitting in its own bubble
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-21/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-21/metadata.json
+
+========================================
+📄 Caption:
+允许部分人不喜欢你，是你找回内心的开始。把精力留给自己。
+
+#涂鸦 #手绘 #黑白 #生活感悟 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 76bc13b] Auto-generate content for 2026-04-21
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-21_image_a.png
+ create mode 100644 docs/images/2026-04-21_image_b.png
+ create mode 100644 drafts/2026-04-21/caption.md
+ create mode 100644 drafts/2026-04-21/image_a.png
+ create mode 100644 drafts/2026-04-21/image_b.png
+ create mode 100644 drafts/2026-04-21/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   651d893..76bc13b  main -> main
+Done: Tue Apr 21 08:00:44 CST 2026
+======================================
+Starting Daily XHS Job: Wed Apr 22 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-22
+🎯 Pillar: 创意灵感
+💡 Text: Small is still something.
+🎨 Option A: a tiny cute pebble casting a surprisingly nice shadow
+🎨 Option B: a tiny match that just lit a candle, looking proudly at the flame it started
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-22/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-22/metadata.json
+
+========================================
+📄 Caption:
+微小的进步也是进步。今天只要没倒退，就已经很棒了。
+
+#手绘 #涂鸦 #极简 #创意 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Wed Apr 22 08:00:31 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-22
+🎯 Pillar: 创意灵感
+💡 Text: You don't have to have it all figured out.
+🎨 Option A: a cute confused puzzle piece shrugging with a tiny smile
+🎨 Option B: a tiny GPS device with a spinning loading icon, but the character holding it looks calm
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-22/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-22/metadata.json
+
+========================================
+📄 Caption:
+允许自己有不知道答案的时刻。迷茫本身也是一种经历。
+
+#涂鸦 #黑白 #手绘 #脑洞 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 22cb325] Auto-generate content for 2026-04-22
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-22_image_a.png
+ create mode 100644 docs/images/2026-04-22_image_b.png
+ create mode 100644 drafts/2026-04-22/caption.md
+ create mode 100644 drafts/2026-04-22/image_a.png
+ create mode 100644 drafts/2026-04-22/image_b.png
+ create mode 100644 drafts/2026-04-22/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   76bc13b..22cb325  main -> main
+Done: Wed Apr 22 08:00:48 CST 2026
+======================================
+Starting Daily XHS Job: Thu Apr 23 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-23
+🎯 Pillar: 文字涂鸦
+💡 Text: Unsubscribe from the hustle.
+🎨 Option A: a cute envelope stamping itself with a 'no thanks' seal
+🎨 Option B: a tiny hamster stepping off its wheel and stretching its arms wide
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-23/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-23/metadata.json
+
+========================================
+📄 Caption:
+退出盲目的内卷游戏。人生是旷野，不是轨道。
+
+#手绘 #插画 #涂鸦 #文字控 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Thu Apr 23 08:00:40 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-23
+🎯 Pillar: 文字涂鸦
+💡 Text: It's okay to log off.
+🎨 Option A: a cute disconnected plug and socket sleeping next to each other
+🎨 Option B: a tiny Wi-Fi icon with its bars turned off, looking peacefully asleep
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-23/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-23/metadata.json
+
+========================================
+📄 Caption:
+世界不会因为你休息一天就崩塌。今天先放过自己吧。
+
+#插画 #黑白 #极简 #手写 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main c3a0a0b] Auto-generate content for 2026-04-23
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-23_image_a.png
+ create mode 100644 docs/images/2026-04-23_image_b.png
+ create mode 100644 drafts/2026-04-23/caption.md
+ create mode 100644 drafts/2026-04-23/image_a.png
+ create mode 100644 drafts/2026-04-23/image_b.png
+ create mode 100644 drafts/2026-04-23/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   22cb325..c3a0a0b  main -> main
+Done: Thu Apr 23 08:01:00 CST 2026
+======================================
+Starting Daily XHS Job: Fri Apr 24 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-24
+🎯 Pillar: 情绪速写
+💡 Text: It's okay to just exist today.
+🎨 Option A: a cute little cloud resting comfortably on the ground
+🎨 Option B: a tiny character lying flat like a starfish, arms and legs out, eyes closed, completely at peace
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-24/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-24/metadata.json
+
+========================================
+📄 Caption:
+今天什么都不做也没关系。能平静地度过一天，就很好了。
+
+#黑白 #涂鸦 #极简 #情绪 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Fri Apr 24 08:00:40 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-24
+🎯 Pillar: 情绪速写
+💡 Text: Let them misunderstand you.
+🎨 Option A: a cute cactus wearing sunglasses, unbothered
+🎨 Option B: a tiny character with noise-cancelling headphones on, reading a book, totally unbothered by chaos around them
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-24/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-24/metadata.json
+
+========================================
+📄 Caption:
+解释太累了。懂你的人自然懂，不懂的人随他去吧。
+
+#手绘 #黑白 #插画 #情绪 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main fb3c5da] Auto-generate content for 2026-04-24
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-24_image_a.png
+ create mode 100644 docs/images/2026-04-24_image_b.png
+ create mode 100644 drafts/2026-04-24/caption.md
+ create mode 100644 drafts/2026-04-24/image_a.png
+ create mode 100644 drafts/2026-04-24/image_b.png
+ create mode 100644 drafts/2026-04-24/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   c3a0a0b..fb3c5da  main -> main
+Done: Fri Apr 24 08:01:01 CST 2026
+======================================
+Starting Daily XHS Job: Sat Apr 25 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-25
+🎯 Pillar: 设计感悟
+💡 Text: Run your own race.
+🎨 Option A: a cute little turtle wearing sneakers and a sweatband
+🎨 Option B: a tiny analog clock melting like Dalí's watches, but with a relaxed smile
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-25/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-25/metadata.json
+
+========================================
+📄 Caption:
+不要拿别人的地图，找自己的路。按照自己的节奏走，就很稳妥。
+
+#手绘 #极简 #黑白 #设计师日常 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Sat Apr 25 08:00:32 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-25
+🎯 Pillar: 设计感悟
+💡 Text: Focus on your own growth.
+🎨 Option A: a small potted plant with one leaf looking happily at its own roots
+🎨 Option B: a tiny character wearing blinders like a horse, happily watering their own garden
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-25/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-25/metadata.json
+
+========================================
+📄 Caption:
+把浇灌别人的水，用来滋养自己。悄悄扎根就好了。
+
+#手绘 #黑白 #涂鸦 #设计师日常 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 3b3dfcb] Auto-generate content for 2026-04-25
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-25_image_a.png
+ create mode 100644 docs/images/2026-04-25_image_b.png
+ create mode 100644 drafts/2026-04-25/caption.md
+ create mode 100644 drafts/2026-04-25/image_a.png
+ create mode 100644 drafts/2026-04-25/image_b.png
+ create mode 100644 drafts/2026-04-25/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   fb3c5da..3b3dfcb  main -> main
+Done: Sat Apr 25 08:00:49 CST 2026
+======================================
+Starting Daily XHS Job: Sun Apr 26 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-26
+🎯 Pillar: 生活碎片
+💡 Text: Trust your own timeline.
+🎨 Option A: a cute hourglass taking a nap on its side
+🎨 Option B: a cute little seed underground, sleeping peacefully while a fully grown flower blooms above
+
+🎨 Generating Option A...
+   ❌ Option A failed
+🎨 Generating Option B...
+   ❌ Option B failed
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-26/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-26/metadata.json
+
+========================================
+📄 Caption:
+不用追赶别人的进度条，你的时间线由你自己决定。
+
+#涂鸦 #插画 #极简 #日常 #BingBang
+========================================
+======================================
+Starting Daily XHS Job: Sun Apr 26 08:00:22 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-26
+🎯 Pillar: 生活碎片
+💡 Text: Don't compare your behind-the-scenes.
+🎨 Option A: a cute half-eaten apple looking content next to a perfect shiny fake apple
+🎨 Option B: a tiny character watching a highlight reel on a phone while their cozy messy room is behind them
+
+🎨 Generating Option A...
+   ✅ Option A saved
+🎨 Generating Option B...
+   ✅ Option B saved
+📝 Caption saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-26/caption.md
+📋 Metadata saved to /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-26/metadata.json
+
+========================================
+📄 Caption:
+每个人都有自己的节奏，没必要去羡慕别人展露在外的光鲜。
+
+#手绘 #黑白 #涂鸦 #生活感悟 #BingBang
+========================================
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 4491b1e] Auto-generate content for 2026-04-26
+ 7 files changed, 63 insertions(+)
+ create mode 100644 docs/images/2026-04-26_image_a.png
+ create mode 100644 docs/images/2026-04-26_image_b.png
+ create mode 100644 drafts/2026-04-26/caption.md
+ create mode 100644 drafts/2026-04-26/image_a.png
+ create mode 100644 drafts/2026-04-26/image_b.png
+ create mode 100644 drafts/2026-04-26/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   3b3dfcb..4491b1e  main -> main
+Done: Sun Apr 26 08:00:38 CST 2026

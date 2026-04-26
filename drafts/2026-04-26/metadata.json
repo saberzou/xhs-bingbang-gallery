@@ -1,16 +1,1 @@
-{
-  "date": "2026-04-26",
-  "pillar": "生活碎片",
-  "theme": {
-    "text": "Don't compare your behind-the-scenes.",
-    "objects": "a cute half-eaten apple looking content next to a perfect shiny fake apple",
-    "objects_alt": "a tiny character watching a highlight reel on a phone while their cozy messy room is behind them",
-    "caption": "每个人都有自己的节奏，没必要去羡慕别人展露在外的光鲜。"
-  },
-  "images": {
-    "a": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-26/image_a.png",
-    "b": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-26/image_b.png"
-  },
-  "image": "/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/drafts/2026-04-26/image_a.png",
-  "generated_at": "2026-04-26T08:00:36.429617"
-}
+{"date": "2026-04-26", "pillar": "Sage & Andy", "images": {"a": "image_a.png"}, "characters": ["sage", "andy"], "scene": "walking together with plant and camera"}
