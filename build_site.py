@@ -26,7 +26,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             --text: #333;
             --text-sub: #999;
             --accent: #FF2442;
-            --gap: 6px;
+            --gap: 16px;
             --radius: 6px;
         }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
