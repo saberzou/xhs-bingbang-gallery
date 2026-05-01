@@ -107,11 +107,40 @@ def generate_image(prompt: str, output_path: Path) -> bool:
         return False
 
 
+def get_recent_texts(days=14):
+    """Get a list of 'text' from the last N days to avoid repeating."""
+    recent_texts = set()
+    if not DRAFTS_DIR.exists():
+        return recent_texts
+    
+    # Sort folders by name (date) descending and take the last 'days' folders
+    folders = sorted([d for d in DRAFTS_DIR.iterdir() if d.is_dir() and d.name != "samples"], reverse=True)[:days]
+    
+    for folder in folders:
+        meta_path = folder / "metadata.json"
+        if meta_path.exists():
+            try:
+                with open(meta_path, 'r', encoding='utf-8') as f:
+                    meta = json.load(f)
+                    if "text" in meta:
+                        recent_texts.add(meta["text"])
+            except Exception:
+                pass
+    return recent_texts
+
 def main():
     today = datetime.now().strftime("%Y-%m-%d")
 
-    # Pick a random scene
-    scene = random.choice(SCENES)
+    # Avoid recent repeats
+    recent_texts = get_recent_texts(days=20)
+    available_scenes = [s for s in SCENES if s["text"] not in recent_texts]
+    
+    # Fallback if somehow we exhausted the list
+    if not available_scenes:
+        available_scenes = SCENES
+
+    # Pick a random scene from the available ones
+    scene = random.choice(available_scenes)
 
     output_dir = DRAFTS_DIR / today
     output_dir.mkdir(parents=True, exist_ok=True)
