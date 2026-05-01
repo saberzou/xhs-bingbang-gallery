@@ -19,87 +19,80 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@BingBang — Sage & Andy</title>
+    <title>Sage & Andy — @BingBang</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {{
-            --bg: #faf9f7;
+            --canvas: #f7f7f7;
             --surface: #ffffff;
-            --text: #000000;
-            --text-sub: #696f7b;
-            --border: #cfcfcf;
-            --accent: #ade900;
-            --accent-fill: #ebffb1;
-            --orange: #d8723c;
-            --radius: 10px;
-            --radius-pill: 999px;
-            --gap: 16px;
-            --shadow: rgba(34, 40, 42, 0.04) 0px 3px 10px 0px;
+            --text: #222222;
+            --text-sub: #6a6a6a;
+            --border: #ebebeb;
+            --placeholder: #dddddd;
+            --accent: #ff385c;
+            --accent-deep: #e00b41;
+            --radius-card: 20px;
+            --radius-pill: 32px;
+            --radius-badge: 4px;
+            --gap: 12px;
+            --shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px 0px, rgba(0,0,0,0.1) 0px 4px 8px 0px;
         }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            background: var(--bg);
+            background: var(--canvas);
             color: var(--text);
             -webkit-font-smoothing: antialiased;
             min-height: 100vh;
         }}
-        .hero {{
-            padding: 68px 24px 40px;
+        header {{
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 24px;
             text-align: center;
-            background: linear-gradient(rgb(242, 241, 237) 42%, rgb(213, 223, 224) 94%, rgb(229, 255, 148) 104%);
         }}
-        .hero h1 {{
-            font-size: 42px;
-            font-weight: 700;
-            letter-spacing: -1px;
-            line-height: 1.1;
+        header h1 {{
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            line-height: 1.23;
         }}
-        .hero p {{
+        header h1 span {{
+            color: var(--accent);
+        }}
+        header p {{
             color: var(--text-sub);
-            font-size: 16px;
-            margin-top: 12px;
+            font-size: 14px;
+            margin-top: 6px;
             font-weight: 400;
-            letter-spacing: 0.1px;
-        }}
-        .hero .tag {{
-            display: inline-block;
-            margin-top: 20px;
-            background: var(--accent-fill);
-            border: 1px solid var(--accent);
-            color: var(--text);
-            font-size: 13px;
-            font-weight: 500;
-            padding: 6px 16px;
-            border-radius: var(--radius-pill);
+            line-height: 1.43;
         }}
         .grid {{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: var(--gap);
-            padding: 32px 20px;
-            max-width: 1200px;
+            padding: 24px;
+            max-width: 1760px;
             margin: 0 auto;
         }}
-        @media (min-width: 640px) {{ .grid {{ grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 40px 24px; }} }}
+        @media (min-width: 640px) {{ .grid {{ grid-template-columns: repeat(3, 1fr); gap: 16px; }} }}
         @media (min-width: 960px) {{ .grid {{ grid-template-columns: repeat(4, 1fr); }} }}
         @media (min-width: 1280px) {{ .grid {{ grid-template-columns: repeat(5, 1fr); }} }}
         .item {{
             cursor: pointer;
-            transition: transform 0.2s ease;
+            transition: transform 0.25s ease;
         }}
         .item:hover {{
-            transform: translateY(-4px);
+            transform: scale(1.02);
         }}
         .item-img {{
             position: relative;
             width: 100%;
-            border-radius: var(--radius);
+            border-radius: var(--radius-card);
             overflow: hidden;
-            background: var(--surface);
-            box-shadow: var(--shadow);
+            background: var(--placeholder);
         }}
         .item-img img {{
             display: block;
@@ -109,22 +102,25 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }}
         .item-img .multi-badge {{
             position: absolute;
-            top: 8px;
-            right: 8px;
-            background: rgba(0,0,0,0.6);
-            color: #fff;
-            font-size: 10px;
-            font-weight: 500;
-            padding: 3px 8px;
-            border-radius: var(--radius-pill);
+            top: 10px;
+            left: 10px;
+            background: var(--surface);
+            color: var(--text);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: var(--radius-badge);
+            letter-spacing: 0.04em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         }}
         .item-info {{
-            padding: 8px 2px 16px;
+            padding: 12px 2px 8px;
         }}
         .item-title {{
-            font-size: 13px;
-            font-weight: 500;
-            line-height: 1.4;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.43;
+            letter-spacing: -0.13px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -134,9 +130,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 6px;
-            font-size: 11px;
+            margin-top: 4px;
+            font-size: 12px;
             color: var(--text-sub);
+            font-weight: 400;
         }}
         .item-author {{
             display: flex;
@@ -151,9 +148,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             position: fixed;
             inset: 0;
             z-index: 100;
-            background: rgba(0,0,0,0.88);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(32px);
+            -webkit-backdrop-filter: blur(32px);
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -161,9 +158,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .lightbox.open {{ display: flex; }}
         .lightbox img {{
             max-width: 90vw;
-            max-height: 68vh;
-            border-radius: var(--radius);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            max-height: 70vh;
+            border-radius: var(--radius-card);
         }}
         .lightbox-caption {{
             color: #fff;
@@ -171,7 +167,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             margin-top: 20px;
             max-width: 480px;
             text-align: center;
-            line-height: 1.6;
+            line-height: 1.5;
             padding: 0 20px;
             white-space: pre-wrap;
             opacity: 0.9;
@@ -182,49 +178,53 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             gap: 12px;
         }}
         .lightbox-actions button, .lightbox-actions a {{
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.3);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: var(--radius-pill);
-            font-size: 13px;
-            font-weight: 500;
+            background: var(--surface);
+            border: none;
+            color: var(--text);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.2s;
+            transition: background 0.25s ease;
         }}
         .lightbox-actions button:hover, .lightbox-actions a:hover {{
-            background: rgba(255,255,255,0.12);
-            border-color: rgba(255,255,255,0.5);
+            background: var(--canvas);
         }}
         .lightbox-close {{
             position: absolute;
             top: 20px;
             right: 24px;
-            background: none;
+            background: var(--surface);
             border: none;
-            color: #fff;
-            font-size: 28px;
+            color: var(--text);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 20px;
             cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.16);
         }}
-        .lightbox-close:hover {{ opacity: 1; }}
         .lightbox-nav {{
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: #fff;
+            background: var(--surface);
+            border: none;
+            color: var(--text);
             width: 40px;
             height: 40px;
             border-radius: 50%;
             font-size: 18px;
             cursor: pointer;
-            transition: all 0.2s;
+            box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.16) 0px 2px 4px 0px;
+            transition: transform 0.25s ease;
         }}
-        .lightbox-nav:hover {{ background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); }}
+        .lightbox-nav:hover {{ transform: translateY(-50%) scale(1.05); }}
         .lightbox-nav.prev {{ left: 20px; }}
         .lightbox-nav.next {{ right: 20px; }}
         .lightbox-dots {{
@@ -238,37 +238,39 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border-radius: 50%;
             background: rgba(255,255,255,0.3);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.25s;
         }}
         .lightbox-dots span.active {{ background: var(--accent); transform: scale(1.3); }}
 
         footer {{
             text-align: center;
-            padding: 40px 20px;
+            padding: 48px 24px;
             font-size: 12px;
             color: var(--text-sub);
+            background: var(--canvas);
+            border-top: 1px solid var(--border);
         }}
         footer a {{
             color: var(--text);
             text-decoration: none;
-            border-bottom: 1px solid var(--border);
+            font-weight: 500;
         }}
+        footer a:hover {{ text-decoration: underline; }}
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <h1>Sage & Andy</h1>
-        <p>A quiet doodle world. Gentle reminders for everyday life.</p>
-        <span class="tag">@BingBang</span>
-    </div>
+    <header>
+        <h1><span>♥</span> Sage & Andy</h1>
+        <p>A quiet doodle world. Small moments, shared softly.</p>
+    </header>
 
     <div class="grid">
         {cards}
     </div>
 
     <footer>
-        Small moments, shared softly. &mdash; <a href="https://www.xiaohongshu.com/user/profile/5a20b5c04eacab4a9e38ea26" target="_blank">@BingBang on XHS</a>
+        @BingBang &middot; <a href="https://www.xiaohongshu.com/user/profile/5a20b5c04eacab4a9e38ea26" target="_blank">Follow on XHS</a>
     </footer>
 
     <!-- Lightbox -->
