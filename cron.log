@@ -1045,3 +1045,258 @@ Starting Daily XHS Job: Sun Apr 26 08:00:22 CST 2026
 To https://github.com/saberzou/xhs-bingbang-gallery.git
    3b3dfcb..4491b1e  main -> main
 Done: Sun Apr 26 08:00:38 CST 2026
+======================================
+Starting Daily XHS Job: Mon Apr 27 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-27
+🎭 Cast: both
+💬 Text: ONE STEP AT A TIME
+🎨 Scene: climbing a simple staircase together, Sage one step ahead reaching back toward Andy
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+一步一步来。
+
+#极简 #手绘 #黑白 #日常 #生活感悟
+======================================
+Starting Daily XHS Job: Mon Apr 27 08:00:55 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-27
+🎭 Cast: andy
+💬 Text: WINDOW SEAT
+🎨 Scene: sitting on a windowsill looking outside, chin resting on one hand
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+窗边发呆时间。
+
+#插画 #黑白 #极简 #BingBang #生活感悟
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main ad837b6] Auto-generate content for 2026-04-27
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-04-27_image.png
+ create mode 100644 drafts/2026-04-27/caption.md
+ create mode 100644 drafts/2026-04-27/image.png
+ create mode 100644 drafts/2026-04-27/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   ad93e38..ad837b6  main -> main
+Done: Mon Apr 27 08:01:06 CST 2026
+======================================
+Starting Daily XHS Job: Tue Apr 28 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-28
+🎭 Cast: sage
+💬 Text: LIGHTHOUSE
+🎨 Scene: standing on a tiny hill next to a simple lighthouse, looking out calmly
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+做自己的灯塔。
+
+#插画 #涂鸦 #极简 #治愈 #Sage和Andy
+======================================
+Starting Daily XHS Job: Tue Apr 28 08:00:39 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-28
+🎭 Cast: andy
+💬 Text: JUST LOOKING
+🎨 Scene: standing on tiptoes peering into a tiny fishbowl with a small fish inside
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+就看看而已。
+
+#手绘 #插画 #黑白 #BingBang #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main d2017e8] Auto-generate content for 2026-04-28
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-04-28_image.png
+ create mode 100644 drafts/2026-04-28/caption.md
+ create mode 100644 drafts/2026-04-28/image.png
+ create mode 100644 drafts/2026-04-28/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   ad837b6..d2017e8  main -> main
+Done: Tue Apr 28 08:00:52 CST 2026
+======================================
+Starting Daily XHS Job: Wed Apr 29 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-29
+🎭 Cast: both
+💬 Text: PAPER BOATS
+🎨 Scene: crouching by a simple wavy line (water), placing paper boats on the surface
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+放一只纸船。
+
+#涂鸦 #插画 #黑白 #日常 #生活感悟
+======================================
+Starting Daily XHS Job: Wed Apr 29 08:00:24 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-29
+🎭 Cast: both
+💬 Text: STILL HERE
+🎨 Scene: sitting back to back on the ground, leaning on each other, eyes peaceful
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+我还在。
+
+#涂鸦 #插画 #黑白 #生活感悟 #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main fc7723e] Auto-generate content for 2026-04-29
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-04-29_image.png
+ create mode 100644 drafts/2026-04-29/caption.md
+ create mode 100644 drafts/2026-04-29/image.png
+ create mode 100644 drafts/2026-04-29/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   d2017e8..fc7723e  main -> main
+Done: Wed Apr 29 08:00:37 CST 2026
+======================================
+Starting Daily XHS Job: Thu Apr 30 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-30
+🎭 Cast: andy
+💬 Text: BLOOM
+🎨 Scene: holding a tiny pot with a single flower just beginning to bloom, looking at it with wonder
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+会开花的。
+
+#插画 #涂鸦 #黑白 #BingBang #生活感悟
+======================================
+Starting Daily XHS Job: Thu Apr 30 08:00:35 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-30
+🎭 Cast: andy
+💬 Text: WINDOW SEAT
+🎨 Scene: sitting on a windowsill looking outside, chin resting on one hand
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+窗边发呆时间。
+
+#黑白 #极简 #插画 #生活感悟 #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main f5aec1b] Auto-generate content for 2026-04-30
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-04-30_image.png
+ create mode 100644 drafts/2026-04-30/caption.md
+ create mode 100644 drafts/2026-04-30/image.png
+ create mode 100644 drafts/2026-04-30/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   fc7723e..f5aec1b  main -> main
+Done: Thu Apr 30 08:00:46 CST 2026
+======================================
+Starting Daily XHS Job: Thu Apr 30 08:01:05 CST 2026
+-> Running generate.py...
+📅 Date: 2026-04-30
+🎭 Cast: both
+💬 Text: CLEANING LIFTS THE SPIRIT
+🎨 Scene: Sage sweeping with a tiny broom while Andy wipes a window, sparkles around them
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+打扫完心情也亮了。
+
+#涂鸦 #极简 #手绘 #生活感悟 #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 4330f94] Auto-generate content for 2026-04-30
+ 5 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   f5aec1b..4330f94  main -> main
+Done: Thu Apr 30 08:01:16 CST 2026
+======================================
+Starting Daily XHS Job: Fri May  1 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-01
+🎭 Cast: both
+💬 Text: LAUNDRY DAY
+🎨 Scene: hanging tiny shirts on a clothesline, a small basket on the ground
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+晾衣服的下午。
+
+#极简 #涂鸦 #手绘 #Sage和Andy #日常
+======================================
+Starting Daily XHS Job: Fri May  1 08:00:44 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-01
+🎭 Cast: both
+💬 Text: CLEANING LIFTS THE SPIRIT
+🎨 Scene: Sage sweeping with a tiny broom while Andy wipes a window, sparkles around them
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+打扫完心情也亮了。
+
+#插画 #手绘 #黑白 #Sage和Andy #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 009adc4] Auto-generate content for 2026-05-01
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-05-01_image.png
+ create mode 100644 drafts/2026-05-01/caption.md
+ create mode 100644 drafts/2026-05-01/image.png
+ create mode 100644 drafts/2026-05-01/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   4330f94..009adc4  main -> main
+Done: Fri May  1 08:00:55 CST 2026

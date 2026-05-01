@@ -19,58 +19,87 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@BingBang Gallery</title>
+    <title>@BingBang — Sage & Andy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {{
-            --bg: #FFFFFF;
-            --text: #333;
-            --text-sub: #999;
-            --accent: #FF2442;
-            --gap: 24px;
-            --radius: 6px;
+            --bg: #faf9f7;
+            --surface: #ffffff;
+            --text: #000000;
+            --text-sub: #696f7b;
+            --border: #cfcfcf;
+            --accent: #ade900;
+            --accent-fill: #ebffb1;
+            --orange: #d8723c;
+            --radius: 10px;
+            --radius-pill: 999px;
+            --gap: 16px;
+            --shadow: rgba(34, 40, 42, 0.04) 0px 3px 10px 0px;
         }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
             background: var(--bg);
             color: var(--text);
             -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
         }}
-        header {{
-            padding: 28px 16px 20px;
+        .hero {{
+            padding: 68px 24px 40px;
             text-align: center;
+            background: linear-gradient(rgb(242, 241, 237) 42%, rgb(213, 223, 224) 94%, rgb(229, 255, 148) 104%);
         }}
-        header h1 {{
-            font-size: 20px;
+        .hero h1 {{
+            font-size: 42px;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
+            line-height: 1.1;
         }}
-        header p {{
+        .hero p {{
             color: var(--text-sub);
-            font-size: 12px;
-            margin-top: 4px;
+            font-size: 16px;
+            margin-top: 12px;
+            font-weight: 400;
+            letter-spacing: 0.1px;
+        }}
+        .hero .tag {{
+            display: inline-block;
+            margin-top: 20px;
+            background: var(--accent-fill);
+            border: 1px solid var(--accent);
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: var(--radius-pill);
         }}
         .grid {{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: var(--gap);
-            padding: 0 var(--gap) var(--gap);
+            padding: 32px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }}
-        @media (min-width: 640px) {{ .grid {{ grid-template-columns: repeat(3, 1fr); }} }}
+        @media (min-width: 640px) {{ .grid {{ grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 40px 24px; }} }}
         @media (min-width: 960px) {{ .grid {{ grid-template-columns: repeat(4, 1fr); }} }}
         @media (min-width: 1280px) {{ .grid {{ grid-template-columns: repeat(5, 1fr); }} }}
         .item {{
             cursor: pointer;
+            transition: transform 0.2s ease;
+        }}
+        .item:hover {{
+            transform: translateY(-4px);
         }}
         .item-img {{
             position: relative;
             width: 100%;
             border-radius: var(--radius);
             overflow: hidden;
-            background: #f5f5f5;
-            border: 1px solid rgba(0,0,0,0.06);
+            background: var(--surface);
+            box-shadow: var(--shadow);
         }}
         .item-img img {{
             display: block;
@@ -82,17 +111,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             position: absolute;
             top: 8px;
             right: 8px;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.6);
             color: #fff;
             font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 4px;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: var(--radius-pill);
         }}
         .item-info {{
-            padding: 6px 2px 14px;
+            padding: 8px 2px 16px;
         }}
         .item-title {{
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 500;
             line-height: 1.4;
             display: -webkit-box;
@@ -104,14 +134,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 4px;
-            font-size: 10px;
+            margin-top: 6px;
+            font-size: 11px;
             color: var(--text-sub);
         }}
         .item-author {{
             display: flex;
             align-items: center;
-            gap: 3px;
+            gap: 4px;
+            font-weight: 500;
         }}
 
         /* Lightbox */
@@ -120,7 +151,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             position: fixed;
             inset: 0;
             z-index: 100;
-            background: rgba(0,0,0,0.92);
+            background: rgba(0,0,0,0.88);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -128,65 +161,76 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .lightbox.open {{ display: flex; }}
         .lightbox img {{
             max-width: 90vw;
-            max-height: 70vh;
-            border-radius: 8px;
+            max-height: 68vh;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
         }}
         .lightbox-caption {{
             color: #fff;
             font-size: 14px;
-            margin-top: 16px;
+            margin-top: 20px;
             max-width: 480px;
             text-align: center;
             line-height: 1.6;
             padding: 0 20px;
             white-space: pre-wrap;
+            opacity: 0.9;
         }}
         .lightbox-actions {{
-            margin-top: 16px;
+            margin-top: 20px;
             display: flex;
             gap: 12px;
         }}
         .lightbox-actions button, .lightbox-actions a {{
-            background: rgba(255,255,255,0.15);
-            border: none;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
             color: #fff;
             padding: 8px 20px;
-            border-radius: 100px;
+            border-radius: var(--radius-pill);
             font-size: 13px;
+            font-weight: 500;
             cursor: pointer;
             text-decoration: none;
+            transition: all 0.2s;
         }}
-        .lightbox-actions button:hover, .lightbox-actions a:hover {{ background: rgba(255,255,255,0.25); }}
+        .lightbox-actions button:hover, .lightbox-actions a:hover {{
+            background: rgba(255,255,255,0.12);
+            border-color: rgba(255,255,255,0.5);
+        }}
         .lightbox-close {{
             position: absolute;
-            top: 16px;
-            right: 20px;
+            top: 20px;
+            right: 24px;
             background: none;
             border: none;
             color: #fff;
             font-size: 28px;
             cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s;
         }}
+        .lightbox-close:hover {{ opacity: 1; }}
         .lightbox-nav {{
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.15);
-            border: none;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
             color: #fff;
             width: 40px;
             height: 40px;
             border-radius: 50%;
             font-size: 18px;
             cursor: pointer;
+            transition: all 0.2s;
         }}
-        .lightbox-nav:hover {{ background: rgba(255,255,255,0.25); }}
-        .lightbox-nav.prev {{ left: 16px; }}
-        .lightbox-nav.next {{ right: 16px; }}
+        .lightbox-nav:hover {{ background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); }}
+        .lightbox-nav.prev {{ left: 20px; }}
+        .lightbox-nav.next {{ right: 20px; }}
         .lightbox-dots {{
             display: flex;
             gap: 6px;
-            margin-top: 12px;
+            margin-top: 14px;
         }}
         .lightbox-dots span {{
             width: 6px;
@@ -194,20 +238,38 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border-radius: 50%;
             background: rgba(255,255,255,0.3);
             cursor: pointer;
+            transition: all 0.2s;
         }}
-        .lightbox-dots span.active {{ background: #fff; }}
+        .lightbox-dots span.active {{ background: var(--accent); transform: scale(1.3); }}
+
+        footer {{
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 12px;
+            color: var(--text-sub);
+        }}
+        footer a {{
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+        }}
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>@BingBang</h1>
-        <p>Sage & Andy's daily adventures</p>
-    </header>
+    <div class="hero">
+        <h1>Sage & Andy</h1>
+        <p>A quiet doodle world. Gentle reminders for everyday life.</p>
+        <span class="tag">@BingBang</span>
+    </div>
 
     <div class="grid">
         {cards}
     </div>
+
+    <footer>
+        Small moments, shared softly. &mdash; <a href="https://www.xiaohongshu.com/user/profile/5a20b5c04eacab4a9e38ea26" target="_blank">@BingBang on XHS</a>
+    </footer>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
@@ -219,7 +281,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="lightbox-caption" id="lb-caption"></div>
         <div class="lightbox-actions">
             <button onclick="lbCopy()">Copy Caption</button>
-            <a id="lb-download" href="" download="">Save Image</a>
+            <a id="lb-download" href="" download="">Save</a>
         </div>
     </div>
 
@@ -255,11 +317,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             dl.href = lbImages[lbIndex];
             dl.download = lbImages[lbIndex].split('/').pop();
 
-            // Nav buttons
             document.getElementById('lb-prev').style.display = lbImages.length > 1 ? 'block' : 'none';
             document.getElementById('lb-next').style.display = lbImages.length > 1 ? 'block' : 'none';
 
-            // Dots
             const dots = document.getElementById('lb-dots');
             if (lbImages.length > 1) {{
                 dots.innerHTML = lbImages.map((_, i) =>
