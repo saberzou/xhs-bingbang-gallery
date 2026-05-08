@@ -1,0 +1,25 @@
+{
+  "date": "2026-05-07",
+  "version": "v2-world-bible",
+  "pillar": "生活碎片",
+  "scene": "late evening kitchen, snack drawer raid",
+  "world_bible_hooks": [
+    "§3 snack drawer (Andy's, Sage raids at 22:00)",
+    "§6 Andy lost an AirPod Tuesday, hasn't replaced",
+    "§2 Andy on the sofa scrolling, late-night habit"
+  ],
+  "caption_options_considered": [
+    "抽屉里的事，抽屉知道。",
+    "说好只看一眼。",
+    "那只 AirPod 还没回来，但夜宵已经开始了。"
+  ],
+  "caption_chosen": "说好只看一眼。",
+  "rationale": "Caught-in-the-act line. Concrete moment, no moral. The unspoken context (Andy will see, Andy won't say anything) does the work.",
+  "image_model": "google/gemini-3.1-flash-image-preview",
+  "reference_used": "references/characters/file_116---7ec56a4a-305d-4096-868a-8515854abc09.jpg",
+  "notes_for_next_iteration": [
+    "Add diamond ◆ on Andy's chest (model dropped it this round)",
+    "Consider showing the missing-AirPod ear more clearly",
+    "Clock detail worked"
+  ]
+}
