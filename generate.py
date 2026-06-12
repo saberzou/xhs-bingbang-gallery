@@ -285,21 +285,53 @@ def build_prompt(scene: dict) -> str:
 
 
 def generate_image(prompt: str, output_path: Path) -> bool:
-    """Generate image using nano-banana."""
+    """Generate image via `openclaw infer image generate` (synchronous CLI).
+
+    Uses OpenAI gpt-image-2 by default. The nano-banana / Gemini direct-call path
+    was abandoned on 2026-06-12 because:
+      1. Gemini API is geo-blocked on the Mac mini ("User location is not supported").
+      2. The `image_generate` tool path requires `sessions_yield`, which the cron
+         executor can't pump completion events back into, so cron runs always
+         abort at the yield. The CLI path runs to completion inline.
+    """
     try:
         result = subprocess.run(
             [
-                "python3", str(NANO_BANANA),
-                prompt,
+                "openclaw", "infer", "image", "generate",
+                "--prompt", prompt,
                 "--aspect-ratio", "1:1",
-                "--model", "gemini-3.1-flash-image-preview",
-                "-o", str(output_path),
+                "--model", "openai/gpt-image-2",
+                "--output", str(output_path),
                 "--json",
             ],
-            capture_output=True, text=True, timeout=240,
+            capture_output=True, text=True, timeout=300,
         )
-        data = json.loads(result.stdout)
-        return data.get("status") == "success"
+        if result.returncode != 0:
+            print(
+                f"Image generation failed (rc={result.returncode}): "
+                f"{result.stderr.strip()[:500]}",
+                file=sys.stderr,
+            )
+            return False
+        # CLI prints provider auth banner to stdout before the JSON object.
+        stdout = result.stdout.strip()
+        brace = stdout.find("{")
+        if brace < 0:
+            print(f"Image generation: no JSON in stdout: {stdout[:300]}", file=sys.stderr)
+            return False
+        data = json.loads(stdout[brace:])
+        if not data.get("ok"):
+            print(f"Image generation: ok=false: {str(data)[:300]}", file=sys.stderr)
+            return False
+        outputs = data.get("outputs") or []
+        if not outputs or not outputs[0].get("path"):
+            print(f"Image generation: no outputs in response: {str(data)[:300]}", file=sys.stderr)
+            return False
+        # CLI wrote the file at --output directly; verify it landed.
+        return Path(outputs[0]["path"]).exists()
+    except subprocess.TimeoutExpired:
+        print("Image generation failed: `openclaw infer image generate` timed out after 300s", file=sys.stderr)
+        return False
     except Exception as e:
         print(f"Image generation failed: {e}", file=sys.stderr)
         return False

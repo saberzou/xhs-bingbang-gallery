@@ -2,6 +2,10 @@
 # Cron job script to generate content, build site, and push to GitHub
 set -e
 
+# Ensure /opt/homebrew/bin (and friends) are on PATH so the script can call
+# openclaw / git / etc. when launched from a bare cron context.
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+
 # Configuration
 REPO_DIR="/Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator"
 LOG_FILE="$REPO_DIR/cron.log"
