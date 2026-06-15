@@ -1,12 +1,12 @@
 {
   "date": "2026-06-15",
-  "cast": "sage",
-  "text": "TRUST YOUR GUT",
-  "caption": "相信直觉。",
-  "scene": "standing confidently with arms crossed, eyes as small determined dots",
+  "cast": "both",
+  "text": "ONE STEP AT A TIME",
+  "caption": "一步一步来。",
+  "scene": "climbing a simple staircase together, Sage one step ahead reaching back toward Andy",
   "bible_hook": null,
   "rationale": null,
   "ideation_model": "github-copilot/claude-opus-4.7",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-15/image.png",
-  "generated_at": "2026-06-15T08:01:11.363772"
+  "generated_at": "2026-06-15T08:05:31.941255"
 }
