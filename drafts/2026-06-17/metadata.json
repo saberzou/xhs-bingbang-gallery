@@ -1,12 +1,12 @@
 {
   "date": "2026-06-17",
   "cast": "both",
-  "text": "DAY 3 LASAGNA",
-  "caption": "剩菜也是一种愿意。",
-  "scene": "both at a small kitchen table each with a square plate, one large rectangular dish in the middle, the dish noticeably emptier than full, a single fork in the air mid-bite",
-  "bible_hook": "§6 Wednesday's lasagna day 3",
+  "text": "GOOD NIGHT",
+  "caption": "晚安。",
+  "scene": "lying in two tiny beds side by side, a crescent moon and star above",
+  "bible_hook": null,
   "rationale": null,
   "ideation_model": "github-copilot/claude-opus-4.7",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-17/image.png",
-  "generated_at": "2026-06-17T08:01:24.461043"
+  "generated_at": "2026-06-17T08:02:47.108563"
 }
