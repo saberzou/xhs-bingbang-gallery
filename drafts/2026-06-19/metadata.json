@@ -1,12 +1,12 @@
 {
   "date": "2026-06-19",
-  "cast": "sage",
-  "text": "NAPPING",
-  "caption": "午睡是正经事。",
-  "scene": "curled up sleeping on a tiny cushion, three Z letters floating above",
-  "bible_hook": null,
+  "cast": "both",
+  "text": "JUST ONE PEEK",
+  "caption": "说好只看一眼。",
+  "scene": "late evening kitchen, Sage caught reaching into an open low drawer with simple snack bag rectangles inside, Andy on a sofa in background scrolling a phone with one earbud in (the other ear empty), a small round wall clock above showing 10:30",
+  "bible_hook": "§3 snack drawer + §6 missing AirPod",
   "rationale": null,
   "ideation_model": "github-copilot/claude-opus-4.7",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-19/image.png",
-  "generated_at": "2026-06-19T08:01:14.652129"
+  "generated_at": "2026-06-19T08:01:59.490347"
 }
