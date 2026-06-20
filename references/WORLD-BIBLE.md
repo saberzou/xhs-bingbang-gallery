@@ -127,6 +127,64 @@ This is the engine of the whole strip. Sage and Andy are two young people doing 
 
 ---
 
+## 2.6 The Scene Bank (bucketed seeds — mine these first)
+
+A navigable menu of concrete scene seeds, bucketed by type. Every daily post should pull one of these (or a close sibling) so captions stay grounded instead of drifting back to poster-mode one-liners. Rotate buckets — don't do three "home together" in a row. Each seed ties to a real fact in this doc.
+
+**A. Sage — design work (§2)**
+- 凌晨改稿，被 PM 一句"没那感觉"打回，面无表情。
+- 为 1px 对齐较劲两小时。
+- 周三 design crit，为一个圆角辩护得像在守底线。
+- 三块屏 + 客制键盘的敲击声，红点消息永远清不完。
+- 拿了个奖，群里只回了个"嗯"。
+- 周五五点 PM 又加需求，Sage 面不改色。
+- 上线了，盯着数据曲线偷偷开心，嘴上不说。
+- 周日晚上的 Monday-review 前夜恐惧。
+- 九个人开会争一个文案词，争了四十分钟。
+- Badge 进闸机，找个工位，耳机一戴，咖啡还没凉 Figma 已经开了。
+
+**B. Andy — store-manager work (§2)**
+- 站了十小时还在笑。
+- 背得出每个品牌的 drop 日历。
+- 月度目标像心跳一样在脑子里，还差三天差两单。
+- 带 6 个 SA 的团队，新人又把丝巾叠错了。
+- VIP 来了，记得她狗的名字、女儿的婚礼、三个品牌的尺码。
+- 盘点夜，扫标签扫到半夜，荧光灯下。
+- 神秘顾客可能是任何人，笑容不能垮。
+- 区域经理来访，白手套级别的紧张。
+- 耳机里"Andy to the floor",永远是他上。
+- 关店，对账、锁保险箱，九点四十最后一个走。
+- 帮客人挑了三小时，最后人家说"我再看看"。
+
+**C. Home together (§2-4)**
+- 下班秒换 oversize T 恤 + 拖鞋,整个人垮掉。
+- 进门第一件事是脱鞋。
+- 太累不想做饭,一盒外卖摆桌上,俩人靠着。
+- 难得都把手机扣桌上,什么都不说。
+- 一个看书一个刷手机,一小时没说话——这才是爱。
+- 他已经把空调开好了。
+- 你瘫在沙发上鞋还拿在手里,他递了杯冰的过来。
+
+**D. City friction (§3)**
+- 挤地铁抢到一个座位的小确幸。
+- 雨天打不到车,humid 的城市说下就下。
+- 共享单车的座垫又是湿的。
+- Andy 又坐过站一站,在橙线上睡着。
+- 门口的快递盒堆了一周没人拆。
+- 又开了第 14 个花呗分期,嘴硬"这是投资"。
+
+**E. Quiet / existential / small-loss (§7)**
+- 牙膏盖又没盖。
+- 深夜阳台,不想任何事。
+- 罗勒又死了,再买一盆就是。
+- Andy 撞上关着的玻璃门,Sage 看见了,一周都不会提。
+- 城市还醒着,我们要睡了(高窗 + 城市灯格)。
+- 一整卷胶片里就那一张好的。
+
+**Usage:** pick a bucket, pick a seed, anchor the caption to it. The §2.5 rule still applies — the best ones pair a hint of the day's pressure with one small bright thing. Visual spec (CHARACTER-BIBLE + §9) stays untouched: minimalist line, 1-2 props, white background.
+
+---
+
 ## 3. The Modern Anchors
 
 These are the props that pull the world out of "abstract cartoon" into "now." Use them in captions even when not drawn.
