@@ -1,12 +1,12 @@
 {
   "date": "2026-06-20",
-  "cast": "both",
-  "text": "HIGH FIVE",
-  "caption": "击个掌！",
-  "scene": "jumping up to high-five each other, motion lines and sparkles at the point of contact",
-  "bible_hook": null,
-  "rationale": null,
-  "ideation_model": "github-copilot/claude-opus-4.7",
+  "cast": "andy",
+  "text": "TARGET HIT",
+  "caption": "还差一小时，达标了！",
+  "scene": "Andy in good work shoes standing on the boutique floor beside a single glass display cube with one luxury bag on a pedestal, a headset line on his ear, one paw doing a tiny fist-pump, a small wall clock showing 8:40 and a tiny upward arrow floating beside him",
+  "bible_hook": "§2 Andy's monthly sales target lives in his head like a heartbeat; hitting it with time to spare (§2.5 small win)",
+  "rationale": "Recent posts skew domestic/cozy and home-bound, so this anchors to Andy's store-manager work with a target-met win plus the late-evening clock showing the day's grind — pressure and bright thing in one frame, and no repeated motif (no metro, snacks, AirPods, or doorway).",
+  "ideation_model": "github-copilot/claude-opus-4.8",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-20/image.png",
-  "generated_at": "2026-06-20T08:01:45.091743"
+  "generated_at": "2026-06-20T13:37:55.896191"
 }

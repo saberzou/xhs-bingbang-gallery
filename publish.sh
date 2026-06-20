@@ -19,6 +19,19 @@ cd "$REPO_DIR"
 echo "-> Running generate.py..." >> "$LOG_FILE"
 python3 generate.py >> "$LOG_FILE" 2>&1
 
+# 1b. QA quality gate (Axiom) - scores the new draft + recent window against
+#     the WORLD-BIBLE voice rules. Non-blocking: logs PASS/FAIL, never stops
+#     publishing, but FAIL is recorded loudly so drift gets caught early.
+TODAY=$(date +%Y-%m-%d)
+echo "-> Running verify_quality.py (QA gate)..." >> "$LOG_FILE"
+if python3 verify_quality.py --date "$TODAY" >> "$LOG_FILE" 2>&1; then
+  echo "   QA: today PASS" >> "$LOG_FILE"
+else
+  echo "   QA: today FAIL  <-- caption drifted off-bible, review before posting" >> "$LOG_FILE"
+fi
+python3 verify_quality.py --window 14 >> "$LOG_FILE" 2>&1 || \
+  echo "   QA: 14-day batch FAIL (cast/job/emotion/grounded drift) - see report above" >> "$LOG_FILE"
+
 # 2. Build static site
 echo "-> Running build_site.py..." >> "$LOG_FILE"
 python3 build_site.py >> "$LOG_FILE" 2>&1
