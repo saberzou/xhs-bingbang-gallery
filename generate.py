@@ -22,7 +22,7 @@ REFS_DIR = SCRIPT_DIR / "references"
 NANO_BANANA = Path.home() / ".openclaw/workspace-axel/skills/nano-banana/generate_image.py"
 
 # Model for scene ideation. Sonnet handles creative + grounded constraints well.
-IDEATION_MODEL = os.environ.get("XHS_IDEATION_MODEL", "github-copilot/claude-opus-4.7")
+IDEATION_MODEL = os.environ.get("XHS_IDEATION_MODEL", "github-copilot/claude-opus-4.8")
 LOOKBACK_DAYS = 30  # how many recent posts to feed as exclusion context
 
 # --- Character Definitions ---
@@ -90,6 +90,46 @@ _LEGACY_SEED_SCENES = [
     {"cast": "andy", "text": "OUTFIT READY", "caption": "明天穿什么已决定。", "scene": "Andy at night standing before a chair with a folded outfit stack laid out (t-shirt rectangle, pants rectangle, two shoe shapes underneath), one paw on chin, a tiny crescent moon outside a small window", "bible_hook": "§2 Andy plans tomorrow's outfit the night before"},
 ]
 
+# --- WORK & LIFE SEED SCENES (added 2026-06-20 per Saber) ---
+# Sage = senior designer at a big IT company. Andy = store manager at a luxury boutique.
+# Theme: metropolis work pressure + the small happiness that makes it bearable.
+# These feed the LLM as tone examples AND act as a richer fallback pool.
+_WORK_LIFE_SEED_SCENES = [
+    # --- Sage: the big-IT-company design grind ---
+    {"cast": "sage", "text": "SHIP IT", "caption": "终于上线了。", "scene": "Sage at a desk in front of two monitor rectangles, one showing a simple upward line chart, both arms raised in a small quiet victory, a tiny coffee mug beside the keyboard", "bible_hook": "§2 Sage ships a feature and watches the launch dashboard"},
+    {"cast": "sage", "text": "MAKE IT 2PX SMALLER", "caption": "强迫症晚期。", "scene": "Sage leaning very close to a single monitor with a tiny ruler line on screen, one paw on a mouse, a magnifying-glass shape over a tiny rectangle, late-night crescent moon in a small window", "bible_hook": "§2 Sage pixel-pushes at 11pm because the spacing was 2px off"},
+    {"cast": "sage", "text": "ANY BLOCKERS NO", "caption": "其实有。", "scene": "Sage sitting upright at a desk facing a laptop with a small grid of tiny face-squares on screen (a video call), a flat neutral expression, a small pile of sticky-note squares stacking up beside him", "bible_hook": "§2 standup at 10, says 'no blockers' when there are blockers"},
+    {"cast": "sage", "text": "MAKE THE LOGO BIGGER", "caption": "又是这句话。", "scene": "Sage at a desk staring at a monitor showing one small square that another floating hand is stretching larger, a tiny sweat drop on Sage's head, a flat line mouth", "bible_hook": "§2 'can you make the logo bigger', said every quarter"},
+    {"cast": "sage", "text": "FORTY TABS", "caption": "一个都不敢关。", "scene": "Sage tiny in front of one big monitor with a long row of tiny rectangle tabs across the top, both paws on a mechanical keyboard, three small tap lines floating up", "bible_hook": "§2 Sage lives in Figma with 40+ tabs open"},
+    {"cast": "sage", "text": "CRIT ENDED EARLY", "caption": "今天提前下班的快乐。", "scene": "Sage walking away from a meeting-room rectangle with a small spring in his step, one tiny diamond sparkle above, a closed laptop tucked under one arm", "bible_hook": "§2.5 small win: the crit ending early"},
+    {"cast": "sage", "text": "SCOPE AT FIVE PM", "caption": "周五五点的需求。", "scene": "Sage at a desk, a small chat-bubble rectangle popping up beside the monitor with three dots in it, Sage's paw frozen mid-air reaching for a coffee mug, a tiny clock showing 5:00", "bible_hook": "§2 the PM adds scope on Friday at 5pm"},
+    {"cast": "sage", "text": "BADGE IN", "caption": "周二回办公室。", "scene": "Sage standing at a simple gate turnstile holding up a small rectangular badge on a lanyard, a tiny beep mark beside the reader, a backpack on his back", "bible_hook": "§2 in-office Tue/Thu, badge gates"},
+
+    # --- Andy: the store-manager half ---
+    {"cast": "andy", "text": "LAST ONE OUT", "caption": "九点四十的关店。", "scene": "Andy pulling down a simple shop shutter line at night, a small key ring in one paw, one tiny crescent moon above, an empty glass display cube behind him", "bible_hook": "§2 Andy closes the store, last one out at 9:40pm"},
+    {"cast": "andy", "text": "TARGET WITH AN HOUR LEFT", "caption": "压线达标。", "scene": "Andy standing tall by a glass counter doing a tiny fist pump, a small clipboard with an upward tick mark in one paw, a tiny luxury bag on a pedestal beside him", "bible_hook": "§2.5 small win: hitting the monthly target with time to spare"},
+    {"cast": "andy", "text": "ANDY TO THE FLOOR", "caption": "永远是我上。", "scene": "Andy mid-stride toward the front of a boutique, a tiny headset earpiece line on one ear with a small sound mark, one paw adjusting his collar, a single bag on a pedestal", "bible_hook": "§2 the headset: 'Andy to the floor', always Andy"},
+    {"cast": "andy", "text": "SHE REMEMBERED ME", "caption": "VIP 记得我的名字。", "scene": "Andy at a glass counter handing a small shopping bag with a ribbon to an off-frame hand, a tiny heart floating, a folded scarf square on the counter", "bible_hook": "§2 VIP client appointments, the client book"},
+    {"cast": "andy", "text": "COUNT THE FLOAT", "caption": "开店先数钱。", "scene": "Andy behind a counter early morning counting a small stack of bill rectangles, a tiny open till box in front, an empty quiet boutique with one bag on a pedestal", "bible_hook": "§2 Andy opens the store: counts the float, briefs the team"},
+    {"cast": "andy", "text": "INVENTORY NIGHT", "caption": "盘点到半夜。", "scene": "Andy crouched among a few stacked box rectangles holding a small scanner with a tiny beam line, fluorescent strip line above, a sleepy half-lidded expression, one crescent moon in a high window", "bible_hook": "§2 inventory count night, midnight under fluorescent lights"},
+    {"cast": "andy", "text": "MYSTERY SHOPPER", "caption": "谁都可能是神秘顾客。", "scene": "Andy standing very straight with a wide fixed smile by a display, eyes darting (two tiny side-glance dots), a single customer head-shape entering through a doorway line", "bible_hook": "§2 a mystery shopper could be anyone, the smile stays on"},
+    {"cast": "andy", "text": "SHOES OFF FIRST", "caption": "回家第一件事。", "scene": "Andy just inside the front door dropping onto a low stool, pulling one dress shoe off, the other shoe already tipped over beside him, a tiny relief puff mark above his head", "bible_hook": "§2.5 small happiness: ten hours standing, the shoes come off first"},
+
+    # --- Shared: metropolis pressure + the small good thing (the core lane) ---
+    {"cast": "both", "text": "A SEAT", "caption": "挤地铁抢到座位。", "scene": "Sage and Andy squeezed among three or four simple head-shapes on a metro, a horizontal hand-rail line above, both managing to share one small bench seat, one tiny diamond sparkle", "bible_hook": "§2.5 small win: a seat on a packed metro"},
+    {"cast": "both", "text": "TOO TIRED TO COOK", "caption": "今天不做饭了。", "scene": "Sage and Andy slumped together on the sofa, a single takeout box with chopsticks on the low table between them, both with flat tired-line mouths but leaning on each other", "bible_hook": "§2.5 shared pressure: too tired to cook, the regular takeout order"},
+    {"cast": "both", "text": "PHONES DOWN", "caption": "难得都放下手机。", "scene": "Sage and Andy side by side on the sofa, two small phone rectangles face-down on the table, both just sitting, one tiny diamond sparkle between them", "bible_hook": "§2.5 small happiness: both on the sofa, phones down for once"},
+    {"cast": "both", "text": "WHERE DID THE WEEKEND GO", "caption": "周日晚上的叹气。", "scene": "Sage and Andy sitting on the floor by the window, a tall window with a tiny city-light grid behind them, both looking out, one small sigh puff above", "bible_hook": "§2.5 shared: the Sunday-evening 'where did the weekend go'"},
+    {"cast": "both", "text": "YOU ALREADY TURNED IT ON", "caption": "你已经开好空调了。", "scene": "Andy stepping through the front door still in work clothes, looking up at a small wall AC unit with one airflow line, Sage on the sofa with a tiny remote, a small heart between them", "bible_hook": "§2.5 small happiness: the other one already turned the AC on"},
+    {"cast": "both", "text": "CITY AT NIGHT", "caption": "城市还醒着，我们要睡了。", "scene": "Sage and Andy as two tiny silhouettes at a big window showing a simple grid of city lights, both small against it, a crescent moon in the corner", "bible_hook": "§2.5 metropolis backdrop: the apartment at night above the city"},
+    {"cast": "both", "text": "COLD DRINK SLID OVER", "caption": "他递了一杯过来。", "scene": "Andy face-down collapsed on the sofa with one dress shoe still in hand, Sage sliding a small cold cup across the low table toward him, a tiny condensation drop on the cup", "bible_hook": "§2.5 the core lane: tired posture + one small bright gesture"},
+    {"cast": "sage", "text": "FIRST SIP", "caption": "回邮件之前的第一口。", "scene": "Sage at a desk holding a small coffee cup with both paws, eyes peacefully closed (curved lines), a dark monitor not yet on beside him, one tiny steam swirl", "bible_hook": "§2.5 small happiness: the first sip of coffee before the inbox"},
+]
+
+# Combined pool: legacy + work/life. Used for fallback selection and as
+# the example bank fed to the LLM each day.
+SEED_SCENES = _LEGACY_SEED_SCENES + _WORK_LIFE_SEED_SCENES
+
 CORE_TAGS = ["#手绘", "#涂鸦", "#黑白", "#极简", "#插画"]
 EXTRA_TAGS = ["#BingBang", "#Sage和Andy", "#日常", "#治愈", "#生活感悟"]
 
@@ -142,11 +182,20 @@ def invoke_llm(prompt: str, timeout: int = 120) -> str:
     )
     if result.returncode != 0:
         raise RuntimeError(f"LLM call failed: {result.stderr[:500]}")
+    # The CLI prints a provider/proxy banner (e.g. "[proxy] routing ...") to
+    # stdout BEFORE the JSON wrapper, so json.loads(result.stdout) would choke
+    # on the leading text. Strip everything before the first '{' so we parse the
+    # wrapper, not the banner. (This was the silent bug that made LLM ideation
+    # fail every run and fall back to the legacy pool — fixed 2026-06-20.)
+    stdout = result.stdout
+    brace = stdout.find("{")
+    if brace < 0:
+        return stdout.strip()
     # Parse the wrapper JSON, extract text content.
     try:
-        data = json.loads(result.stdout)
+        data = json.loads(stdout[brace:])
     except json.JSONDecodeError:
-        return result.stdout.strip()
+        return stdout[brace:].strip()
     # openclaw infer model run shape: { outputs: [ { text } ] }
     if isinstance(data.get("outputs"), list) and data["outputs"]:
         first = data["outputs"][0]
@@ -193,7 +242,19 @@ def extract_json_object(text: str) -> dict:
         elif t[i] == "}":
             depth -= 1
             if depth == 0:
-                return json.loads(t[start:i+1])
+                obj = json.loads(t[start:i+1])
+                # Defensive: if a CLI wrapper leaked through (has outputs[*].text),
+                # dig into the inner payload and re-extract the real scene object.
+                if (
+                    isinstance(obj, dict)
+                    and "cast" not in obj
+                    and isinstance(obj.get("outputs"), list)
+                    and obj["outputs"]
+                    and isinstance(obj["outputs"][0], dict)
+                    and isinstance(obj["outputs"][0].get("text"), str)
+                ):
+                    return extract_json_object(obj["outputs"][0]["text"])
+                return obj
     raise ValueError(f"Unterminated JSON object in LLM output: {text[:300]}")
 
 
@@ -220,9 +281,9 @@ def generate_scene(world_bible: str, recent: list[dict], seed_examples: list[dic
 You will invent ONE fresh scene for today's post. Output a single JSON object, nothing else.
 
 # Brand
-Sage = bear roommate (gentle, designer, gym, street photography).
-Andy = cat roommate (luxury retail, snacks, lost AirPods, scrolling).
-Minimalist black-and-white doodles. One short English caption inside the drawing, one short Chinese caption beneath.
+Sage = bear roommate — senior product designer at a big IT company (Figma, crits, launches, the org grind), also gym + street photography.
+Andy = cat roommate — store manager at a luxury boutique (opening/closing, sales targets, VIP clients, a team of SAs, the headset), also snacks + lost AirPods + scrolling.
+They are two young people doing demanding jobs in an expensive city, finding small happiness in the gaps. Minimalist black-and-white doodles. One short English caption inside the drawing, one short Chinese caption beneath.
 
 # Format you must output (single JSON object, no prose, no code fence)
 {{
@@ -241,6 +302,7 @@ Minimalist black-and-white doodles. One short English caption inside the drawing
 4. Keep it specific and small. One concrete moment. No abstract metaphors unless grounded in a prop.
 5. Vary cast: if the last 3 posts were all "both", consider a solo. If all solo, consider "both".
 6. The scene must be drawable as a single minimalist line illustration. Max 1-2 props.
+7. WORK–LIFE BALANCE: roughly half the time, anchor to their JOBS (Sage's design work §2, Andy's store-manager work §2, or the shared work–life pressure §2.5), not just home/apartment life. If the recent posts are all domestic/cozy, deliberately pick a workday or commute moment. The strongest scenes hold BOTH a hint of the day's pressure AND one small bright thing in the same frame (see §2.5).
 
 # WORLD BIBLE (truth source)
 {world_bible}
@@ -347,7 +409,7 @@ def main():
 
     # Try LLM ideation; on failure, fall back to a non-recent legacy scene.
     try:
-        scene = generate_scene(world_bible, recent, _LEGACY_SEED_SCENES)
+        scene = generate_scene(world_bible, recent, SEED_SCENES)
         print(f"   ✅ LLM scene generated.")
         if scene.get("rationale"):
             print(f"   💭 {scene['rationale']}")
@@ -355,7 +417,7 @@ def main():
         print(f"   ❌ LLM ideation failed: {e}", file=sys.stderr)
         print("   ⤵️  Falling back to legacy scene pool.", file=sys.stderr)
         recent_texts = {r["text"] for r in recent}
-        pool = [s for s in _LEGACY_SEED_SCENES if s["text"] not in recent_texts] or _LEGACY_SEED_SCENES
+        pool = [s for s in SEED_SCENES if s["text"] not in recent_texts] or SEED_SCENES
         scene = random.choice(pool)
 
     output_dir = DRAFTS_DIR / today
