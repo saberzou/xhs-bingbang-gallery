@@ -37,9 +37,21 @@ echo "-> Running build_site.py..." >> "$LOG_FILE"
 python3 build_site.py >> "$LOG_FILE" 2>&1
 
 # 3. Commit and push
+# Cron runs in a non-interactive shell that CANNOT reach the macOS keychain
+# (osxkeychain helper), which is why the June 18/19 auto-pushes failed silently
+# with "could not read Username for https://github.com". gh stores its token in
+# its own keyring and `gh auth git-credential` serves it non-interactively, so
+# we point git at that helper for this push instead of the keychain.
 echo "-> Pushing to GitHub..." >> "$LOG_FILE"
 git add drafts/ docs/ >> "$LOG_FILE" 2>&1
 git commit -m "Auto-generate content for $(date +%Y-%m-%d)" >> "$LOG_FILE" 2>&1 || true # ignore error if nothing to commit
-git push origin main >> "$LOG_FILE" 2>&1 || true
+if git -c credential.helper='!gh auth git-credential' push origin main >> "$LOG_FILE" 2>&1; then
+  echo "   PUSH: ok" >> "$LOG_FILE"
+else
+  # Do NOT swallow this. A silent push failure means the live feed is stale
+  # while drafts/ keeps advancing locally. Make it loud so cron.log + the QA
+  # watchdog surface it.
+  echo "   PUSH: FAILED <-- live site is now STALE, commits stuck local. Check gh auth." >> "$LOG_FILE"
+fi
 
 echo "Done: $(date)" >> "$LOG_FILE"
