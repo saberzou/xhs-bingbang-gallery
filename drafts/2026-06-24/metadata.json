@@ -1,12 +1,12 @@
 {
   "date": "2026-06-24",
   "cast": "both",
-  "text": "WHERE DID IT GO",
-  "caption": "周末就这样没了。",
-  "scene": "Sage and Andy slumped at opposite ends of the linen sofa on a Sunday evening, both staring up at a single round wall clock showing 9:00, one of Andy's house slippers fallen on the floor, faint flat expressions, a small window beside them with one tiny crescent moon",
-  "bible_hook": "§2.5 the Sunday-evening 'where did the weekend go'",
-  "rationale": "Recent posts leaned on solo work moments and cozy snack/lasagna scenes; this is a shared work-life-pressure beat (Sunday dread) with a fresh clock-staring motif not used in the last 30 days.",
+  "text": "WET SEAT AGAIN",
+  "caption": "今天又中招了。",
+  "scene": "Sage and Andy standing beside two shared bikes on the street, Andy looking down with a flat dismayed face at a saddle with two tiny water-drop shapes on it, one paw hovering above it, while Sage beside him flips his own saddle dry with one hand, a small puddle line under the wheels.",
+  "bible_hook": "§3 shared bikes — often the seat is wet",
+  "rationale": "Pulls a fresh city-friction motif (wet bike saddle) from bucket D that hasn't appeared in 30 days, and holds the small daily annoyance against Sage's tiny fix in the same frame; recent posts were mostly home/sofa, so this moves us to a commute moment.",
   "ideation_model": "github-copilot/claude-opus-4.8",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-24/image.png",
-  "generated_at": "2026-06-24T08:01:58.989978"
+  "generated_at": "2026-06-24T08:05:27.452801"
 }

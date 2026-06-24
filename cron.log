@@ -1300,3 +1300,2661 @@ Starting Daily XHS Job: Fri May  1 08:00:44 CST 2026
 To https://github.com/saberzou/xhs-bingbang-gallery.git
    4330f94..009adc4  main -> main
 Done: Fri May  1 08:00:55 CST 2026
+======================================
+Starting Daily XHS Job: Fri May  1 10:58:46 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-01
+🎭 Cast: both
+💬 Text: YOUR PACE IS THE RIGHT PACE
+🎨 Scene: walking together but at slightly different strides, both looking content
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+你的节奏就是对的。
+
+#涂鸦 #黑白 #手绘 #生活感悟 #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 40bf74f] Auto-generate content for 2026-05-01
+ 5 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   b8ef968..40bf74f  main -> main
+Done: Fri May  1 10:58:57 CST 2026
+======================================
+Starting Daily XHS Job: Sat May  2 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-02
+🎭 Cast: both
+💬 Text: GOOD NIGHT
+🎨 Scene: lying in two tiny beds side by side, a crescent moon and star above
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+晚安。
+
+#极简 #涂鸦 #插画 #治愈 #日常
+======================================
+Starting Daily XHS Job: Sat May  2 08:00:23 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-02
+🎭 Cast: andy
+💬 Text: BRAVE TODAY
+🎨 Scene: standing in front of a closed door, one hand reaching for the doorknob, taking a breath
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+今天也要勇敢。
+
+#极简 #手绘 #涂鸦 #生活感悟 #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main c7dfb2d] Auto-generate content for 2026-05-02
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-05-02_image.png
+ create mode 100644 drafts/2026-05-02/caption.md
+ create mode 100644 drafts/2026-05-02/image.png
+ create mode 100644 drafts/2026-05-02/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   40bf74f..c7dfb2d  main -> main
+Done: Sat May  2 08:00:32 CST 2026
+======================================
+Starting Daily XHS Job: Sat May  2 08:00:41 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-02
+🎭 Cast: sage
+💬 Text: BREATHE
+🎨 Scene: standing with eyes closed and arms slightly out, tiny lines radiating outward like calm energy
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+深呼吸。
+
+#插画 #手绘 #涂鸦 #生活感悟 #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 232c39e] Auto-generate content for 2026-05-02
+ 5 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   c7dfb2d..232c39e  main -> main
+Done: Sat May  2 08:00:52 CST 2026
+======================================
+Starting Daily XHS Job: Sun May  3 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-03
+🎭 Cast: both
+💬 Text: GROW TOGETHER
+🎨 Scene: each watering a small plant in a pot, the plants leaning toward each other
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+一起成长。
+
+#极简 #插画 #黑白 #Sage和Andy #日常
+======================================
+Starting Daily XHS Job: Sun May  3 08:00:26 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-03
+🎭 Cast: andy
+💬 Text: STILL LEARNING
+🎨 Scene: sitting at a tiny desk with an open book, a small question mark floating above
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+还在学。
+
+#涂鸦 #极简 #插画 #生活感悟 #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 0f5e9b8] Auto-generate content for 2026-05-03
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-05-03_image.png
+ create mode 100644 drafts/2026-05-03/caption.md
+ create mode 100644 drafts/2026-05-03/image.png
+ create mode 100644 drafts/2026-05-03/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   f3b6e88..0f5e9b8  main -> main
+Done: Sun May  3 08:00:35 CST 2026
+======================================
+Starting Daily XHS Job: Mon May  4 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-04
+🎭 Cast: both
+💬 Text: STARGAZING
+🎨 Scene: lying on the ground looking up, a few simple stars and one shooting star above
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+看星星的夜晚。
+
+#极简 #手绘 #插画 #治愈 #Sage和Andy
+======================================
+Starting Daily XHS Job: Mon May  4 08:00:28 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-04
+🎭 Cast: both
+💬 Text: ONE STEP AT A TIME
+🎨 Scene: climbing a simple staircase together, Sage one step ahead reaching back toward Andy
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+一步一步来。
+
+#极简 #涂鸦 #黑白 #Sage和Andy #日常
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 026ee4a] Auto-generate content for 2026-05-04
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-05-04_image.png
+ create mode 100644 drafts/2026-05-04/caption.md
+ create mode 100644 drafts/2026-05-04/image.png
+ create mode 100644 drafts/2026-05-04/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   0f5e9b8..026ee4a  main -> main
+Done: Mon May  4 08:00:42 CST 2026
+======================================
+Starting Daily XHS Job: Tue May  5 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-05
+🎭 Cast: andy
+💬 Text: BLOOM
+🎨 Scene: holding a tiny pot with a single flower just beginning to bloom, looking at it with wonder
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+会开花的。
+
+#极简 #涂鸦 #黑白 #治愈 #Sage和Andy
+======================================
+Starting Daily XHS Job: Tue May  5 08:00:41 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-05
+🎭 Cast: both
+💬 Text: KITE
+🎨 Scene: one holding a kite string while the other watches, a simple diamond kite in the sky with a curvy tail
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+放风筝的日子。
+
+#黑白 #极简 #手绘 #BingBang #生活感悟
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 591c87d] Auto-generate content for 2026-05-05
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-05-05_image.png
+ create mode 100644 drafts/2026-05-05/caption.md
+ create mode 100644 drafts/2026-05-05/image.png
+ create mode 100644 drafts/2026-05-05/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   026ee4a..591c87d  main -> main
+Done: Tue May  5 08:00:51 CST 2026
+======================================
+Starting Daily XHS Job: Tue May  5 08:01:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-05
+🎭 Cast: both
+💬 Text: UMBRELLA
+🎨 Scene: standing close under one small umbrella, tiny rain lines falling around them
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+有伞一起撑。
+
+#极简 #黑白 #涂鸦 #日常 #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main a1120a3] Auto-generate content for 2026-05-05
+ 5 files changed, 9 insertions(+), 9 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   591c87d..a1120a3  main -> main
+Done: Tue May  5 08:01:12 CST 2026
+======================================
+Starting Daily XHS Job: Wed May  6 08:00:21 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-06
+🎭 Cast: both
+💬 Text: GROW TOGETHER
+🎨 Scene: each watering a small plant in a pot, the plants leaning toward each other
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+一起成长。
+
+#插画 #极简 #手绘 #BingBang #日常
+======================================
+Starting Daily XHS Job: Wed May  6 08:00:58 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-06
+🎭 Cast: sage
+💬 Text: LIGHTHOUSE
+🎨 Scene: standing on a tiny hill next to a simple lighthouse, looking out calmly
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+做自己的灯塔。
+
+#手绘 #涂鸦 #极简 #治愈 #日常
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main e29683a] Auto-generate content for 2026-05-06
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-05-06_image.png
+ create mode 100644 drafts/2026-05-06/caption.md
+ create mode 100644 drafts/2026-05-06/image.png
+ create mode 100644 drafts/2026-05-06/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   a1120a3..e29683a  main -> main
+Done: Wed May  6 08:01:14 CST 2026
+======================================
+Starting Daily XHS Job: Wed May  6 08:01:41 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-06
+🎭 Cast: both
+💬 Text: COFFEE FIRST
+🎨 Scene: standing side by side each holding a tiny coffee cup, steam rising
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+先来杯咖啡。
+
+#极简 #涂鸦 #插画 #治愈 #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main eadbfaf] Auto-generate content for 2026-05-06
+ 5 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   e29683a..eadbfaf  main -> main
+Done: Wed May  6 08:01:53 CST 2026
+======================================
+Starting Daily XHS Job: Thu May  7 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-07
+🎭 Cast: both
+💬 Text: LAUNDRY DAY
+🎨 Scene: hanging tiny shirts on a clothesline, a small basket on the ground
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+晾衣服的下午。
+
+#黑白 #涂鸦 #极简 #生活感悟 #日常
+======================================
+Starting Daily XHS Job: Thu May  7 08:00:34 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-07
+🎭 Cast: both
+💬 Text: HIGH FIVE
+🎨 Scene: jumping up to high-five each other, motion lines and sparkles at the point of contact
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+击个掌！
+
+#极简 #手绘 #黑白 #生活感悟 #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 500c17d] Auto-generate content for 2026-05-07
+ 5 files changed, 28 insertions(+)
+ create mode 100644 docs/images/2026-05-07_image.png
+ create mode 100644 drafts/2026-05-07/caption.md
+ create mode 100644 drafts/2026-05-07/image.png
+ create mode 100644 drafts/2026-05-07/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   eadbfaf..500c17d  main -> main
+Done: Thu May  7 08:00:46 CST 2026
+======================================
+Starting Daily XHS Job: Fri May  8 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-08
+🎭 Cast: andy
+💬 Text: OUTFIT READY
+🎨 Scene: Andy at night standing before a chair with a folded outfit stack laid out (t-shirt rectangle, pants rectangle, two shoe shapes underneath), one paw on chin, a tiny crescent moon outside a small window
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+明天穿什么已决定。
+
+#插画 #黑白 #极简 #生活感悟 #BingBang
+======================================
+Starting Daily XHS Job: Fri May  8 08:00:30 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-08
+🎭 Cast: andy
+💬 Text: AIRPOD MIA
+🎨 Scene: Andy in oversized t-shirt patting the sofa cushions looking for something, one ear has a tiny earbud, a couple of question marks floating, a remote and a takeout box on the table
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+剩一只也能听。
+
+#极简 #黑白 #插画 #生活感悟 #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 452cb04] Auto-generate content for 2026-05-08
+ 12 files changed, 67 insertions(+), 9 deletions(-)
+ create mode 100644 docs/images/2026-05-08_image.png
+ create mode 100644 drafts/2026-05-07-v2/caption.md
+ create mode 100644 drafts/2026-05-07-v2/image.jpg
+ create mode 100644 drafts/2026-05-07-v2/metadata.json
+ create mode 100644 drafts/2026-05-08/caption.md
+ create mode 100644 drafts/2026-05-08/image.png
+ create mode 100644 drafts/2026-05-08/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   500c17d..452cb04  main -> main
+Done: Fri May  8 08:00:44 CST 2026
+======================================
+Starting Daily XHS Job: Sat May  9 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-09
+🎭 Cast: andy
+💬 Text: OUTFIT READY
+🎨 Scene: Andy at night standing before a chair with a folded outfit stack laid out (t-shirt rectangle, pants rectangle, two shoe shapes underneath), one paw on chin, a tiny crescent moon outside a small window
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+明天穿什么已决定。
+
+#手绘 #黑白 #插画 #日常 #BingBang
+======================================
+Starting Daily XHS Job: Sun May 10 08:00:17 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-10
+🎭 Cast: both
+💬 Text: AC WAR
+🎨 Scene: Sage and Andy each reaching for the same wall-mounted AC remote on a low table, a tiny wall-mounted AC unit visible in the corner, a small spark between their hands
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+二十四还是二十六。
+
+#手绘 #极简 #涂鸦 #BingBang #生活感悟
+======================================
+Starting Daily XHS Job: Mon May 11 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-11
+🎭 Cast: sage
+💬 Text: BASIL LIVES
+🎨 Scene: Sage on a narrow balcony crouched watering a small potted basil plant with a tiny watering can, a folding stool beside, a thin railing line
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+罗勒又活过来了。
+
+#插画 #手绘 #涂鸦 #Sage和Andy #日常
+======================================
+Starting Daily XHS Job: Mon May 11 08:00:26 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-11
+🎭 Cast: andy
+💬 Text: NEW DROP
+🎨 Scene: Andy on the sofa staring at a phone screen showing a tiny shopping bag icon, one paw on chin in deliberation, a small shopping bag already on the floor next to him
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+又安了一个花呗。
+
+#极简 #涂鸦 #黑白 #治愈 #BingBang
+======================================
+Starting Daily XHS Job: Tue May 12 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-12
+🎭 Cast: sage
+💬 Text: TRUST YOUR GUT
+🎨 Scene: standing confidently with arms crossed, eyes as small determined dots
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+相信直觉。
+
+#手绘 #插画 #黑白 #Sage和Andy #BingBang
+======================================
+Starting Daily XHS Job: Wed May 13 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-13
+🎭 Cast: sage
+💬 Text: LEG DAY
+🎨 Scene: Sage stepping out the apartment door with a small gym bag over shoulder, a tiny umbrella in the other hand, a few rain lines outside, a single barbell icon faintly above as a thought
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+下雨也是腿日。
+
+#黑白 #涂鸦 #极简 #治愈 #Sage和Andy
+======================================
+Starting Daily XHS Job: Wed May 13 08:00:56 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-13
+🎭 Cast: both
+💬 Text: GROW TOGETHER
+🎨 Scene: each watering a small plant in a pot, the plants leaning toward each other
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+一起成长。
+
+#手绘 #插画 #涂鸦 #BingBang #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 60404e4] Auto-generate content for 2026-05-13
+ 7 files changed, 41 insertions(+)
+ create mode 100644 docs/images/2026-05-13_image.png
+ create mode 100644 drafts/2026-05-12/caption.md
+ create mode 100644 drafts/2026-05-12/metadata.json
+ create mode 100644 drafts/2026-05-13/caption.md
+ create mode 100644 drafts/2026-05-13/image.png
+ create mode 100644 drafts/2026-05-13/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   21229ac..60404e4  main -> main
+Done: Wed May 13 08:02:54 CST 2026
+======================================
+Starting Daily XHS Job: Wed May 13 08:03:06 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-13
+🎭 Cast: both
+💬 Text: DID YOU BRING IT
+🎨 Scene: both at the front door area, Sage holding a folded umbrella out toward Andy who is mid-step leaving, a small shoe pile on the floor, a coat hook on the wall
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+你伞带了吗。
+
+#极简 #插画 #黑白 #Sage和Andy #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main a169620] Auto-generate content for 2026-05-13
+ 5 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   60404e4..a169620  main -> main
+Done: Wed May 13 08:03:19 CST 2026
+======================================
+Starting Daily XHS Job: Fri May 15 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-15
+🎭 Cast: both
+💬 Text: JUST ONE PEEK
+🎨 Scene: late evening kitchen, Sage caught reaching into an open low drawer with simple snack bag rectangles inside, Andy on a sofa in background scrolling a phone with one earbud in (the other ear empty), a small round wall clock above showing 10:30
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+说好只看一眼。
+
+#黑白 #手绘 #插画 #Sage和Andy #治愈
+======================================
+Starting Daily XHS Job: Sat May 16 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-16
+🎭 Cast: sage
+💬 Text: CARDS LOGGED
+🎨 Scene: Sage sitting on a yoga mat with a tiny phone in hand and a small dumbbell beside, a few sweat drop marks, a notebook icon faint above
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+每一组都记上。
+
+#黑白 #涂鸦 #手绘 #Sage和Andy #日常
+======================================
+Starting Daily XHS Job: Sun May 17 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-17
+🎭 Cast: both
+💬 Text: DAY 3 LASAGNA
+🎨 Scene: both at a small kitchen table each with a square plate, one large rectangular dish in the middle, the dish noticeably emptier than full, a single fork in the air mid-bite
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+剩菜也是一种愿意。
+
+#极简 #黑白 #涂鸦 #治愈 #日常
+======================================
+Starting Daily XHS Job: Mon May 18 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-18
+🎭 Cast: andy
+💬 Text: 23:30 RUN
+🎨 Scene: Andy in oversized t-shirt and slippers walking back through a doorway carrying a small convenience-store bag with simple snack rectangles poking out, a wall clock showing 23:30
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+夜粉应急补给。
+
+#插画 #涂鸦 #黑白 #生活感悟 #日常
+======================================
+Starting Daily XHS Job: Mon May 18 08:00:44 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-18
+🎭 Cast: both
+💬 Text: STARGAZING
+🎨 Scene: lying on the ground looking up, a few simple stars and one shooting star above
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+看星星的夜晚。
+
+#黑白 #手绘 #插画 #治愈 #日常
+======================================
+Starting Daily XHS Job: Tue May 19 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-19
+🎭 Cast: sage
+💬 Text: LEG DAY
+🎨 Scene: Sage stepping out the apartment door with a small gym bag over shoulder, a tiny umbrella in the other hand, a few rain lines outside, a single barbell icon faintly above as a thought
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+下雨也是腿日。
+
+#极简 #黑白 #手绘 #Sage和Andy #治愈
+======================================
+Starting Daily XHS Job: Wed May 20 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-20
+🎭 Cast: sage
+💬 Text: LIGHT IS RIGHT
+🎨 Scene: Sage crouching on a sidewalk holding up a small camera (rounded rectangle with a circle lens) toward something off-frame, a leaf casting a tiny shadow line, two diamond sparkles
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+这个光不接不行。
+
+#插画 #涂鸦 #极简 #治愈 #BingBang
+======================================
+Starting Daily XHS Job: Wed May 20 08:00:31 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-20
+🎭 Cast: andy
+💬 Text: BUTTERFLY
+🎨 Scene: standing still with a tiny butterfly landed on one outstretched hand, looking at it gently
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+蝴蝶停了一下。
+
+#极简 #手绘 #黑白 #日常 #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/.openclaw/workspace-axel/projects/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 0c0b11b] Auto-generate content for 2026-05-20
+ 7 files changed, 41 insertions(+)
+ create mode 100644 docs/images/2026-05-20_image.png
+ create mode 100644 drafts/2026-05-19/caption.md
+ create mode 100644 drafts/2026-05-19/metadata.json
+ create mode 100644 drafts/2026-05-20/caption.md
+ create mode 100644 drafts/2026-05-20/image.png
+ create mode 100644 drafts/2026-05-20/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   6816eb9..0c0b11b  main -> main
+Done: Wed May 20 08:01:50 CST 2026
+======================================
+Starting Daily XHS Job: Thu May 21 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-21
+🎭 Cast: both
+💬 Text: STARGAZING
+🎨 Scene: lying on the ground looking up, a few simple stars and one shooting star above
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+看星星的夜晚。
+
+#手绘 #黑白 #插画 #Sage和Andy #日常
+======================================
+Starting Daily XHS Job: Fri May 22 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-22
+🎭 Cast: both
+💬 Text: HIGH FIVE
+🎨 Scene: jumping up to high-five each other, motion lines and sparkles at the point of contact
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+击个掌！
+
+#黑白 #极简 #涂鸦 #治愈 #日常
+======================================
+Starting Daily XHS Job: Fri May 22 08:00:22 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-22
+🎭 Cast: sage
+💬 Text: LIGHT IS RIGHT
+🎨 Scene: Sage crouching on a sidewalk holding up a small camera (rounded rectangle with a circle lens) toward something off-frame, a leaf casting a tiny shadow line, two diamond sparkles
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+这个光不接不行。
+
+#插画 #极简 #涂鸦 #日常 #Sage和Andy
+======================================
+Starting Daily XHS Job: Sat May 23 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-23
+🎭 Cast: andy
+💬 Text: 23:30 RUN
+🎨 Scene: Andy in oversized t-shirt and slippers walking back through a doorway carrying a small convenience-store bag with simple snack rectangles poking out, a wall clock showing 23:30
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+夜粉应急补给。
+
+#手绘 #黑白 #涂鸦 #BingBang #Sage和Andy
+======================================
+Starting Daily XHS Job: Sun May 24 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-24
+🎭 Cast: sage
+💬 Text: CARRY ON
+🎨 Scene: walking forward carrying a small bindle stick over shoulder, looking ahead
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+继续走。
+
+#涂鸦 #极简 #黑白 #生活感悟 #BingBang
+======================================
+Starting Daily XHS Job: Mon May 25 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-25
+🎭 Cast: andy
+💬 Text: 23:30 RUN
+🎨 Scene: Andy in oversized t-shirt and slippers walking back through a doorway carrying a small convenience-store bag with simple snack rectangles poking out, a wall clock showing 23:30
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+夜粉应急补给。
+
+#黑白 #插画 #涂鸦 #BingBang #生活感悟
+======================================
+Starting Daily XHS Job: Mon May 25 08:00:34 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-25
+🎭 Cast: sage
+💬 Text: LIGHTHOUSE
+🎨 Scene: standing on a tiny hill next to a simple lighthouse, looking out calmly
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+做自己的灯塔。
+
+#手绘 #插画 #涂鸦 #治愈 #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 81572aa] Auto-generate content for 2026-05-25
+ 7 files changed, 41 insertions(+)
+ create mode 100644 docs/images/2026-05-25_image.png
+ create mode 100644 drafts/2026-05-24/caption.md
+ create mode 100644 drafts/2026-05-24/metadata.json
+ create mode 100644 drafts/2026-05-25/caption.md
+ create mode 100644 drafts/2026-05-25/image.png
+ create mode 100644 drafts/2026-05-25/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   f817088..81572aa  main -> main
+Done: Mon May 25 08:00:50 CST 2026
+======================================
+Starting Daily XHS Job: Mon May 25 08:00:59 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-25
+🎭 Cast: andy
+💬 Text: 23:30 RUN
+🎨 Scene: Andy in oversized t-shirt and slippers walking back through a doorway carrying a small convenience-store bag with simple snack rectangles poking out, a wall clock showing 23:30
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+夜粉应急补给。
+
+#手绘 #极简 #黑白 #生活感悟 #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 086ba2b] Auto-generate content for 2026-05-25
+ 5 files changed, 11 insertions(+), 11 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   81572aa..086ba2b  main -> main
+Done: Mon May 25 08:01:15 CST 2026
+======================================
+Starting Daily XHS Job: Tue May 26 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-26
+🎭 Cast: both
+💬 Text: CLEANING LIFTS THE SPIRIT
+🎨 Scene: Sage sweeping with a tiny broom while Andy wipes a window, sparkles around them
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+打扫完心情也亮了。
+
+#手绘 #涂鸦 #极简 #治愈 #生活感悟
+======================================
+Starting Daily XHS Job: Wed May 27 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-27
+🎭 Cast: andy
+💬 Text: WINDOW SEAT
+🎨 Scene: sitting on a windowsill looking outside, chin resting on one hand
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+窗边发呆时间。
+
+#涂鸦 #黑白 #插画 #日常 #BingBang
+======================================
+Starting Daily XHS Job: Wed May 27 08:00:41 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-27
+🎭 Cast: andy
+💬 Text: STILL LEARNING
+🎨 Scene: sitting at a tiny desk with an open book, a small question mark floating above
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+还在学。
+
+#手绘 #涂鸦 #极简 #治愈 #日常
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 2a1648c] Auto-generate content for 2026-05-27
+ 7 files changed, 41 insertions(+)
+ create mode 100644 docs/images/2026-05-27_image.png
+ create mode 100644 drafts/2026-05-26/caption.md
+ create mode 100644 drafts/2026-05-26/metadata.json
+ create mode 100644 drafts/2026-05-27/caption.md
+ create mode 100644 drafts/2026-05-27/image.png
+ create mode 100644 drafts/2026-05-27/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   086ba2b..2a1648c  main -> main
+Done: Wed May 27 08:01:02 CST 2026
+======================================
+Starting Daily XHS Job: Thu May 28 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-28
+🎭 Cast: andy
+💬 Text: BLOOM
+🎨 Scene: holding a tiny pot with a single flower just beginning to bloom, looking at it with wonder
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+会开花的。
+
+#涂鸦 #极简 #手绘 #日常 #治愈
+======================================
+Starting Daily XHS Job: Fri May 29 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-29
+🎭 Cast: both
+💬 Text: STILL HERE
+🎨 Scene: sitting back to back on the ground, leaning on each other, eyes peaceful
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+我还在。
+
+#手绘 #涂鸦 #极简 #Sage和Andy #BingBang
+======================================
+Starting Daily XHS Job: Fri May 29 08:00:34 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-29
+🎭 Cast: both
+💬 Text: ONE STEP AT A TIME
+🎨 Scene: climbing a simple staircase together, Sage one step ahead reaching back toward Andy
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+一步一步来。
+
+#涂鸦 #极简 #手绘 #Sage和Andy #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main af88b40] Auto-generate content for 2026-05-29
+ 7 files changed, 41 insertions(+)
+ create mode 100644 docs/images/2026-05-29_image.png
+ create mode 100644 drafts/2026-05-28/caption.md
+ create mode 100644 drafts/2026-05-28/metadata.json
+ create mode 100644 drafts/2026-05-29/caption.md
+ create mode 100644 drafts/2026-05-29/image.png
+ create mode 100644 drafts/2026-05-29/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   2a1648c..af88b40  main -> main
+Done: Fri May 29 08:01:16 CST 2026
+======================================
+Starting Daily XHS Job: Fri May 29 08:01:24 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-29
+🎭 Cast: both
+💬 Text: UMBRELLA
+🎨 Scene: standing close under one small umbrella, tiny rain lines falling around them
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+有伞一起撑。
+
+#极简 #手绘 #涂鸦 #日常 #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 9c453d4] Auto-generate content for 2026-05-29
+ 5 files changed, 9 insertions(+), 9 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   af88b40..9c453d4  main -> main
+Done: Fri May 29 08:01:54 CST 2026
+======================================
+Starting Daily XHS Job: Sat May 30 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-30
+🎭 Cast: andy
+💬 Text: AIRPOD MIA
+🎨 Scene: Andy in oversized t-shirt patting the sofa cushions looking for something, one ear has a tiny earbud, a couple of question marks floating, a remote and a takeout box on the table
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+剩一只也能听。
+
+#手绘 #插画 #黑白 #治愈 #生活感悟
+======================================
+Starting Daily XHS Job: Sun May 31 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-05-31
+🎭 Cast: sage
+💬 Text: LIGHTHOUSE
+🎨 Scene: standing on a tiny hill next to a simple lighthouse, looking out calmly
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+做自己的灯塔。
+
+#手绘 #插画 #极简 #治愈 #生活感悟
+======================================
+Starting Daily XHS Job: Mon Jun  1 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-06-01
+🎭 Cast: both
+💬 Text: AC WAR
+🎨 Scene: Sage and Andy each reaching for the same wall-mounted AC remote on a low table, a tiny wall-mounted AC unit visible in the corner, a small spark between their hands
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+二十四还是二十六。
+
+#黑白 #手绘 #涂鸦 #日常 #BingBang
+======================================
+Starting Daily XHS Job: Mon Jun  1 08:00:05 CST 2026
+-> Running generate.py...
+📅 Date: 2026-06-01
+🎭 Cast: sage
+💬 Text: BASIL LIVES
+🎨 Scene: Sage on a narrow balcony crouched watering a small potted basil plant with a tiny watering can, a folding stool beside, a thin railing line
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+罗勒又活过来了。
+
+#涂鸦 #黑白 #插画 #Sage和Andy #日常
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 0301c04] Auto-generate content for 2026-06-01
+ 9 files changed, 53 insertions(+)
+ create mode 100644 docs/images/2026-06-01_image.png
+ create mode 100644 drafts/2026-05-30/caption.md
+ create mode 100644 drafts/2026-05-30/metadata.json
+ create mode 100644 drafts/2026-05-31/caption.md
+ create mode 100644 drafts/2026-05-31/metadata.json
+ create mode 100644 drafts/2026-06-01/caption.md
+ create mode 100644 drafts/2026-06-01/image.png
+ create mode 100644 drafts/2026-06-01/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   9c453d4..0301c04  main -> main
+Done: Mon Jun  1 08:00:19 CST 2026
+======================================
+Starting Daily XHS Job: Tue Jun  2 08:00:01 CST 2026
+-> Running generate.py...
+📅 Date: 2026-06-02
+🎭 Cast: andy
+💬 Text: OUTFIT READY
+🎨 Scene: Andy at night standing before a chair with a folded outfit stack laid out (t-shirt rectangle, pants rectangle, two shoe shapes underneath), one paw on chin, a tiny crescent moon outside a small window
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+明天穿什么已决定。
+
+#手绘 #极简 #黑白 #Sage和Andy #日常
+======================================
+Starting Daily XHS Job: Wed Jun  3 08:00:00 CST 2026
+-> Running generate.py...
+📅 Date: 2026-06-03
+🎭 Cast: both
+💬 Text: AC WAR
+🎨 Scene: Sage and Andy each reaching for the same wall-mounted AC remote on a low table, a tiny wall-mounted AC unit visible in the corner, a small spark between their hands
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+二十四还是二十六。
+
+#黑白 #手绘 #极简 #治愈 #生活感悟
+======================================
+Starting Daily XHS Job: Wed Jun  3 08:00:05 CST 2026
+-> Running generate.py...
+📅 Date: 2026-06-03
+🎭 Cast: both
+💬 Text: DID YOU BRING IT
+🎨 Scene: both at the front door area, Sage holding a folded umbrella out toward Andy who is mid-step leaving, a small shoe pile on the floor, a coat hook on the wall
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+你伞带了吗。
+
+#手绘 #极简 #插画 #治愈 #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 2aedd68] Auto-generate content for 2026-06-03
+ 7 files changed, 41 insertions(+)
+ create mode 100644 docs/images/2026-06-03_image.png
+ create mode 100644 drafts/2026-06-02/caption.md
+ create mode 100644 drafts/2026-06-02/metadata.json
+ create mode 100644 drafts/2026-06-03/caption.md
+ create mode 100644 drafts/2026-06-03/image.png
+ create mode 100644 drafts/2026-06-03/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   0301c04..2aedd68  main -> main
+Done: Wed Jun  3 08:00:18 CST 2026
+======================================
+Starting Daily XHS Job: Wed Jun  3 08:00:25 CST 2026
+-> Running generate.py...
+📅 Date: 2026-06-03
+🎭 Cast: both
+💬 Text: AC WAR
+🎨 Scene: Sage and Andy each reaching for the same wall-mounted AC remote on a low table, a tiny wall-mounted AC unit visible in the corner, a small spark between their hands
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+二十四还是二十六。
+
+#插画 #极简 #手绘 #Sage和Andy #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 39cca52] Auto-generate content for 2026-06-03
+ 5 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   2aedd68..39cca52  main -> main
+Done: Wed Jun  3 08:00:42 CST 2026
+======================================
+Starting Daily XHS Job: Wed Jun  3 08:00:48 CST 2026
+-> Running generate.py...
+📅 Date: 2026-06-03
+🎭 Cast: both
+💬 Text: DID YOU BRING IT
+🎨 Scene: both at the front door area, Sage holding a folded umbrella out toward Andy who is mid-step leaving, a small shoe pile on the floor, a coat hook on the wall
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+你伞带了吗。
+
+#涂鸦 #黑白 #插画 #生活感悟 #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main c13b403] Auto-generate content for 2026-06-03
+ 5 files changed, 10 insertions(+), 10 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   39cca52..c13b403  main -> main
+Done: Wed Jun  3 08:01:01 CST 2026
+======================================
+Starting Daily XHS Job: Thu Jun  4 08:00:01 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-04
+🎭 Cast: both
+💬 Text: NO WORDS NEEDED
+🎨 Scene: sitting side by side on a bench looking at nothing in particular, comfortable silence
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+不用说话也可以。
+
+#手绘 #涂鸦 #黑白 #日常 #BingBang
+======================================
+Starting Daily XHS Job: Fri Jun  5 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-05
+🎭 Cast: andy
+💬 Text: WINDOW SEAT
+🎨 Scene: sitting on a windowsill looking outside, chin resting on one hand
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+窗边发呆时间。
+
+#涂鸦 #黑白 #极简 #日常 #生活感悟
+======================================
+Starting Daily XHS Job: Fri Jun  5 08:00:06 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Recent posts covered Sage's gym, camera, and basil but never his daily coffee ritual — a core §2 anchor; solo Sage scene with fresh kitchen prop, no overlap with umbrella/basil/AirPod/outfit/lasagna motifs.
+📅 Date: 2026-06-05
+🎭 Cast: sage
+💬 Text: GRIND AND POUR
+🎨 Scene: Sage standing at the kitchen counter turning the handle of a small hand grinder, an empty V60 dripper sitting on a mug beside it, one tiny coffee bean on the counter.
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+周六的二楼咖啡。
+
+#极简 #黑白 #涂鸦 #治愈 #生活感悟
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 3d67814] Auto-generate content for 2026-06-05
+ 7 files changed, 47 insertions(+)
+ create mode 100644 docs/images/2026-06-05_image.png
+ create mode 100644 drafts/2026-06-04/caption.md
+ create mode 100644 drafts/2026-06-04/metadata.json
+ create mode 100644 drafts/2026-06-05/caption.md
+ create mode 100644 drafts/2026-06-05/image.png
+ create mode 100644 drafts/2026-06-05/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   754bb37..3d67814  main -> main
+Done: Fri Jun  5 08:00:32 CST 2026
+======================================
+Starting Daily XHS Job: Sat Jun  6 08:00:01 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-06
+🎭 Cast: both
+💬 Text: GROCERIES
+🎨 Scene: walking together carrying a paper grocery bag between them, a carrot and baguette sticking out
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+买菜也是一种仪式感。
+
+#极简 #手绘 #插画 #治愈 #Sage和Andy
+======================================
+Starting Daily XHS Job: Sun Jun  7 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-07
+🎭 Cast: sage
+💬 Text: SLOW MORNING
+🎨 Scene: sitting on the ground holding a warm mug with both hands, eyes peacefully closed (curved lines), tiny steam swirls
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+慢慢来的早晨。
+
+#黑白 #插画 #手绘 #生活感悟 #日常
+======================================
+Starting Daily XHS Job: Mon Jun  8 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-08
+🎭 Cast: sage
+💬 Text: NAPPING
+🎨 Scene: curled up sleeping on a tiny cushion, three Z letters floating above
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+午睡是正经事。
+
+#涂鸦 #插画 #黑白 #生活感悟 #治愈
+======================================
+Starting Daily XHS Job: Mon Jun  8 09:47:28 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Anchors to a recurring commute gag never drawn yet; solo Andy after recent 'both' posts, and avoids snack/AirPod/outfit motifs already used this month.
+📅 Date: 2026-06-08
+🎭 Cast: andy
+💬 Text: ONE STOP TOO FAR
+🎨 Scene: Andy slumped asleep on a metro bench seat, head tilted to one side, a tiny speech bubble with Z, one hand loosely holding a phone, a simple horizontal window line behind him suggesting a subway car
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+又坐过了一站。
+
+#涂鸦 #黑白 #手绘 #Sage和Andy #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 6e6cffc] Auto-generate content for 2026-06-08
+ 9 files changed, 62 insertions(+)
+ create mode 100644 docs/images/2026-06-08_image.png
+ create mode 100644 drafts/2026-06-06/caption.md
+ create mode 100644 drafts/2026-06-06/metadata.json
+ create mode 100644 drafts/2026-06-07/caption.md
+ create mode 100644 drafts/2026-06-07/metadata.json
+ create mode 100644 drafts/2026-06-08/caption.md
+ create mode 100644 drafts/2026-06-08/image.png
+ create mode 100644 drafts/2026-06-08/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   3d67814..6e6cffc  main -> main
+Done: Mon Jun  8 09:47:53 CST 2026
+======================================
+Starting Daily XHS Job: Tue Jun  9 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-09
+🎭 Cast: both
+💬 Text: LAUNDRY DAY
+🎨 Scene: hanging tiny shirts on a clothesline, a small basket on the ground
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+晾衣服的下午。
+
+#黑白 #极简 #涂鸦 #治愈 #日常
+======================================
+Starting Daily XHS Job: Wed Jun 10 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-10
+🎭 Cast: both
+💬 Text: STILL HERE
+🎨 Scene: sitting back to back on the ground, leaning on each other, eyes peaceful
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+我还在。
+
+#插画 #极简 #手绘 #日常 #BingBang
+======================================
+Starting Daily XHS Job: Wed Jun 10 08:21:03 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Recent posts have leaned tender/cozy; this anchors to Andy's specific money texture (installment plans) which hasn't been shown directly, and it's a solo after several 'both' posts. Differs from 05-18 NEW DROP which was about the decision moment — this is the aftermath.
+📅 Date: 2026-06-10
+🎭 Cast: andy
+💬 Text: FOURTEEN PLANS
+🎨 Scene: Andy sitting cross-legged on the sofa staring at a phone screen showing a small calendar grid with tiny dots on multiple dates, a single shopping bag on the floor beside him, one paw rubbing the back of his neck.
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+这个月又开新分期。
+
+#极简 #插画 #涂鸦 #Sage和Andy #生活感悟
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 944705d] Auto-generate content for 2026-06-10
+ 7 files changed, 47 insertions(+)
+ create mode 100644 docs/images/2026-06-10_image.png
+ create mode 100644 drafts/2026-06-09/caption.md
+ create mode 100644 drafts/2026-06-09/metadata.json
+ create mode 100644 drafts/2026-06-10/caption.md
+ create mode 100644 drafts/2026-06-10/image.png
+ create mode 100644 drafts/2026-06-10/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   6e6cffc..944705d  main -> main
+Done: Wed Jun 10 08:21:25 CST 2026
+======================================
+Starting Daily XHS Job: Thu Jun 11 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-11
+🎭 Cast: sage
+💬 Text: BREATHE
+🎨 Scene: standing with eyes closed and arms slightly out, tiny lines radiating outward like calm energy
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+深呼吸。
+
+#涂鸦 #黑白 #手绘 #日常 #治愈
+======================================
+Starting Daily XHS Job: Fri Jun 12 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: [Errno 2] No such file or directory: 'openclaw'
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-12
+🎭 Cast: andy
+💬 Text: IT'S OKAY
+🎨 Scene: sitting alone hugging knees with a small rain cloud above, but a tiny smile
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+没关系的。
+
+#插画 #手绘 #极简 #生活感悟 #治愈
+======================================
+Starting Daily XHS Job: Fri Jun 12 08:00:06 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Recent posts covered Sage's morning coffee, gym, photography, and balcony but never his actual work setup; this anchors a fresh weekday WFH moment with new props (monitors, keyboard) untouched in the last 30 days.
+📅 Date: 2026-06-12
+🎭 Cast: sage
+💬 Text: TYPING IN THE DEN
+🎨 Scene: Sage sitting at a small desk in the den with two simple monitor rectangles in front, fingers on a mechanical keyboard with tiny tap marks above, a small mug beside the keyboard
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+周四在家办公。
+
+#手绘 #涂鸦 #极简 #BingBang #治愈
+======================================
+Starting Daily XHS Job: Fri Jun 12 08:00:21 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Recent posts leaned home/apartment scenes; this pulls into Andy's workday at the mall, a setting we haven't touched. No overlap with snack drawer, AirPods, shopping bags, or 23:30 runs.
+📅 Date: 2026-06-12
+🎭 Cast: andy
+💬 Text: STAFF CANTEEN AGAIN
+🎨 Scene: Andy in a simple work shirt sitting at a small canteen table with a tray holding one rectangular compartment plate, a tiny paper coffee cup beside it, his chin resting on one paw looking down at the food with a flat expression.
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+今天又是同款午饭。
+
+#极简 #插画 #手绘 #日常 #生活感悟
+======================================
+Starting Daily XHS Job: Fri Jun 12 09:36:37 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'cast', 'scene', 'text', 'caption'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"sage","text":"ROLL THIRTY-SIX","caption":"周日的暗房时间。","scene":"Sage sitting at a small desk in front of a laptop screen showing a grid of tiny photo thumbnails, his Fuji camera resting beside the laptop, one hand on a small mouse, looking focused at the screen.","bible_hook":"§2 Sage edits photos in Lightroom; §6 Sage shot a roll of film over the weekend, scanned Monday","rationale":"Anchors to Sage\'s photography habit and the recent continuity beat about scanning film; differs from recent posts which featured the camera on the street (5/22) — this is the editing-at-home counterpart, a quiet solo moment after two \'both\' posts."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-12
+🎭 Cast: andy
+💬 Text: JUST LOOKING
+🎨 Scene: standing on tiptoes peering into a tiny fishbowl with a small fish inside
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+就看看而已。
+
+#极简 #插画 #手绘 #Sage和Andy #生活感悟
+======================================
+Starting Daily XHS Job: Fri Jun 12 09:36:55 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'cast', 'text', 'caption', 'scene'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"sage","text":"KEEPS BUZZING","caption":"灯又响了。","scene":"Sage standing on the sofa on tiptoes reaching up toward a tall floor lamp, one paw lightly touching the lamp shade, head tilted listening, a tiny musical-note-like buzz mark near the bulb, a closed book left on the sofa cushion below.","bible_hook":"§1 IKEA floor lamp that buzzes when it rains","rationale":"Anchors to a specific apartment quirk we\'ve never drawn; solo Sage after recent \'both\' posts, and avoids all recent motifs (umbrella, basil, AirPod, snack drawer, gym, coffee, lasagna)."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-12
+🎭 Cast: both
+💬 Text: AC WAR
+🎨 Scene: Sage and Andy each reaching for the same wall-mounted AC remote on a low table, a tiny wall-mounted AC unit visible in the corner, a small spark between their hands
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+二十四还是二十六。
+
+#插画 #极简 #黑白 #治愈 #Sage和Andy
+======================================
+Starting Daily XHS Job: Fri Jun 12 09:51:28 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'caption', 'scene', 'text', 'cast'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"sage","text":"KINDLE BEFORE SLEEP","caption":"睡前最后一页。","scene":"Sage lying in bed under a simple blanket line, holding a small rectangular Kindle up with both hands, a tiny bedside lamp glowing beside, a small crescent moon in a window above the headboard.","bible_hook":"§3 Sage uses a Kindle; §2 reads in bed, lights out by 23:00","rationale":"Recent posts leaned on snacks, AC, basil, coffee — but Sage\'s quiet bedtime reading ritual hasn\'t appeared. A solo Sage scene balances the cast mix and uses a fresh prop (Kindle) not yet drawn."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+======================================
+Starting Daily XHS Job: Fri Jun 12 09:53:31 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'text', 'scene', 'caption', 'cast'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{\n  "cast": "sage",\n  "text": "PR FOR ONE",\n  "caption": "只告诉了妈妈。",\n  "scene": "Sage standing alone in a gym holding a phone up to one ear, a barbell with two plates resting on the floor beside him, one tiny heart floating above the phone.",\n  "bible_hook": "§6 Sage hit a deadlift PR last Thursday, told no one, texted his mom only",\n  "rationale": "Pulls a quiet recent-past callback that hasn\'t been used; solo Sage after recent both-heavy posts (AC WAR, LAUNDRY DAY); no umbrella/snack/AirPod/coffee/basil/lasagna motifs."\n}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+======================================
+Starting Daily XHS Job: Fri Jun 12 11:17:08 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'cast', 'text', 'caption', 'scene'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{\n  "cast": "sage",\n  "text": "ONE GOOD KNIFE",\n  "caption": "切菜的声音很稳。",\n  "scene": "Sage standing at the kitchen counter slicing a small vegetable on a simple cutting board, holding one chef\'s knife, a tiny pile of cut pieces beside the board.",\n  "bible_hook": "§1 the kitchen has one good knife",\n  "rationale": "Anchors to a small specific kitchen fact never used yet; a quiet solo Sage moment after a recent run of \'both\' posts (AC WAR, LAUNDRY DAY), and avoids all recent motifs (umbrella, basil, AirPod, snack drawer, coffee grinder, lasagna, gym, AC remote)."\n}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+Image generation failed (rc=1): [image-generation/openai] image auth selected: provider=openai mode=oauth transport=codex-responses requestedModel=gpt-image-2 responsesModel=gpt-5.5 timeoutMs=180000
+[image-generation] candidate failed: openai/gpt-image-2: OpenAI Codex image generation failed (HTTP 429): The usage limit has been reached [type=usage_limit_reached]
+ProviderHttpError: OpenAI Codex image generation failed (HTTP 429): The usage limit has been reached [type=usage_limit_reached]
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-12
+🎭 Cast: both
+💬 Text: STILL HERE
+🎨 Scene: sitting back to back on the ground, leaning on each other, eyes peaceful
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+我还在。
+
+#手绘 #黑白 #插画 #Sage和Andy #日常
+======================================
+Starting Daily XHS Job: Sat Jun 13 08:00:01 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'caption', 'cast', 'scene', 'text'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"sage","text":"TWO SCREENS DEEP","caption":"周四居家办公。","scene":"Sage sitting at a small desk in the den, two simple monitor rectangles in front, fingers on a mechanical keyboard with tiny tap marks above the keys, a small mug to the side","bible_hook":"§2 Sage WFH days: deep work in the den, two screens, mechanical keyboard tapping","rationale":"This week leaned on emotional/together moments and Andy solos; pivoting to a Sage solo grounded in his concrete WFH ritual — new motif (desk + dual monitors + keyboard) not seen in recent posts."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-13
+🎭 Cast: andy
+💬 Text: BRAVE TODAY
+🎨 Scene: standing in front of a closed door, one hand reaching for the doorknob, taking a breath
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+今天也要勇敢。
+
+#插画 #涂鸦 #黑白 #Sage和Andy #生活感悟
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 2454741] Auto-generate content for 2026-06-13
+ 9 files changed, 62 insertions(+)
+ create mode 100644 docs/images/2026-06-13_image.png
+ create mode 100644 drafts/2026-06-11/caption.md
+ create mode 100644 drafts/2026-06-11/metadata.json
+ create mode 100644 drafts/2026-06-12/caption.md
+ create mode 100644 drafts/2026-06-12/metadata.json
+ create mode 100644 drafts/2026-06-13/caption.md
+ create mode 100644 drafts/2026-06-13/image.png
+ create mode 100644 drafts/2026-06-13/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+Done: Sat Jun 13 08:01:28 CST 2026
+======================================
+Starting Daily XHS Job: Sun Jun 14 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'cast', 'caption', 'text', 'scene'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"andy","text":"WIFI\'S ANDYSUX2018","caption":"密码他自己设的。","scene":"Andy sitting cross-legged on the floor squinting at a small router box with tiny signal lines, one paw holding a phone, a sticky note stuck to the router with letters and numbers scribbled on it","bible_hook":"§4 the wifi password is andysux2018","rationale":"Anchors to a wifi password fact never used before; solo Andy with a router prop is a fresh domestic micro-moment, distinct from recent snack/AirPod/metro motifs."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-14
+🎭 Cast: both
+💬 Text: COFFEE FIRST
+🎨 Scene: standing side by side each holding a tiny coffee cup, steam rising
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+先来杯咖啡。
+
+#黑白 #涂鸦 #极简 #Sage和Andy #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main eb8b29e] Auto-generate content for 2026-06-14
+ 5 files changed, 32 insertions(+)
+ create mode 100644 docs/images/2026-06-14_image.png
+ create mode 100644 drafts/2026-06-14/caption.md
+ create mode 100644 drafts/2026-06-14/image.png
+ create mode 100644 drafts/2026-06-14/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+Done: Sun Jun 14 08:01:41 CST 2026
+======================================
+Starting Daily XHS Job: Mon Jun 15 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'scene', 'caption', 'cast', 'text'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"sage","text":"AC WAR TRUCE","caption":"二十五度，成交。","scene":"Sage standing on the sofa on tiptoes pointing a small rectangular remote up at a square wall-mounted AC unit, a tiny number 25 floating from the unit, one folded blanket draped over the sofa arm","bible_hook":"§4 the long-running debate about whether the AC should be on 24 or 26°C","rationale":"Anchors to the AC temperature debate which has never been used; recent posts leaned on coffee, AirPod, basil, lasagna — this introduces a fresh recurring household friction with a single prop (remote) and breaks a \'both\' streak with a solo Sage moment."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-15
+🎭 Cast: sage
+💬 Text: TRUST YOUR GUT
+🎨 Scene: standing confidently with arms crossed, eyes as small determined dots
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+相信直觉。
+
+#黑白 #涂鸦 #手绘 #Sage和Andy #日常
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 6503243] Auto-generate content for 2026-06-15
+ 5 files changed, 32 insertions(+)
+ create mode 100644 docs/images/2026-06-15_image.png
+ create mode 100644 drafts/2026-06-15/caption.md
+ create mode 100644 drafts/2026-06-15/image.png
+ create mode 100644 drafts/2026-06-15/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+Done: Mon Jun 15 08:01:13 CST 2026
+======================================
+Starting Daily XHS Job: Mon Jun 15 08:04:07 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'caption', 'scene', 'cast', 'text'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{\n  "cast": "both",\n  "text": "TWENTY FOUR OR TWENTY SIX",\n  "caption": "空调战又开始了。",\n  "scene": "Sage and Andy standing side by side on the sofa both reaching up toward a small AC unit mounted on the wall, a tiny remote in Andy\'s paw, a small temperature display showing 25 in the middle as a compromise, both with mildly determined expressions.",\n  "bible_hook": "§4 long-running debate about whether the AC should be on 24 or 26°C",\n  "rationale": "Mid-June humid coastal weather makes the AC temperature war a real anchor this week. Differs from recent posts by leaning into a domestic disagreement prop (AC remote) not yet used, instead of more outdoor/cafe/balcony moments."\n}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-15
+🎭 Cast: both
+💬 Text: ONE STEP AT A TIME
+🎨 Scene: climbing a simple staircase together, Sage one step ahead reaching back toward Andy
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+一步一步来。
+
+#手绘 #涂鸦 #极简 #日常 #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main a6963bd] Auto-generate content for 2026-06-15
+ 5 files changed, 11 insertions(+), 11 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   eaa6802..a6963bd  main -> main
+Done: Mon Jun 15 08:05:35 CST 2026
+======================================
+Starting Daily XHS Job: Tue Jun 16 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'cast', 'text', 'caption', 'scene'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"andy","text":"FIVE MORE MINUTES","caption":"再玩五分钟。","scene":"Andy lying in bed at night under a thin blanket, holding a phone above his face with both paws, the screen showing a small grid of playing-card shapes, eyes wide open, a tiny crescent moon visible through a small window","bible_hook":"§3 Andy plays Balatro in bed + stays up until 1-2am scrolling","rationale":"Anchors to Andy\'s late-night Balatro habit (a fresh §3 anchor untouched in 30 days); solo Andy after a \'both\' yesterday, and avoids all recent motifs (umbrella/basil/AirPod/snack run/coffee/outfit/lasagna/gym/camera/metro)."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+Image generation failed (rc=1): [image-generation/openai] image auth selected: provider=openai mode=oauth transport=codex-responses requestedModel=gpt-image-2 responsesModel=gpt-5.5 timeoutMs=180000
+[image-generation] candidate failed: openai/gpt-image-2: fetch failed | Connect Timeout Error (attempted address: chatgpt.com:443, timeout: 10000ms)
+TypeError: fetch failed
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-16
+🎭 Cast: andy
+💬 Text: JUST LOOKING
+🎨 Scene: standing on tiptoes peering into a tiny fishbowl with a small fish inside
+
+🎨 Generating doodle...
+   ❌ Failed
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+就看看而已。
+
+#手绘 #极简 #插画 #Sage和Andy #日常
+======================================
+Starting Daily XHS Job: Wed Jun 17 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'text', 'caption', 'scene', 'cast'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"both","text":"AC WAR","caption":"二十四还是二十六。","scene":"Sage and Andy standing side by side both reaching toward a small wall-mounted AC remote, each pointing at a different button, a tiny AC unit on the wall above with one short line indicating airflow.","bible_hook":"§4 long-running debate about whether the AC should be on 24 or 26°C","rationale":"Pulls the iconic AC temperature debate from §4 — a domestic friction motif we haven\'t touched. Differs from recent tender/wholesome \'both\' scenes by showing playful disagreement, and uses a fresh prop (remote) not seen in last 30 days."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-17
+🎭 Cast: both
+💬 Text: DAY 3 LASAGNA
+🎨 Scene: both at a small kitchen table each with a square plate, one large rectangular dish in the middle, the dish noticeably emptier than full, a single fork in the air mid-bite
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+剩菜也是一种愿意。
+
+#手绘 #黑白 #极简 #BingBang #日常
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 0a015e3] Auto-generate content for 2026-06-17
+ 7 files changed, 47 insertions(+)
+ create mode 100644 docs/images/2026-06-17_image.png
+ create mode 100644 drafts/2026-06-16/caption.md
+ create mode 100644 drafts/2026-06-16/metadata.json
+ create mode 100644 drafts/2026-06-17/caption.md
+ create mode 100644 drafts/2026-06-17/image.png
+ create mode 100644 drafts/2026-06-17/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+Done: Wed Jun 17 08:01:26 CST 2026
+======================================
+Starting Daily XHS Job: Wed Jun 17 08:01:36 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'cast', 'text', 'scene', 'caption'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{\n  "cast": "sage",\n  "text": "TAPPING AWAY",\n  "caption": "在家办公的下午。",\n  "scene": "Sage sitting at a small desk in profile typing on a mechanical keyboard, two simple monitor rectangles in front of him, a tiny tea mug beside the keyboard, three small tap lines floating above the keys.",\n  "bible_hook": "§2 WFH days deep work in the den, two screens, mechanical keyboard tapping",\n  "rationale": "Recent posts covered Sage\'s mornings (coffee, gym, basil) and shared/Andy moments, but never his actual workday — a fresh anchor that\'s distinctly his, with new props (keyboard, monitors) not yet seen this month."\n}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-17
+🎭 Cast: both
+💬 Text: GOOD NIGHT
+🎨 Scene: lying in two tiny beds side by side, a crescent moon and star above
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+晚安。
+
+#涂鸦 #插画 #黑白 #治愈 #日常
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 8f283fb] Auto-generate content for 2026-06-17
+ 5 files changed, 11 insertions(+), 11 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   a6963bd..8f283fb  main -> main
+Done: Wed Jun 17 08:02:51 CST 2026
+======================================
+Starting Daily XHS Job: Thu Jun 18 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'cast', 'scene', 'caption', 'text'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"andy","text":"STILL WARM","caption":"第三天的千层面。","scene":"Andy standing at the open fridge in oversized t-shirt and slippers, holding a small foil-covered tray with both paws, peering down at it skeptically, a tiny question mark floating above his head, simple fridge interior with one shelf line behind him.","bible_hook":"§6 leftover lasagna in the fridge from Wednesday\'s cook night, day 3","rationale":"Pulls a specific continuity callback (the day-3 lasagna) that hasn\'t been used; solo Andy after a stretch heavy on \'both\' posts, and a fresh motif (fridge/leftovers) not seen in the last 30 days."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-18
+🎭 Cast: both
+💬 Text: PAPER BOATS
+🎨 Scene: crouching by a simple wavy line (water), placing paper boats on the surface
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+放一只纸船。
+
+#黑白 #插画 #手绘 #日常 #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 6a36483] Auto-generate content for 2026-06-18
+ 5 files changed, 32 insertions(+)
+ create mode 100644 docs/images/2026-06-18_image.png
+ create mode 100644 drafts/2026-06-18/caption.md
+ create mode 100644 drafts/2026-06-18/image.png
+ create mode 100644 drafts/2026-06-18/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+Done: Thu Jun 18 08:01:17 CST 2026
+======================================
+Starting Daily XHS Job: Fri Jun 19 08:00:00 CST 2026
+-> Running generate.py...
+======================================
+Starting Daily XHS Job: Fri Jun 19 08:00:04 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'scene', 'text', 'caption', 'cast'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"sage","text":"DEADLIFT PR","caption":"只告诉了妈妈。","scene":"Sage standing alone in a simple gym setting, one hand holding a phone up to his ear, a small barbell with two round plates resting on the floor beside him, a tiny smile on his face","bible_hook":"§6 Sage hit a deadlift PR last Thursday. Told no one. Texted his mom only.","rationale":"Pulls a specific recent-past continuity beat that hasn\'t been touched; a solo Sage gym moment after a stretch of softer both-scenes, and avoids all recent motifs (no coffee, basil, AirPods, umbrella, snacks, balcony)."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+   ❌ LLM ideation failed: LLM scene missing fields {'text', 'scene', 'cast', 'caption'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"sage","text":"DAY THREE","caption":"还能再吃一顿。","scene":"Sage standing in front of the open fridge at night, peering in at a single small foil-covered tray on the middle shelf, one paw on the fridge door, a tiny light glow line from inside the fridge.","bible_hook":"§6 leftover lasagna in the fridge from Wednesday\'s cook night, day 3","rationale":"Pulls a fresh continuity callback from this week\'s bible (the lingering lasagna) — a solo Sage moment to break the run of recent \'both\' posts and avoid all recent motifs (no umbrella, basil, AirPod, coffee, snack run)."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-19
+🎭 Cast: sage
+💬 Text: NAPPING
+🎨 Scene: curled up sleeping on a tiny cushion, three Z letters floating above
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+午睡是正经事。
+
+#涂鸦 #黑白 #插画 #BingBang #Sage和Andy
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 6ff449d] Auto-generate content for 2026-06-19
+ 5 files changed, 32 insertions(+)
+ create mode 100644 docs/images/2026-06-19_image.png
+ create mode 100644 drafts/2026-06-19/caption.md
+ create mode 100644 drafts/2026-06-19/image.png
+ create mode 100644 drafts/2026-06-19/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+Done: Fri Jun 19 08:01:16 CST 2026
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-19
+🎭 Cast: both
+💬 Text: JUST ONE PEEK
+🎨 Scene: late evening kitchen, Sage caught reaching into an open low drawer with simple snack bag rectangles inside, Andy on a sofa in background scrolling a phone with one earbud in (the other ear empty), a small round wall clock above showing 10:30
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+说好只看一眼。
+
+#涂鸦 #黑白 #手绘 #Sage和Andy #BingBang
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 9e76e11] Auto-generate content for 2026-06-19
+ 5 files changed, 12 insertions(+), 12 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   8f283fb..9e76e11  main -> main
+Done: Fri Jun 19 08:02:03 CST 2026
+======================================
+Starting Daily XHS Job: Sat Jun 20 08:00:00 CST 2026
+-> Running generate.py...
+   ❌ LLM ideation failed: LLM scene missing fields {'text', 'scene', 'cast', 'caption'}: {'ok': True, 'capability': 'model.run', 'transport': 'local', 'provider': 'github-copilot', 'model': 'claude-opus-4.7', 'attempts': [], 'outputs': [{'text': '{"cast":"sage","text":"PR DAY","caption":"只告诉妈妈。","scene":"Sage standing in a gym holding a simple barbell across the shoulders, a small phone on a bench nearby showing a tiny speech bubble that says MOM, two small weight plates on each side of the bar.","bible_hook":"§6 Sage hit a deadlift PR last Thursday, told no one, texted his mom only","rationale":"Recent posts leaned cozy/domestic and there\'s been no gym scene; this anchors to a specific continuity beat (the PR + mom text) that hasn\'t been touched, and gives Sage a solo after several \'both\' posts."}', 'mediaUrl': None}]}
+   ⤵️  Falling back to legacy scene pool.
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+📅 Date: 2026-06-20
+🎭 Cast: both
+💬 Text: HIGH FIVE
+🎨 Scene: jumping up to high-five each other, motion lines and sparkles at the point of contact
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+击个掌！
+
+#手绘 #黑白 #插画 #日常 #治愈
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 2e3fdc2] Auto-generate content for 2026-06-20
+ 5 files changed, 32 insertions(+)
+ create mode 100644 docs/images/2026-06-20_image.png
+ create mode 100644 drafts/2026-06-20/caption.md
+ create mode 100644 drafts/2026-06-20/image.png
+ create mode 100644 drafts/2026-06-20/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+Done: Sat Jun 20 08:01:46 CST 2026
+======================================
+Starting Daily XHS Job: Sun Jun 21 08:00:00 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Anchors to Andy's late-night store-manager inventory grind — a work-pressure beat not yet shown; differs from recent domestic and the upbeat TARGET HIT win by leaning into tired after-hours labor.
+📅 Date: 2026-06-21
+🎭 Cast: andy
+💬 Text: EVERY TAG TWICE
+🎨 Scene: Andy in good work shoes standing inside the boutique holding a small barcode scanner pointed at a single luxury bag on a low shelf, a tiny clock on the wall showing 11:50, one droopy eyelid line and the headset line still on his ear
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+盘点夜，灯还亮着。
+
+#黑白 #手绘 #插画 #生活感悟 #治愈
+-> Running verify_quality.py (QA gate)...
+XHS Quality Gate — last 1 drafts  (2026-06-21 08:01)
+============================================================
+✅ 2026-06-21 [andy] g=grounded emo=—
+    “盘点夜，灯还亮着。”   ⟵ §2 inventory count night = staying till midnight scanning tags under fluorescent lights
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: PASS   (per-draft hard=0, batch hard=0)
+   QA: today PASS
+XHS Quality Gate — last 14 drafts  (2026-06-21 08:01)
+============================================================
+✅ 2026-06-08 [andy] g=grounded emo=funny,tired
+    “又坐过了一站。”   ⟵ §3 Andy always falls asleep one stop past their stop on the orange line
+❌ 2026-06-09 [both] g=grounded emo=—
+    “晾衣服的下午。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-10 [andy] g=grounded emo=funny
+    “这个月又开新分期。”   ⟵ §3 Andy has 14 active 花呗 installment plans, lives paycheck-to-paycheck
+❌ 2026-06-11 [sage] g=floaty   emo=—
+    “深呼吸。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['深呼吸'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-12 [both] g=grounded emo=—
+    “我还在。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-13 [andy] g=floaty   emo=—
+    “今天也要勇敢。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['勇敢'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-14 [both] g=grounded emo=—
+    “先来杯咖啡。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-15 [both] g=floaty   emo=—
+    “一步一步来。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['一步一步'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-16 [andy] g=grounded emo=—
+    “就看看而已。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-17 [both] g=floaty   emo=—
+    “晚安。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=[], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-18 [both] g=grounded emo=quiet
+    “放一只纸船。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-19 [both] g=grounded emo=funny
+    “说好只看一眼。”   ⟵ §3 snack drawer + §6 missing AirPod
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-20 [andy] g=grounded emo=—
+    “还差一小时，达标了！”   ⟵ §2 Andy's monthly sales target lives in his head like a heartbeat; hitting it with time to spare (§2.5 small win)
+✅ 2026-06-21 [andy] g=grounded emo=—
+    “盘点夜，灯还亮着。”   ⟵ §2 inventory count night = staying till midnight scanning tags under fluorescent lights
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: FAIL   (per-draft hard=22, batch hard=0)
+   QA: 14-day batch FAIL (cast/job/emotion/grounded drift) - see report above
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 038ae50] Auto-generate content for 2026-06-21
+ 6 files changed, 36 insertions(+), 4 deletions(-)
+ create mode 100644 docs/images/2026-06-21_image.png
+ create mode 100644 drafts/2026-06-21/caption.md
+ create mode 100644 drafts/2026-06-21/image.png
+ create mode 100644 drafts/2026-06-21/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+Done: Sun Jun 21 08:01:32 CST 2026
+======================================
+Starting Daily XHS Job: Mon Jun 22 08:00:00 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Pulls into Sage's design-work grind (bucket A) after a run of domestic and Andy-work posts; the 2px obsession is a fresh prop never drawn, distinct from coffee/gym/balcony motifs.
+📅 Date: 2026-06-22
+🎭 Cast: sage
+💬 Text: STILL 2PX OFF
+🎨 Scene: Sage sitting at a small desk at night facing a single monitor showing two tiny rectangles with a small gap between them and a faint ruler line, one paw nudging a mechanical keyboard, a tiny crescent moon in a small window behind, mouth a flat focused line
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+这个间距不对。
+
+#黑白 #涂鸦 #插画 #BingBang #生活感悟
+-> Running verify_quality.py (QA gate)...
+XHS Quality Gate — last 1 drafts  (2026-06-22 08:03)
+============================================================
+✅ 2026-06-22 [sage] g=grounded emo=—
+    “这个间距不对。”   ⟵ §2 Sage pixel-pushes at 11pm before a review because the spacing was 2px off and it bothered him
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: PASS   (per-draft hard=0, batch hard=0)
+   QA: today PASS
+XHS Quality Gate — last 14 drafts  (2026-06-22 08:03)
+============================================================
+❌ 2026-06-09 [both] g=grounded emo=—
+    “晾衣服的下午。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-10 [andy] g=grounded emo=funny
+    “这个月又开新分期。”   ⟵ §3 Andy has 14 active 花呗 installment plans, lives paycheck-to-paycheck
+❌ 2026-06-11 [sage] g=floaty   emo=—
+    “深呼吸。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['深呼吸'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-12 [both] g=grounded emo=—
+    “我还在。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-13 [andy] g=floaty   emo=—
+    “今天也要勇敢。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['勇敢'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-14 [both] g=grounded emo=—
+    “先来杯咖啡。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-15 [both] g=floaty   emo=—
+    “一步一步来。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['一步一步'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-16 [andy] g=grounded emo=—
+    “就看看而已。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-17 [both] g=floaty   emo=—
+    “晚安。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=[], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-18 [both] g=grounded emo=quiet
+    “放一只纸船。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-19 [both] g=grounded emo=funny
+    “说好只看一眼。”   ⟵ §3 snack drawer + §6 missing AirPod
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-20 [andy] g=grounded emo=—
+    “还差一小时，达标了！”   ⟵ §2 Andy's monthly sales target lives in his head like a heartbeat; hitting it with time to spare (§2.5 small win)
+✅ 2026-06-21 [andy] g=grounded emo=—
+    “盘点夜，灯还亮着。”   ⟵ §2 inventory count night = staying till midnight scanning tags under fluorescent lights
+✅ 2026-06-22 [sage] g=grounded emo=—
+    “这个间距不对。”   ⟵ §2 Sage pixel-pushes at 11pm before a review because the spacing was 2px off and it bothered him
+------------------------------------------------------------
+BATCH:
+  ❌ emotional range too narrow: only ['funny', 'quiet'] — mix tired/funny/annoyed/quiet/tender
+============================================================
+RESULT: FAIL   (per-draft hard=22, batch hard=1)
+   QA: 14-day batch FAIL (cast/job/emotion/grounded drift) - see report above
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 8ffca88] Auto-generate content for 2026-06-22
+ 5 files changed, 32 insertions(+)
+ create mode 100644 docs/images/2026-06-22_image.png
+ create mode 100644 drafts/2026-06-22/caption.md
+ create mode 100644 drafts/2026-06-22/image.png
+ create mode 100644 drafts/2026-06-22/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+   PUSH: FAILED <-- live site is now STALE, commits stuck local. Check gh auth.
+Done: Mon Jun 22 08:03:08 CST 2026
+======================================
+Starting Daily XHS Job: Mon Jun 22 08:07:29 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Anchors to Sage's street-photography hobby and the film-scan continuity, a side of him untouched recently; differs from the work/coffee/balcony posts by spotlighting a quiet creative win after a long day, and avoids all recent motifs (no coffee, basil, AirPod, gym, snack run).
+📅 Date: 2026-06-22
+🎭 Cast: sage
+💬 Text: JUST ONE GOOD ONE
+🎨 Scene: Sage sitting in a reading chair at night hunched over a laptop showing a single small photo frame on screen, a thin strip of film negatives draped over one arm of the chair, mouth a faint satisfied curve, a tiny crescent moon in a small window behind
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+一卷就这张好。
+
+#插画 #手绘 #黑白 #BingBang #生活感悟
+-> Running verify_quality.py (QA gate)...
+XHS Quality Gate — last 1 drafts  (2026-06-22 08:08)
+============================================================
+✅ 2026-06-22 [sage] g=grounded emo=—
+    “一卷就这张好。”   ⟵ §7 small wins: the one good photo from a whole roll (§6 Sage scanned a roll of film Monday)
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: PASS   (per-draft hard=0, batch hard=0)
+   QA: today PASS
+XHS Quality Gate — last 14 drafts  (2026-06-22 08:08)
+============================================================
+❌ 2026-06-09 [both] g=grounded emo=—
+    “晾衣服的下午。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-10 [andy] g=grounded emo=funny
+    “这个月又开新分期。”   ⟵ §3 Andy has 14 active 花呗 installment plans, lives paycheck-to-paycheck
+❌ 2026-06-11 [sage] g=floaty   emo=—
+    “深呼吸。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['深呼吸'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-12 [both] g=grounded emo=—
+    “我还在。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-13 [andy] g=floaty   emo=—
+    “今天也要勇敢。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['勇敢'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-14 [both] g=grounded emo=—
+    “先来杯咖啡。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-15 [both] g=floaty   emo=—
+    “一步一步来。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['一步一步'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-16 [andy] g=grounded emo=—
+    “就看看而已。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-17 [both] g=floaty   emo=—
+    “晚安。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=[], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-18 [both] g=grounded emo=quiet
+    “放一只纸船。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-19 [both] g=grounded emo=funny
+    “说好只看一眼。”   ⟵ §3 snack drawer + §6 missing AirPod
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-20 [andy] g=grounded emo=—
+    “还差一小时，达标了！”   ⟵ §2 Andy's monthly sales target lives in his head like a heartbeat; hitting it with time to spare (§2.5 small win)
+✅ 2026-06-21 [andy] g=grounded emo=—
+    “盘点夜，灯还亮着。”   ⟵ §2 inventory count night = staying till midnight scanning tags under fluorescent lights
+✅ 2026-06-22 [sage] g=grounded emo=—
+    “一卷就这张好。”   ⟵ §7 small wins: the one good photo from a whole roll (§6 Sage scanned a roll of film Monday)
+------------------------------------------------------------
+BATCH:
+  ❌ emotional range too narrow: only ['funny', 'quiet'] — mix tired/funny/annoyed/quiet/tender
+============================================================
+RESULT: FAIL   (per-draft hard=22, batch hard=1)
+   QA: 14-day batch FAIL (cast/job/emotion/grounded drift) - see report above
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 27913e5] Auto-generate content for 2026-06-22
+ 5 files changed, 12 insertions(+), 12 deletions(-)
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   d763aac..27913e5  main -> main
+   PUSH: ok
+Done: Mon Jun 22 08:08:52 CST 2026
+======================================
+Starting Daily XHS Job: Tue Jun 23 08:00:00 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Pays off a real continuity thread (the lasagna finally finishing) with a shared no-cooking small win — different from recent snack/coffee/work motifs and uses a fresh prop (baking dish + two forks).
+📅 Date: 2026-06-23
+🎭 Cast: both
+💬 Text: DAY THREE LASAGNA
+🎨 Scene: Sage and Andy sitting close on the linen sofa, sharing one small baking dish between them with a single square of lasagna left and two forks meeting at it, a tiny fridge magnet shape on a fridge edge in the background, both with faint content smiles.
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+终于把它吃完了。
+
+#极简 #插画 #涂鸦 #日常 #Sage和Andy
+-> Running verify_quality.py (QA gate)...
+XHS Quality Gate — last 1 drafts  (2026-06-23 08:02)
+============================================================
+✅ 2026-06-23 [both] g=grounded emo=smallwin
+    “终于把它吃完了。”   ⟵ §6 leftover lasagna from Wednesday's cook night, day 3 today
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: PASS   (per-draft hard=0, batch hard=0)
+   QA: today PASS
+XHS Quality Gate — last 14 drafts  (2026-06-23 08:02)
+============================================================
+✅ 2026-06-10 [andy] g=grounded emo=funny
+    “这个月又开新分期。”   ⟵ §3 Andy has 14 active 花呗 installment plans, lives paycheck-to-paycheck
+❌ 2026-06-11 [sage] g=floaty   emo=—
+    “深呼吸。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['深呼吸'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-12 [both] g=grounded emo=—
+    “我还在。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-13 [andy] g=floaty   emo=—
+    “今天也要勇敢。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['勇敢'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-14 [both] g=grounded emo=—
+    “先来杯咖啡。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-15 [both] g=floaty   emo=—
+    “一步一步来。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['一步一步'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-16 [andy] g=grounded emo=—
+    “就看看而已。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-17 [both] g=floaty   emo=—
+    “晚安。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=[], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-18 [both] g=grounded emo=quiet
+    “放一只纸船。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-19 [both] g=grounded emo=funny
+    “说好只看一眼。”   ⟵ §3 snack drawer + §6 missing AirPod
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-20 [andy] g=grounded emo=—
+    “还差一小时，达标了！”   ⟵ §2 Andy's monthly sales target lives in his head like a heartbeat; hitting it with time to spare (§2.5 small win)
+✅ 2026-06-21 [andy] g=grounded emo=—
+    “盘点夜，灯还亮着。”   ⟵ §2 inventory count night = staying till midnight scanning tags under fluorescent lights
+✅ 2026-06-22 [sage] g=grounded emo=—
+    “一卷就这张好。”   ⟵ §7 small wins: the one good photo from a whole roll (§6 Sage scanned a roll of film Monday)
+✅ 2026-06-23 [both] g=grounded emo=smallwin
+    “终于把它吃完了。”   ⟵ §6 leftover lasagna from Wednesday's cook night, day 3 today
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: FAIL   (per-draft hard=20, batch hard=0)
+   QA: 14-day batch FAIL (cast/job/emotion/grounded drift) - see report above
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 4c7a1ca] Auto-generate content for 2026-06-23
+ 5 files changed, 32 insertions(+)
+ create mode 100644 docs/images/2026-06-23_image.png
+ create mode 100644 drafts/2026-06-23/caption.md
+ create mode 100644 drafts/2026-06-23/image.png
+ create mode 100644 drafts/2026-06-23/metadata.json
+fatal: could not read Username for 'https://github.com': Device not configured
+   PUSH: FAILED <-- live site is now STALE, commits stuck local. Check gh auth.
+Done: Tue Jun 23 08:02:52 CST 2026
+======================================
+Starting Daily XHS Job: Wed Jun 24 08:00:00 CST 2026
+-> Running generate.py...
+======================================
+Starting Daily XHS Job: Wed Jun 24 08:00:04 CST 2026
+-> Running generate.py...
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Recent posts leaned domestic/cozy and Andy-heavy on the work side; this anchors to Sage's specific big-org grind moment, a fresh motif (Friday scope-add) not touched in the last 30 days.
+📅 Date: 2026-06-24
+🎭 Cast: sage
+💬 Text: STRAIGHT FACE FRIDAY
+🎨 Scene: Sage sitting at a desk facing two simple monitor rectangles, one showing a small to-do list with a fresh line added at the bottom, a floating speech bubble from off-frame with a tiny plus sign inside, Sage's face a perfectly flat neutral line, one tiny sweat drop on his temple, a small wall clock reading 5:00
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+周五五点，又加了。
+
+#黑白 #极简 #插画 #日常 #Sage和Andy
+-> Running verify_quality.py (QA gate)...
+XHS Quality Gate — last 1 drafts  (2026-06-24 08:01)
+============================================================
+✅ 2026-06-24 [sage] g=grounded emo=funny
+    “周五五点，又加了。”   ⟵ §2 the PM adds scope on Friday at 5pm, Sage keeps a straight face
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: PASS   (per-draft hard=0, batch hard=0)
+   QA: today PASS
+XHS Quality Gate — last 14 drafts  (2026-06-24 08:01)
+============================================================
+❌ 2026-06-11 [sage] g=floaty   emo=—
+    “深呼吸。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['深呼吸'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-12 [both] g=grounded emo=—
+    “我还在。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-13 [andy] g=floaty   emo=—
+    “今天也要勇敢。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['勇敢'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-14 [both] g=grounded emo=—
+    “先来杯咖啡。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-15 [both] g=floaty   emo=—
+    “一步一步来。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['一步一步'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-16 [andy] g=grounded emo=—
+    “就看看而已。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-17 [both] g=floaty   emo=—
+    “晚安。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=[], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-18 [both] g=grounded emo=quiet
+    “放一只纸船。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-19 [both] g=grounded emo=funny
+    “说好只看一眼。”   ⟵ §3 snack drawer + §6 missing AirPod
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-20 [andy] g=grounded emo=—
+    “还差一小时，达标了！”   ⟵ §2 Andy's monthly sales target lives in his head like a heartbeat; hitting it with time to spare (§2.5 small win)
+✅ 2026-06-21 [andy] g=grounded emo=—
+    “盘点夜，灯还亮着。”   ⟵ §2 inventory count night = staying till midnight scanning tags under fluorescent lights
+✅ 2026-06-22 [sage] g=grounded emo=—
+    “一卷就这张好。”   ⟵ §7 small wins: the one good photo from a whole roll (§6 Sage scanned a roll of film Monday)
+✅ 2026-06-23 [both] g=grounded emo=smallwin
+    “终于把它吃完了。”   ⟵ §6 leftover lasagna from Wednesday's cook night, day 3 today
+✅ 2026-06-24 [sage] g=grounded emo=funny
+    “周五五点，又加了。”   ⟵ §2 the PM adds scope on Friday at 5pm, Sage keeps a straight face
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: FAIL   (per-draft hard=20, batch hard=0)
+   QA: 14-day batch FAIL (cast/job/emotion/grounded drift) - see report above
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 6ef1f5a] Auto-generate content for 2026-06-24
+ 5 files changed, 32 insertions(+)
+ create mode 100644 docs/images/2026-06-24_image.png
+ create mode 100644 drafts/2026-06-24/caption.md
+ create mode 100644 drafts/2026-06-24/image.png
+ create mode 100644 drafts/2026-06-24/metadata.json
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   ba9d33d..6ef1f5a  main -> main
+   PUSH: ok
+Done: Wed Jun 24 08:01:30 CST 2026
+🧠 Generating fresh scene via LLM...
+   Loaded 30 recent posts for de-duplication.
+   ✅ LLM scene generated.
+   💭 Recent posts leaned on solo work moments and cozy snack/lasagna scenes; this is a shared work-life-pressure beat (Sunday dread) with a fresh clock-staring motif not used in the last 30 days.
+📅 Date: 2026-06-24
+🎭 Cast: both
+💬 Text: WHERE DID IT GO
+🎨 Scene: Sage and Andy slumped at opposite ends of the linen sofa on a Sunday evening, both staring up at a single round wall clock showing 9:00, one of Andy's house slippers fallen on the floor, faint flat expressions, a small window beside them with one tiny crescent moon
+
+🎨 Generating doodle...
+   ✅ Saved
+📝 Caption saved
+📋 Metadata saved
+
+📄 Caption:
+周末就这样没了。
+
+#插画 #黑白 #极简 #日常 #治愈
+-> Running verify_quality.py (QA gate)...
+XHS Quality Gate — last 1 drafts  (2026-06-24 08:01)
+============================================================
+✅ 2026-06-24 [both] g=grounded emo=smallwin
+    “周末就这样没了。”   ⟵ §2.5 the Sunday-evening 'where did the weekend go'
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: PASS   (per-draft hard=0, batch hard=0)
+   QA: today PASS
+XHS Quality Gate — last 14 drafts  (2026-06-24 08:01)
+============================================================
+❌ 2026-06-11 [sage] g=floaty   emo=—
+    “深呼吸。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['深呼吸'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-12 [both] g=grounded emo=—
+    “我还在。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-13 [andy] g=floaty   emo=—
+    “今天也要勇敢。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['勇敢'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-14 [both] g=grounded emo=—
+    “先来杯咖啡。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-15 [both] g=floaty   emo=—
+    “一步一步来。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=['一步一步'], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-16 [andy] g=grounded emo=—
+    “就看看而已。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-17 [both] g=floaty   emo=—
+    “晚安。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ❌ caption reads floaty/poster (floaty=[], grounded=[])
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+❌ 2026-06-18 [both] g=grounded emo=quiet
+    “放一只纸船。”   ⟵ —
+    ❌ missing bible_hook (post must trace to a real fact)
+    ❌ LIKELY LLM-IDEATION FALLBACK (no hook + no rationale) — check cron.log for parser failure
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-19 [both] g=grounded emo=funny
+    “说好只看一眼。”   ⟵ §3 snack drawer + §6 missing AirPod
+    ⚠️  rationale is null (add why-this / what-it-avoids)
+✅ 2026-06-20 [andy] g=grounded emo=—
+    “还差一小时，达标了！”   ⟵ §2 Andy's monthly sales target lives in his head like a heartbeat; hitting it with time to spare (§2.5 small win)
+✅ 2026-06-21 [andy] g=grounded emo=—
+    “盘点夜，灯还亮着。”   ⟵ §2 inventory count night = staying till midnight scanning tags under fluorescent lights
+✅ 2026-06-22 [sage] g=grounded emo=—
+    “一卷就这张好。”   ⟵ §7 small wins: the one good photo from a whole roll (§6 Sage scanned a roll of film Monday)
+✅ 2026-06-23 [both] g=grounded emo=smallwin
+    “终于把它吃完了。”   ⟵ §6 leftover lasagna from Wednesday's cook night, day 3 today
+✅ 2026-06-24 [both] g=grounded emo=smallwin
+    “周末就这样没了。”   ⟵ §2.5 the Sunday-evening 'where did the weekend go'
+------------------------------------------------------------
+BATCH:
+  ✅ batch checks clean
+============================================================
+RESULT: FAIL   (per-draft hard=20, batch hard=0)
+   QA: 14-day batch FAIL (cast/job/emotion/grounded drift) - see report above
+-> Running build_site.py...
+✅ Website built successfully at /Users/saberzou/OpenClawProjects/axel/xhs-creator/docs/index.html
+-> Pushing to GitHub...
+[main 2bde67a] Auto-generate content for 2026-06-24
+ 5 files changed, 13 insertions(+), 13 deletions(-)
+failed to store: -61
+To https://github.com/saberzou/xhs-bingbang-gallery.git
+   6ef1f5a..2bde67a  main -> main
+   PUSH: ok
+Done: Wed Jun 24 08:02:03 CST 2026
