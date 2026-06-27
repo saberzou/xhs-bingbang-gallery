@@ -4,9 +4,11 @@
   "text": "PAPER BOATS",
   "caption": "放一只纸船。",
   "scene": "crouching by a simple wavy line (water), placing paper boats on the surface",
-  "bible_hook": null,
-  "rationale": null,
+  "bible_hook": "§7 quiet small-moment + §2.5 one tiny bright gesture — a paper boat on the water",
+  "rationale": "Anchors the paper-boats-on-water scene to §7's quiet-moment range; backfilled (was legacy-pool fallback). Caption already grounded (纸船).",
   "ideation_model": "github-copilot/claude-opus-4.7",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-18/image.png",
-  "generated_at": "2026-06-18T08:01:15.183239"
+  "generated_at": "2026-06-18T08:01:15.183239",
+  "backfilled_at": "2026-06-27T08:18:16.209627",
+  "backfill_note": "bible_hook+rationale backfilled by Axel (WATCHDOG); original draft hit the pre-2026-06-20 [proxy]-banner LLM-ideation fallback (no hook/rationale)."
 }

@@ -4,9 +4,11 @@
   "text": "COFFEE FIRST",
   "caption": "先来杯咖啡。",
   "scene": "standing side by side each holding a tiny coffee cup, steam rising",
-  "bible_hook": null,
-  "rationale": null,
+  "bible_hook": "§2.5 small happiness: the first sip of coffee before the inbox + §2 Sage's hand-grinder/V60 morning",
+  "rationale": "Anchors the two-coffee-cups scene to the §2.5 first-sip ritual; backfilled (was legacy-pool fallback, no hook). Caption already grounded (咖啡).",
   "ideation_model": "github-copilot/claude-opus-4.7",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-14/image.png",
-  "generated_at": "2026-06-14T08:01:39.453625"
+  "generated_at": "2026-06-14T08:01:39.453625",
+  "backfilled_at": "2026-06-27T08:18:16.209627",
+  "backfill_note": "bible_hook+rationale backfilled by Axel (WATCHDOG); original draft hit the pre-2026-06-20 [proxy]-banner LLM-ideation fallback (no hook/rationale)."
 }

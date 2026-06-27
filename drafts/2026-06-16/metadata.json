@@ -4,9 +4,11 @@
   "text": "JUST LOOKING",
   "caption": "就看看而已。",
   "scene": "standing on tiptoes peering into a tiny fishbowl with a small fish inside",
-  "bible_hook": null,
-  "rationale": null,
+  "bible_hook": "§3 Andy window-shops SSENSE / Vestiaire 'just looking' + §2.5 the 小红书 highlight reel he scrolls",
+  "rationale": "Anchors the peering-into-the-fishbowl scene to Andy's §3 'just looking' browsing habit; backfilled (was legacy-pool fallback). Scene is rich enough to read grounded.",
   "ideation_model": "github-copilot/claude-opus-4.7",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-16/image.png",
-  "generated_at": "2026-06-16T08:00:35.337263"
+  "generated_at": "2026-06-16T08:00:35.337263",
+  "backfilled_at": "2026-06-27T08:18:16.209627",
+  "backfill_note": "bible_hook+rationale backfilled by Axel (WATCHDOG); original draft hit the pre-2026-06-20 [proxy]-banner LLM-ideation fallback (no hook/rationale)."
 }

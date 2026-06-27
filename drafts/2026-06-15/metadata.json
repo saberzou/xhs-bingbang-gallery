@@ -2,11 +2,13 @@
   "date": "2026-06-15",
   "cast": "both",
   "text": "ONE STEP AT A TIME",
-  "caption": "一步一步来。",
+  "caption": "电梯又坏了。",
   "scene": "climbing a simple staircase together, Sage one step ahead reaching back toward Andy",
-  "bible_hook": null,
-  "rationale": null,
+  "bible_hook": "§1 6th-floor walk-up, the elevator is often broken (recurring gag) — taking the stairs together",
+  "rationale": "Re-anchors the staircase image to §1's broken-elevator gag instead of the floaty poster line; backfilled (was legacy-pool fallback). New caption is concrete (电梯) and matches the climbing-stairs scene.",
   "ideation_model": "github-copilot/claude-opus-4.7",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-15/image.png",
-  "generated_at": "2026-06-15T08:05:31.941255"
+  "generated_at": "2026-06-15T08:05:31.941255",
+  "backfilled_at": "2026-06-27T08:18:16.209627",
+  "backfill_note": "bible_hook+rationale backfilled by Axel (WATCHDOG); original draft hit the pre-2026-06-20 [proxy]-banner LLM-ideation fallback (no hook/rationale)."
 }

@@ -2,11 +2,13 @@
   "date": "2026-06-17",
   "cast": "both",
   "text": "GOOD NIGHT",
-  "caption": "晚安。",
+  "caption": "中间还留着十厘米。",
   "scene": "lying in two tiny beds side by side, a crescent moon and star above",
-  "bible_hook": null,
-  "rationale": null,
+  "bible_hook": "§4 two single beds pushed together-ish, a ~10cm gap neither will admit they want closed",
+  "rationale": "Re-anchors the two-beds-side-by-side image to §4's 10cm-gap detail instead of the floaty 晚安 poster line; backfilled (was legacy-pool fallback). New caption is concrete and matches the scene.",
   "ideation_model": "github-copilot/claude-opus-4.7",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-06-17/image.png",
-  "generated_at": "2026-06-17T08:02:47.108563"
+  "generated_at": "2026-06-17T08:02:47.108563",
+  "backfilled_at": "2026-06-27T08:18:16.209627",
+  "backfill_note": "bible_hook+rationale backfilled by Axel (WATCHDOG); original draft hit the pre-2026-06-20 [proxy]-banner LLM-ideation fallback (no hook/rationale)."
 }
