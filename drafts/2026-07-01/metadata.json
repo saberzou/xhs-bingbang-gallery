@@ -1,12 +1,12 @@
 {
   "date": "2026-07-01",
-  "cast": "sage",
-  "text": "ONE PIXEL OFF",
-  "caption": "两像素也不行。",
-  "scene": "Sage sitting alone at a desk late at night, leaning very close to a single monitor showing two rectangle shapes with a tiny gap between them and a small dotted measurement line reading 2, one paw on a mechanical keyboard, a small crescent moon in a window behind, a flat focused line for a mouth.",
-  "bible_hook": "§2 Sage pixel-pushes at 11pm before a review because the spacing was 2px off and it bothered him",
-  "rationale": "Recent Sage work posts covered crit, standup, and the Friday scope-add, but not the solitary late-night 2px obsession — a quieter design-craft pressure moment, no props repeated from the last 30 days.",
+  "cast": "both",
+  "text": "SUNDAY WENT WHERE",
+  "caption": "周末又没了。",
+  "scene": "Sage and Andy sitting side by side on the linen sofa in the evening, both staring flatly at a single wall calendar showing a big crossed-out weekend square, one small window behind them with a crescent moon, their mouths matching flat resigned lines.",
+  "bible_hook": "§2.5 shared pressure — the Sunday-evening 'where did the weekend go'",
+  "rationale": "Recent posts leaned on solo work grind and cozy home wins; this pulls the shared existential-tired lane with a fresh calendar-and-moon motif not used in the last 30 days.",
   "ideation_model": "github-copilot/claude-opus-4.8",
   "image": "/Users/saberzou/OpenClawProjects/axel/xhs-creator/drafts/2026-07-01/image.png",
-  "generated_at": "2026-07-01T08:01:31.400221"
+  "generated_at": "2026-07-01T08:02:38.011827"
 }
